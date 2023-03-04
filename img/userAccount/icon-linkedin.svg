@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="icon-linkedin" transform="translate(-1153 -682.05)">
+    <g id="Group_48965" data-name="Group 48965" transform="translate(1153 682.05)">
+      <path id="Path_96368" data-name="Path 96368" d="M485.239,360.476a17.5,17.5,0,1,1,17.5,17.5A17.5,17.5,0,0,1,485.239,360.476Z" transform="translate(-485.239 -342.976)" fill="#fff"/>
+      <g id="Group_49042" data-name="Group 49042" transform="translate(-168.122 -67.674)">
+        <path id="Path_96404" data-name="Path 96404" d="M178.065,81.8h3.242V92.214h-3.242Zm1.622-5.177a1.878,1.878,0,1,1-1.878,1.877,1.881,1.881,0,0,1,1.878-1.877" fill="#23b3ce"/>
+        <path id="Path_96405" data-name="Path 96405" d="M181.175,79.873h3.1V81.3h.043a3.408,3.408,0,0,1,3.066-1.683c3.277,0,3.882,2.156,3.882,4.961v5.712h-3.234V85.225c0-1.208-.025-2.761-1.683-2.761-1.686,0-1.944,1.313-1.944,2.672v5.152h-3.234Z" transform="translate(2.165 1.925)" fill="#23b3ce"/>
+      </g>
+    </g>
+  </g>
+</svg>

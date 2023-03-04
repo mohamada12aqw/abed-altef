@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11.125" height="14.911" viewBox="0 0 11.125 14.911">
+  <g id="icon-lock" transform="translate(-2335.216 -477.044)">
+    <g id="Group_48962" data-name="Group 48962" transform="translate(2335.716 477.544)">
+      <path id="Path_96364" data-name="Path 96364" d="M2345.841,689.975a.666.666,0,0,1-.667.666h-8.792a.666.666,0,0,1-.667-.666v-6.648a.666.666,0,0,1,.667-.666h8.792a.666.666,0,0,1,.667.666Z" transform="translate(-2335.716 -676.73)" fill="none" stroke="#636569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <g id="Group_48961" data-name="Group 48961" transform="translate(1.461 0)">
+        <path id="Path_96365" data-name="Path 96365" d="M2437.411,528.142v-1.679a2.252,2.252,0,1,0-4.5,0v1.659" transform="translate(-2431.558 -522.862)" fill="none" stroke="#636569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_96366" data-name="Path 96366" d="M2386.24,482.8v-1.659a3.6,3.6,0,0,1,7.2,0v1.679" transform="translate(-2386.24 -477.544)" fill="none" stroke="#636569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <path id="Path_96367" data-name="Path 96367" d="M2469.632,748.342a1.263,1.263,0,1,0-1.872,1.1v1.646a.474.474,0,0,0,.474.474h.27a.474.474,0,0,0,.474-.474v-1.646A1.258,1.258,0,0,0,2469.632,748.342Z" transform="translate(-2463.307 -739.285)" fill="none" stroke="#636569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

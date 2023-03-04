@@ -1,0 +1,1939 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="Toyota, Lexus, UIS, United Installment, Toyota Financing, Vehicle Installment, Vehicle Financing, Vehicle Leasing, Vehicle installment, Corolla, Camry, Yaris, Limousine, Lexus, Land Cruiser, Prado, Daihatsu, Abdul Latif Financing, Toyota Saudi, Rent a car, Vehicle Dealer, car loan"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Abdul Latif Jameel United Finance Co"><meta property="og:description" content="Abdul Latif Jameel United Finance Co. provides financial leasing and Murabaha services for all car brands, home appliances, electronics and certain types of heavy equipment subject to terms and conditions."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan.svg">
+
+   
+    <!-- Boots`trap CSS-->
+    <!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="css/bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/bootstrap3-custom.css" rel="stylesheet"><link href="css/global-style.css" rel="stylesheet" type="text/css">
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="Abdul Latif Jameel Finance appreciates individuals' interests and financial needs by financing a desired amount of cash through Islamic Tawarruq while adhering to the terms and conditions of the product.">
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            Int_Datepicker(true);
+        });
+
+        Int_Datepicker(true);
+
+        function openOfferView() {
+            $("#OffersView").modal({ show: true });
+        }
+
+        function currencyFormat(num) {
+            return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " ريال";
+        }
+
+        function ChangePeriod(Period) {
+            document.getElementById('ContentPlaceHolder1_Hid_Period').value = Period;
+        }
+
+        function WaitMessage_popup(event) {
+            if (IsCustomConditionsValid() && chkValidation() && IsPersonValid() && captchaValidation()) {
+                showWaitMessage();
+            }
+            else {
+                event.preventDefault();
+                return false;
+            }
+        }
+
+        function OnCalculateClick() {
+            if (IsCalcFormValid()) {
+                showWaitMessage();
+            }
+            else {
+                event.returnValue = false;
+                return false;
+            }
+        }
+
+        function captchaValidation() {
+            if (grecaptcha.getResponse() === '') {
+                //reCaptcha not verified
+                document.getElementById('Hid_captcha').value = 0;
+                Alert_Warning('Warning!', 'Please verify if you are not a robot!');
+                event.returnValue = false;
+                return false;
+            } else {
+                //reCaptch verified
+                document.getElementById('Hid_captcha').value = 1;
+                return true;
+            }
+        }
+
+        function CalcValidation() {
+            if (document.getElementById('ContentPlaceHolder1_Hid_TotalCost').value == 0 || $("#txt_ProductPrice").val() == "") {
+                Alert_Warning('Warning!', "Please use finance calculator!");
+                event.returnValue = false;
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function chkValidation() {
+            if ($('.container').find('span[style*="red"][style*="inline"]').length > 0) {
+                //alert("false");
+                return false;
+            } else {
+                //alert("true");
+                return true;
+            }
+        }
+
+        function IsPersonValid() {
+            debugger;
+            var flag = true;
+
+            if ($("#txt_First_Name").val() == "") return false;
+            if ($("#txt_Last_Name").val() == "") return false;
+            if ($("#txt_ID_Number").val() == "") return false;
+            if ($("#dob_date_input").val() == "") return false;
+            if ($("#lst_Residence_City").val() == 0) return false;
+            if ($("#lst_Branch").val() == 0) return false;
+            if ($("#txt_Mobile").val() == "") return false;
+            if ($("#txt_Email").val() == "") return false;
+            if ($("#ddl_EmployerType").val() == 0) return false;
+            //if ($("#ddl_ServiceDuration").val() == 0) return false;
+            if ($("#rdo_AnyMonthlyPayment_Yes").is(":checked")) {
+                if ($("#ddl_MonthlyPaymentType").val() == 0) return false;
+                if ($("#txt_TotalMonthlyPayment").val() == "") return false;
+            }
+
+            if ($("#txt_ID_Number").val()[0] == "2") {
+                if ($("#ddl_EmployerType").val() == 1 || $("#ddl_EmployerType").val() == 4) {
+                    if ($("#ddl_ServiceDuration").val() == 0) {
+                        Alert_Warning("Warning!", "Please Select Service Duration!");
+                        return false;
+                    }
+                }
+            }
+            else {
+                if ($("#ddl_EmployerType").val() == 1 || $("#ddl_EmployerType").val() == 2) {
+                    if ($("#ddl_ServiceDuration").val() == 0) {
+                        Alert_Warning("Warning!", "Please Select Service Duration!");
+                        return false;
+                    }
+                }
+            }
+
+            if ($("#file_Id").val() == "") return false;
+            if ($("#file_SalaryCertificate").val() == "") return false;
+            if ($("#file_BankIBANProof").val() == "") return false;
+
+            return flag;
+        }
+
+        function IsCustomConditionsValid() {
+            var flag = true;
+
+            if ($("#txt_ID_Number").val() != "") {
+                if ($("#txt_ID_Number").val()[0] == "2") {
+                    if ($("#ddl_EmployerType").val() == 2 || $("#ddl_EmployerType").val() == 3) {
+                        Alert_Warning("Warning!", "Dear guest, we apologize for not being able to complete the cash financing request, because the product is only available to government sector employees and company listed on saudi stock market employees.");
+                        return false;
+                    }
+                }
+            }
+            if ($("#ddl_EmployerType").val() == 3) {
+                Alert_Warning('Warning!', 'Dear guest, we apologize for not being able to complete the cash financing request, because the product is only available to government sector employees and corporate employees.');
+                return false;
+            }
+            if ($("#ddl_EmployerType").val() == 1 && $("#ddl_ServiceDuration").val() == 1) {
+                Alert_Warning('Warning!', 'Dear guest, we apologize for not being able to complete the cash financing request, due to the request not matching the financing conditions.');
+                return false;
+            }
+            if ($("#ddl_EmployerType").val() == 2 && $("#ddl_ServiceDuration").val() == 1) {
+                Alert_Warning('Warning!', 'Dear guest, we apologize for not being able to complete the cash financing application, because the service period required for company employees is not less than a year');
+                return false;
+            }
+
+            return flag;
+        }
+
+        function IsCalcFormValid() {
+            if ($("#txt_ProductPrice").val() == "") return false;
+            if (parseInt($("#txt_ProductPrice").val()) < 10000 || parseInt($("#txt_ProductPrice").val()) > 100000) { Alert_Warning("Warning!", "Cash Amount Should Be Between 10,000 And 100,000SR!"); return false; }
+            if ($("#monthlySalary").val() == "") return false;
+            if (parseInt($("#monthlySalary").val()) < 3000 || parseInt($("#monthlySalary").val()) > 100000) { Alert_Warning("Warning!", "Net Income Should Be Between 3,000 And 100,000SR!"); return false; }
+
+            return true;
+        }
+
+        function GetTabNo_Next() {
+
+            if (document.getElementById('ContentPlaceHolder1_Hid_Tab_No').value == '1') {
+                document.getElementById('ContentPlaceHolder1_Hid_Tab_No').value = 2
+            }
+
+            if (document.getElementById('ContentPlaceHolder1_Hid_Tab_No').value == '1') {
+                document.getElementById('btn_Submit').value = "Next > Apply Finance"
+            }
+            else if (document.getElementById('ContentPlaceHolder1_Hid_Tab_No').value == '2') {
+                document.getElementById('btn_Submit').value = "Submit"
+            }
+        }
+
+        function ApplyForFinanceButton() {
+            if (CalcValidation()) {
+                $('.finance_opt').children("a").removeClass('active');
+                $('#finance-option').removeClass('active');
+                $('.finance_apply').removeClass('disabled');
+                $('.finance_apply').children("a").addClass('active');
+                $('#apply-finance').addClass('active');
+                $('#finance-option-tab').addClass('done');
+            }
+        }
+
+        function FinanceOptionClick() {
+                $('#finance-option-tab').removeClass('done');
+        }
+
+        function Int_Datepicker(flag) {
+            // INITIALIZE DATEPICKER PLUGIN
+            $('.datepicker').datepicker({
+                todayHighlight: true
+            });
+            if (flag == true) {
+                $('#dob_date_input').hijriDatePicker({
+                    locale: 'en-us',
+                    hijri: false,
+                    showSwitcher: false,
+                });
+            } else {
+                $('#dob_date_input').hijriDatePicker({
+                    locale: 'en-us',
+                    hijri: true,
+                    showSwitcher: false,
+                });
+            }
+        }
+
+    </script>
+    
+    <link href="UI-components/bootstrap-hijridate/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="css/online-financing.css" rel="stylesheet">
+ 
+     <script src="js/jquery-3.5.1.js"></script> 
+
+    <script type="text/javascript">
+        var newsLink ;
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            newURL = 'http://' + document.location.host + url.split('.aspx')[0] + "_ar.aspx" + url.split('.aspx')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#Arabic"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "العربية" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+            
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment.aspx';
+            }else {
+                newsLink = 'SADAD_payment.aspx';
+            }
+
+            var links = ['index',
+                      'Offers_listing',
+                      'fleet_and_business',
+                      'vehicle_listing',
+                      'vehicles_comparison',
+                      'feedbacks',
+                      'account_dashboard',
+                      'offers_details'];
+
+
+            links.forEach(function (item) {
+                
+                if (url.indexOf(item) !== -1) {
+
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                
+                //swal({
+                //    html: true,
+                //    title: "<hr>We value your Feedback",
+                //    text: "Abdul Latif Jameel Finance aims to improve your website experience.<br>Please spare a minute to share your thoughts<br><br>",
+                //    imageUrl: "img/logo.png",
+                //    imageSize: '200x50',          
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "SKIP",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'VISIT'
+
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+            document.getElementById("myForm").style.display = "block";
+                
+            }else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            }
+
+
+            //end of VAT popup code
+            //=====================================================================
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+            var index = url.search("index");
+
+            if (index > 0) {
+                //if (true) {
+                //     mobile_Div.style.display = "none";;
+                //}
+                //else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From App Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From GOOGLE PLAY</p>";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From Windose Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+               
+            }
+
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+        function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+            };
+
+            function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+            };
+
+            function openInNewTab() {
+              var win = window.open(newsLink, '_blank');
+              win.focus();
+            };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+  
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script> 
+    
+    
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+   
+<title>
+	Cash Finance for Individual | Abdul Latif Jameel United Finance
+</title></head>
+<body>
+    <!-- Google Tag Manager -->
+
+
+    <!-- Google tag (gtag.js) -->
+
+<script async="" src="gtag/js?id=UA-7444353-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7444353-1');
+</script>
+
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./cash_financing.aspx" id="form1" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4893AB76">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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">
+        
+       
+        <!-- Wrapper start -->
+        <div class="wrapper">
+
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">Financial Leasing</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            Call us: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="Account_login.aspx.html">Login</a></li>
+    <li><a href="account_registration.aspx.html">Register</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class="active"><a href="#" class="activelangbutton">English</a></li>
+                                            <li><a href="#Arabic" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                             <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>Menu</a>
+                                </div>
+
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo">
+                                        <a href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item"><a href="index.aspx.html" class="nav-link">Home</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Financial products</a>
+                                                <div class="dropdown-menu">
+                                                    <div class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products.aspx.html">
+                                                                            <h6>Finance Calculator</h6>
+                                                                            <p>Get a finance quotation for the vehicle of your choice</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic.aspx.html">
+                                                                            <h6>Murabaha Calculator</h6>
+                                                                            <p>Get a finance quotation</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance.aspx.html">
+                                                                            <h6>Consumer Goods Finance</h6>
+                                                                            <p>Get a Electronics & Home Appliances Finance</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="used_cars_campaign.aspx.html">
+                                                                            <h6>Used Vehicles</h6>
+                                                                            <p>Get your used vehicle with financing.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>  
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing.aspx.html">
+                                                                            <h6>Cash finance for individual</h6>
+                                                                            <p>A financing product that allows individuals to fulfill their financial needs.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref.aspx.html">
+                                                                            <h6>Real Estate Financing</h6>
+                                                                            <p>We provide affordable, Sharia-compliant financial solutions</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf.aspx.html">
+                                                                            <h6>Bab Rizq Jameel Microfinance</h6>
+                                                                            <p>We provide Small and medium-sized enterprises with sharia compliant financing</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="nav-item"><a href="Offers_listing.aspx.html">Offers</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                                            <li class="nav-item"><a href="locations.aspx.html">Locations</a></li>
+                                            <li class="nav-item"><a href="news_listing.aspx.html">News</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about.aspx.html">
+                                                                            <h6>Mission and Vision </h6>
+                                                                            <p>Abdul Latif Jameel United Finance Co. (ALJUF)</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan.aspx.html">
+                                                                            <h6>Tamakan</h6>
+                                                                            <p>We build confidence by enabling dreams</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs.aspx.html">
+                                                                            <h6>FAQ’s</h6>
+                                                                            <p>Everything you need to know</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>                                    
+                                       
+                                        <a class="navbar-brand logo-en" href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top">
+                                        </a>
+                                    </div>
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                <!--<input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength="255" />
+                                                <input name="ctl00$btn_Search" type="submit" id="btn_Search" class="sb-search-submit" />-->
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input id="txt_Search" type="text" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength='255'>
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+    
+    
+    <!-- Page header start -->
+    <section class="pageHeaderWide">
+        <div class="container pageHeader">
+            <div class="row">
+                <div class="col-sm-8">
+                    <ol class="breadcrumb">
+                        <li><a href="index_ar.aspx.html">Homepage</a></li>
+                        <li><a href="finance_options_ar.aspx-10.html">Finance</a></li>
+                        <li class="active">Finance Calculator</li>
+                    </ol>
+                </div>
+                <div class="col-md-4 col-12 text-left text-md-right text-white" style="font-size:15px;">
+                    The latest price update was on 04/03/2023
+                </div>
+                <div class="col-sm-6">
+                    <h1 itemprop="name">Cash Finance for Individual</h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="contentAreaWide">
+        <header class="bg-head">
+            <div class="bg-head-img d-none d-sm-none d-md-block">
+                <img src="img/bg-deal-head.png" alt="" title="">
+            </div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+                        <div class="text-center pt-3">
+                            <img src="img/Cash-Jameel-01.jpg" alt="Cash Finance" title="Cash Finance">
+                        </div>
+                    </div>
+                    <div class="col-md-8 offset-md-2">
+                        <p class="text-center">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="about--offer">
+                        <h2 class="fiscal__title">Cash Finance for Individual 
+                        </h2>
+                        <p class="about--offer__text" style="padding-right: 0">
+                            A financing product that allows individuals to fulfill their financial needs by financing a desired amount of cash through 
+                            Islamic tawarruq while complying with the terms and conditions of the product.
+                        
+                        </p>
+                        <h4 class="about--offer__title title_ofer">* Conditions (For individuals):
+                        </h4>
+                        <ul class="enjoybenefits__list">
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                Saudis: 
+                                <ul>
+                                    <li class="pl-0 pb-0">Government sector employees.</li>
+                                    <li class="pl-0 pb-0">Private sector employees.</li>                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                Non-Saudis:
+                                <ul>
+                                    <li class="pl-0 pb-0">For those who work in government Sector or companies listed on the Saudi stock market only.</li>                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                The financing amount ranges from 10,000 to 100,000 Saudi riyals.
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                The financing period ranges from 12 months to 60 months.
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                The minimum salary is 3,000 Saudi riyals.
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                Without a Guarantor.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="enjoybenefits">
+
+                        <h2 class="fiscal__title">Required Documents:</h2>
+
+                        <ul class="enjoybenefits__list">
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                ID Number.
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                Salary Certificate.
+                            </li>
+                            <li>
+                                <img src="img/Checked.png" alt="" title="">
+                                Bank IBAN Proof or bank card estate the IBAN. 
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="about--offer">                        
+                        <h2 class="fiscal__title">You can obtain 30 thousand with easy steps by downloading the application</h2>
+                        <p>
+                            You can get the application through our page
+                            <a href="mobile_app.aspx.html">"Abdul Latif Jameel Finance with you through mobile app"</a>
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12">
+                    <!-- Tabs start -->
+                    <div role="tabpanel" class="wizard-tabs p-0">
+                        <ul class="nav nav-tabs border-gray opt_tabs" role="tablist">
+                            <li class="nav-item finance_opt" role="presentation" onclick="FinanceOptionClick();">
+                                <a class="nav-link active" href="#finance-option" id="finance-option-tab" data-toggle="tab" role="tab" aria-controls="finance-option" aria-selected="true">
+                                    <span class="badge badge-progress rounded-circle">1</span>
+                                    <span class="badge badge-done-chk rounded-circle"><i class="done-chk"></i></span>
+                                    <span class="wz-title">Financial & Loan Details</span>   
+                                </a>
+                            </li>
+                            <li class="nav-item finance_apply disabled" role="presentation">
+                                <a href="#apply-finance" data-toggle="tab" class="nav-link" id="apply-finance-tab" role="tab" aria-controls="apply-finance" aria-selected="false">
+                                    <span class="badge badge-progress rounded-circle">2</span>
+                                   <span class="badge badge-done-chk rounded-circle"><i class="done-chk"></i></span>
+                                   <span class="wz-title">Apply for finance</span>    
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active p-0" id="finance-option" role="tabpanel" aria-labelledby="finance-option-tab">
+                                <div class="tab-inner">
+                                    <div class="row m-0">
+                                        <div class="col-sm-4 p-4">
+                                            <div class="financeOptCalcRow px-0">
+                                                <div class="form-group">
+                                                    <label>Cash Required</label>
+                                                    <div class="input-hint-q">
+                                                        <span class="c-icon question-icon" id="i1">
+                                                            <span class="popOver popOverHide">
+                                                                <a href="#blank"><i class="c-icon close-icon"></i></a>
+                                                                <p>cash required cannot exceed 100,000 SR.</p>
+                                                            </span>
+                                                        </span>
+                                                        <span class="valueUnit">SAR</span>
+                                                    </div>
+                                                    <input name="ctl00$ContentPlaceHolder1$txt_ProductPrice" type="number" id="txt_ProductPrice" class="form-control SliderOutput w-85">
+                                                    
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="financeOptCalcRow px-0 mt-4">
+                                                <div class="alert alert-danger" role="alert">
+                                                    <p>
+                                                        The monthly payments and the annual percentage rate are subject to change in the event of influencing factors such 
+                                                        as the customer's credit record.
+                                                        <br>
+                                                        * VAT is not included
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-5 financeOptionCalculator p-4">
+                                            <div id="ContentPlaceHolder1_update_Calc">
+	
+                                                    <div class="financeOptCalcRow px-0">
+                                                        <div class="form-group">
+                                                            <label>Net Income</label>
+                                                            <div class="input-hint-q">
+                                                                <span class="c-icon question-icon" id="i2">
+                                                                    <span class="popOver popOverHide">
+                                                                        <a href="#blank"><i class="c-icon close-icon"></i></a>
+                                                                        <p>Your monthly payment should be 40% of your net monthly income or less.</p>
+                                                                        <p>Net monthly income is the monthly income withholds deductions.</p>
+                                                                    </span>
+                                                                </span>
+                                                                <span class="valueUnit">SAR</span>
+                                                            </div>
+                                                            <input name="ctl00$ContentPlaceHolder1$monthlySalary" type="text" id="monthlySalary" class="form-control SliderOutput w-90" data-slider-min="3000" data-slider-max="100000" data-slider-step="5" data-slider-value="10000">
+                                                            
+                                                            &nbsp;
+                                                        </div>
+                                                    </div>
+                                                    <div class="financeOptCalcRow px-0">
+                                                        <div class="form-group">
+                                                            <label>Period</label>
+                                                            <ul id="Ul1" class="periodList">
+                                                                <li id="Period_6" class="d-none"><a href="#lists" onclick="ChangePeriod(6);">6</a></li>
+                                                                <li id="Period_12"><a href="#lists" onclick="ChangePeriod(12);">12</a></li>
+                                                                <li id="Period_18"><a href="#lists" onclick="ChangePeriod(18);">18</a></li>
+                                                                <li id="Period_24"><a href="#lists" onclick="ChangePeriod(24);">24</a></li>
+                                                                <li id="Period_30"><a href="#lists" onclick="ChangePeriod(30);">30</a></li>
+                                                                <li id="Period_36"><a href="#lists" onclick="ChangePeriod(36);">36</a></li>                                                                
+                                                                <li id="Period_42"><a href="#lists" onclick="ChangePeriod(42);">42</a></li>
+                                                                <li id="Period_48"><a href="#lists" onclick="ChangePeriod(48);">48</a></li>                                                                
+                                                                <li id="Period_60" class="active"><a href="#lists" onclick="ChangePeriod(60);">60</a></li>
+                                                             </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 px-0">
+                                                        <div class="rengerWraper">
+                                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btn_Calculate" value="Calculate my Finance" onclick="OnCalculateClick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btn_Calculate&quot;, &quot;&quot;, true, &quot;VG_Calc&quot;, &quot;&quot;, false, false))" id="btn_Calculate" class="gbtn btn-teal btn-regular w-100">
+                                                        </div>
+                                                    </div>
+                                                    <input name="ctl00$ContentPlaceHolder1$Hid_Period" type="hidden" id="ContentPlaceHolder1_Hid_Period" value="0">
+                                                    <input name="ctl00$ContentPlaceHolder1$Hid_MonthlyPayment" type="hidden" id="ContentPlaceHolder1_Hid_MonthlyPayment" value="0">
+                                                    <input name="ctl00$ContentPlaceHolder1$Hid_TotalCost" type="hidden" id="ContentPlaceHolder1_Hid_TotalCost" value="0">
+                                                
+</div>
+                                        </div>
+                                        <div class="col-sm-3 blueBox financeOptCalcRslt">
+                                            <div id="ContentPlaceHolder1_update_Result">
+	
+                                                    <div class="financeOptCalcRsltRow">
+                                                        <h4>Financing Results</h4>
+                                                        <h6>Period</h6>
+                                                        <h2>
+                                                            </h2>
+                                                    </div>
+                                                    <div class="financeOptCalcRsltRow">
+                                                        <h6>Monthly Payment</h6>
+                                                        <h2>
+                                                            </h2>
+                                                    </div>
+                                                    <div class="financeOptCalcRsltRow">
+                                                        <h6>Total Tawarruq Amount</h6>
+                                                        <h2>
+                                                            </h2>
+                                                    </div>
+                                                    <div class="financeOptCalcRsltRow">
+                                                        <h6>Admin Fee</h6>
+                                                        <span class="c-icon question-icon" id="Span3">
+                                                            <span class="popOver right popOverHide">
+                                                                <a href="#blank"><i class="c-icon close-icon"></i></a>
+                                                                <p>
+                                                                    1% of the Total Tawarruq Amount
+                                                                </p>
+                                                            </span>
+                                                        </span>
+                                                        <h2>
+                                                            </h2>
+                                                    </div>
+                                                    <div class="financeOptCalcRsltRow">
+                                                        <h6>Admin Fee VAT</h6>
+                                                        <h2>
+                                                            </h2>
+                                                    </div>
+                                                    <div class="financeOptCalcRsltRow">
+                                                        <h6>APR</h6>
+                                                        <span class="c-icon question-icon" id="Span2">
+                                                            <span class="popOver right popOverHide">
+                                                                <a href="#blank"><i class="c-icon close-icon"></i></a>
+                                                                <p>
+                                                                    Annual Percentage Rate (APR) is a number that represents the total yearly cost of borrowing money, expressed as a percentage of the principal loan amount.
+                                                                </p>
+                                                            </span>
+                                                        </span>
+                                                        <h2>
+                                                            </h2>
+                                                    </div>
+                                                    <div class="financeOptCalcRsltRow" data-step="9" data-intro="step nine" data-position="top">
+                                                        <input type="submit" name="ctl00$ContentPlaceHolder1$btn_ApplyForFinance" value="Apply for finance" onclick="ApplyForFinanceButton();" id="ContentPlaceHolder1_btn_ApplyForFinance" class="gbtn btn-slate btn-regular">
+                                                    </div>
+                                                    <div id="ContentPlaceHolder1_resultArea" class="disabled-area"></div>
+                                                
+</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="tab-pane p-0 " id="apply-finance" role="tabpanel" aria-labelledby="apply-finance-tab">
+                                <div class="tab-inner pt-md-0 pt-sm-4">
+                                    
+                                         <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="mb11">First Name</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txt_First_Name" type="text" maxlength="50" id="txt_First_Name" class="form-control">
+                                                            <br>
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="mb11">Last Name</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txt_Last_Name" type="text" maxlength="50" id="txt_Last_Name" class="form-control">
+                                                            <br>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="ContentPlaceHolder1_Pnl_Form">
+	
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">ID Number</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txt_ID_Number" type="text" maxlength="10" id="txt_ID_Number" class="form-control width100pi"><br>
+                                                                    <br>
+                                                                    
+                                                                    
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group ">
+                                                                    <label class="mb11">Gender</label>
+                                                                    <br>
+                                                                    <div class="radio radio-primary inline-blk between20 pl-4">
+                                                                        <input id="rdo_Male" type="radio" name="ctl00$ContentPlaceHolder1$gender" value="1" checked="checked"><label for="rdo_Male">Male</label>
+                                                                    </div>
+                                                                    <div class="radio radio-primary inline-blk between20">
+                                                                        <input id="rdo_Female" type="radio" name="ctl00$ContentPlaceHolder1$gender" value="2"><label for="rdo_Female">Female</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">Date of Birth</label>
+                                                                    <div class="input-group p-0">
+                                                                        <div class="floating-label w-100 m-0">
+                                                                            <input name="ctl00$ContentPlaceHolder1$dob_date_input" id="dob_date_input" type="text" placeholder=" " class="form-control date-input floating-input">
+                                                                            <span class="highlight"></span>
+                                                                            <label></label>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">Mobile</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txt_Mobile" type="text" maxlength="10" id="txt_Mobile" class="form-control"><br>
+                                                                    
+                                                                    <br>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">Email</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txt_Email" type="text" id="txt_Email" class="form-control"><br>
+                                                                    
+                                                                    <br>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">City</label>
+
+                                                                    <select name="ctl00$ContentPlaceHolder1$lst_Residence_City" id="lst_Residence_City" class="selectpicker form-control">
+		<option selected="selected" value="0"> Select City</option>
+		<option value="151001">Abha</option>
+		<option value="162002">Umluj</option>
+		<option value="211001">AL Bahah</option>
+		<option value="142003">Jubail</option>
+		<option value="222002">AL Jouf</option>
+		<option value="112002">Haweyah</option>
+		<option value="142004">Khobar</option>
+		<option value="102003">Kharj</option>
+		<option value="142005">Khafjey</option>
+		<option value="141001">Dammam</option>
+		<option value="102005">Dawadmey</option>
+		<option value="101001">Riyadh</option>
+		<option value="112003">Taif</option>
+		<option value="123006">Ula</option>
+		<option value="222003">Qerayat</option>
+		<option value="142007">Qatif</option>
+		<option value="113010">Qonfodah</option>
+		<option value="103014">Qwaiaaeyah</option>
+		<option value="102007">Majmaah</option>
+		<option value="213003">Makhwah</option>
+		<option value="121001">Madina</option>
+		<option value="142009">Hafouf</option>
+		<option value="163003">Wajh</option>
+		<option value="123007">Badr Hunain</option>
+		<option value="101002">Buraydah</option>
+		<option value="213005">Baljurashey</option>
+		<option value="152003">Beesha</option>
+		<option value="161001">Tabouk</option>
+		<option value="163004">Teemaa</option>
+		<option value="191001">Jizan</option>
+		<option value="112004">Jeddah</option>
+		<option value="171001">Hael</option>
+		<option value="142012">Hafer Baten</option>
+		<option value="103018">Houtat Baney Tameem</option>
+		<option value="152004">Khamees Moshait</option>
+		<option value="223004">Domat Aljandal</option>
+		<option value="112005">Rabegh</option>
+		<option value="182002">Rafhaa</option>
+		<option value="202002">Sharorah</option>
+		<option value="103021">Shaqraa</option>
+		<option value="192003">Sabia</option>
+		<option value="142016">Safwa</option>
+		<option value="163007">Dhebaa</option>
+		<option value="223006">Tabarjal</option>
+		<option value="182003">Traif</option>
+		<option value="181001">Arar</option>
+		<option value="102008">Afeef</option>
+		<option value="102009">Anaizah</option>
+		<option value="153010">Mohayel</option>
+		<option value="111001">Makkah Al-Mukarramah</option>
+		<option value="201001">Najran</option>
+		<option value="103026">Wady Al Dawaser</option>
+
+	</select>
+                                                                    
+                                                                    <br>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">Nearest Branch</label>
+                                                                    <select name="ctl00$ContentPlaceHolder1$lst_Branch" id="lst_Branch" class="selectpicker form-control">
+		<option value="0"> Choose branch</option>
+		<option value="1022">Abha</option>
+		<option value="1055">Abu Arish2</option>
+		<option value="1008">AL - Nahdha</option>
+		<option value="1036">Al Ahad</option>
+		<option value="1105">AL ameer Soultan</option>
+		<option value="1026">Al Baha</option>
+		<option value="917">Al Estismar </option>
+		<option value="1107">Al haj Street</option>
+		<option value="1100">AL HAMADANIAH </option>
+		<option value="972">Al Jouf</option>
+		<option value="950">AL khalidiah</option>
+		<option value="921">Al Khober</option>
+		<option value="1041">Al Makhwa</option>
+		<option value="878">Al Manarat Toshiba</option>
+		<option value="30063">Al Matar Dist</option>
+		<option value="840">AL Muzahmiah</option>
+		<option value="885">Al nakheel</option>
+		<option value="894">Al Olaya</option>
+		<option value="1298">Al Qadisiah Fleet</option>
+		<option value="906">Al Sahafa</option>
+		<option value="1087">Al Sail</option>
+		<option value="1009">ALDAYR</option>
+		<option value="995">Alfarooq</option>
+		<option value="1164">Aljisr</option>
+		<option value="30009">ALJUL Mohamadia</option>
+		<option value="30465">Al-Nahada</option>
+		<option value="1051">Al-Qounfoudah</option>
+		<option value="902">Al-Rawabi</option>
+		<option value="1106">Alrehab</option>
+		<option value="1092">Al-Safa ALJ</option>
+		<option value="30450">Areas Outside Riyadh</option>
+		<option value="976">Badr</option>
+		<option value="30454">Baha &amp; Taif WSalers</option>
+		<option value="1025">Beesha</option>
+		<option value="973">Buraidah</option>
+		<option value="30434">C Multi Brand</option>
+		<option value="898">Comm-lease</option>
+		<option value="841">Comm-Lease 2</option>
+		<option value="920">Dammam</option>
+		<option value="981">Domat Aljandal</option>
+		<option value="30449">Eastern Wholesalers</option>
+		<option value="949">Fleet Branch</option>
+		<option value="1065">Fleet Sales Jeddah</option>
+		<option value="900">Fleet Sales Riyadh</option>
+		<option value="1030">Gizan</option>
+		<option value="925">Hafr Al Batn</option>
+		<option value="970">Hail</option>
+		<option value="930">Hajr</option>
+		<option value="30235">Jeddah Multi-Brand</option>
+		<option value="923">Jubail</option>
+		<option value="928">Khafji</option>
+		<option value="1023">Khamis Mushait</option>
+		<option value="30237">Khobar MB Financing</option>
+		<option value="839">Khurais</option>
+		<option value="1155">LexusGizan</option>
+		<option value="30288">Madina Monawarra </option>
+		<option value="30453">MadinahYanbu WSalers</option>
+		<option value="1038">Mahil Aseer</option>
+		<option value="1071">Makkah Mukkarama</option>
+		<option value="1069">Medina Rd.</option>
+		<option value="1063">Medina Road K 14</option>
+		<option value="1068">Mekkah Rd.</option>
+		<option value="984">Moushrif</option>
+		<option value="1024">Najran</option>
+		<option value="845">New Badeeah</option>
+		<option value="926">Qatif</option>
+		<option value="962">Qeba</option>
+		<option value="903">Qurtuba</option>
+		<option value="30430">Rabegh</option>
+		<option value="993">Rafha</option>
+		<option value="1126">Rusafa</option>
+		<option value="946">Safwa</option>
+		<option value="958">Soultanah</option>
+		<option value="855">South Riyadh Fleet </option>
+		<option value="30452">South Riyadh WS FIN</option>
+		<option value="969">Tabook</option>
+		<option value="983">Tabuk - 2</option>
+		<option value="1013">Taif</option>
+		<option value="30453">Taif WSales</option>
+		<option value="30453">Taif WSales</option>
+		<option value="30289">Tibah ALJR</option>
+		<option value="1076">Toshiba</option>
+		<option value="1015">Toshiba Al Taif</option>
+		<option value="940">Toshiba Dammam</option>
+		<option value="1102">Toshiba makkah</option>
+		<option value="1090">TOYOTA Auto Mall</option>
+		<option value="978">Umlog</option>
+		<option value="912">Used Car</option>
+		<option value="1094">Used Car Kakih</option>
+		<option value="860">Wadi Dawaser</option>
+		<option value="30374">مكة - السمو</option>
+
+	</select>
+
+                                                                    
+                                                                    <br>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">Employer Type</label>
+                                                                    <select name="ctl00$ContentPlaceHolder1$ddl_EmployerType" id="ddl_EmployerType" class="selectpicker form-control">
+		<option selected="selected" value="0">Select an Option</option>
+		<option value="1">Public Sector</option>
+		<option value="2">Corporate</option>
+		<option value="3">Establishment</option>
+
+	</select><br>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div id="ContentPlaceHolder1_div_ServiceDuration" class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="mb11">Service Duration</label>
+                                                                    <select name="ctl00$ContentPlaceHolder1$ddl_ServiceDuration" id="ddl_ServiceDuration" class="selectpicker form-control">
+		<option value="0">Select an Option</option>
+
+	</select><br>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+</div>
+                                                    <div id="ContentPlaceHolder1_update_MonthlyPayment">
+	
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group ">
+                                                                        <label class="mb11">Any Monthly Payment</label>
+                                                                        <br>
+                                                                        <div class="radio radio-primary inline-blk between20 pl-4">
+                                                                            <input id="rdo_AnyMonthlyPayment_Yes" type="radio" name="ctl00$ContentPlaceHolder1$monthlypayment" value="1" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rdo_AnyMonthlyPayment_Yes\&#39;,\&#39;\&#39;)&#39;, 0)"><label for="rdo_AnyMonthlyPayment_Yes">Yes</label>
+                                                                        </div>
+                                                                        <div class="radio radio-primary inline-blk between20">
+                                                                            <input id="rdo_AnyMonthlyPayment_No" type="radio" name="ctl00$ContentPlaceHolder1$monthlypayment" value="2" checked="checked"><label for="rdo_AnyMonthlyPayment_No">No</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        
+</div>
+
+                                                    <div class="form-group">
+                                                        <div class="tab-pane-title">
+                                                            <p>Upload The following Documents</p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8 p-3">
+                                                                <label>ID</label>
+                                                                <div class="input-group">
+                                                                    <div class="custom-file">
+                                                                        <input name="ctl00$ContentPlaceHolder1$file_Id" type="file" id="file_Id" class="custom-file-input" aria-describedby="inputGroupFileAddon01" accept="image/jpg,image/png,image/jpeg,application/pdf" max-size="2000000">
+                                                                        <label class="custom-file-label" for="file_Id">Choose file</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8 p-3">
+                                                                <label>Salary Certificate</label>
+                                                                <div class="input-group">
+                                                                    <div class="custom-file">
+                                                                        <input name="ctl00$ContentPlaceHolder1$file_SalaryCertificate" type="file" id="file_SalaryCertificate" class="custom-file-input" aria-describedby="inputGroupFileAddon01" accept="image/jpg,image/png,image/jpeg,application/pdf" max-size="2000000">
+                                                                        <label class="custom-file-label" for="file_SalaryCertificate">Choose file</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8 p-3">
+                                                                <label>Bank IBAN Proof</label>
+                                                                <div class="input-group">
+                                                                    <div class="custom-file">
+                                                                        <input name="ctl00$ContentPlaceHolder1$file_BankIBANProof" type="file" id="file_BankIBANProof" class="custom-file-input" aria-describedby="inputGroupFileAddon01" accept="image/jpg,image/png,image/jpeg,application/pdf" max-size="2000000">
+                                                                        <label class="custom-file-label" for="file_BankIBANProof">Choose file</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group form-group-left pt-0">
+                                                                <label for="" class="mb12">Are You A Robot?</label>
+                                                                <div class="g-recaptcha g-recaptcha-margin-left" data-sitekey="6LcLFwwTAAAAANyLXxeMItgo8kMZsG4itE9PxTh6"></div>
+                                                                <script src='recaptcha/api-2.js?hl=en' async="" defer=""></script>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    <div class="card-footer p-4">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                
+                                                        <input type="submit" name="ctl00$ContentPlaceHolder1$btn_Submit" value="Apply for finance" onclick="WaitMessage_popup(event);GetTabNo_Next();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btn_Submit&quot;, &quot;&quot;, true, &quot;VG_Personal&quot;, &quot;&quot;, false, false))" id="btn_Submit" class="gbtn btn-slate btn-regular w-50">
+                                                    
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="securiy-note ml-sm-3">
+                                                    Your information is secured
+                                                </p>
+                                            </div>
+                                        </div>                                        
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input name="ctl00$ContentPlaceHolder1$Hid_Tab_No" type="hidden" id="ContentPlaceHolder1_Hid_Tab_No" value="1">
+        <input name="ctl00$ContentPlaceHolder1$Hid_captcha" type="hidden" id="Hid_captcha" value="0">
+        <br>
+        <br>
+    </section>
+
+    <script src="UI-components/moment.min.js"></script>
+    <script src="UI-components/bootstrap-hijridate/bootstrap-hijri-datetimepicker.min.js"></script>
+    <script>
+        $('#file_Id').on('change',
+            function () {
+                //get the file name
+                var fileName = this.files[0].name;
+                //replace the "Choose a file" label
+                debugger;
+
+                $(this).next('.custom-file-label').html(fileName);
+            });
+
+        $('#file_SalaryCertificate').on('change',
+            function () {
+                //get the file name
+                var fileName = this.files[0].name;
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            });
+
+        $('#file_BankIBANProof').on('change',
+            function () {
+                //get the file name
+                var fileName = this.files[0].name;
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+    </script>
+
+
+</main>
+
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+          
+                            <h6><strong>Vehicles</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options.aspx-5.html?BrandID=1">Toyota</a></li>
+                                <li><a href="finance_options.aspx-6.html?BrandID=2">Lexus</a></li>
+                                <li><a href="finance_options.aspx-7.html?BrandID=2015">Hyundai</a></li>
+                                <li><a href="finance_options.aspx-8.html?BrandID=2019">Kia</a></li>
+                                <li><a href="finance_options.aspx-9.html?BrandID=2053">Geely</a></li>
+                                <li><a href="vehicles_comparison.aspx.html">Vehicles Comparison</a></li>
+                             
+                            </ul>
+
+                            <h6><strong>SME Financing</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry.aspx.html">Make A Fleet Enquiry</a></li>
+                                <li><a href="fleet_and_business.aspx.html">Our Fleet Branches</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">Suppliers services</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Tools</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                <li><a href="cash_financing.aspx.html">Cash finance for individual </a></li>
+                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance </a></li>
+                                <li><a href="how_to_auto_finance.aspx.html">How to finance a vehicle?</a></li>
+                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                <li><a href="Offers_listing.aspx.html">Offers</a></li>                               
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Your Account</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="Account_login.aspx.html">Account Login</a></li>
+                                <li><a href="account_registration.aspx.html">New Registration</a></li>
+                                <li><a href="account_password_reset.aspx.html">Recover Password</a></li>
+                                <li><a href="SADAD_payment.aspx.html">SADAD Payment</a></li>
+                                <li><a href="Documents/ServicesFeesListEn.pdf">Services Fees List</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Locations</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations.aspx.html">Branches Map</a></li>
+                                <li><a href="locations_ho.aspx.html">Let Us Call You</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">Wholesalers List</a></li>
+                            </ul>
+                            <h6><strong>Contact us</strong></h6>
+                            <ul class="footerTopMenu">
+                          
+                                <li><a href="feedbacks.aspx.html">Feedbacks</a></li>
+                                <li><a href="feedbacks.aspx.html">Complaints</a></li>
+                                <li><a href="feedbacks_whistleblowing.aspx.html">Whistleblowing</a></li>
+
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Abdul Latif Jameel Finance</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about.aspx.html">About Us</a></li>
+                                <li><a href="WebImages/Links/27/File_en.pdf">Consumer Protection</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_En.pdf">Principles of Responsible Financing for Individuals</a></li>
+                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                <li><a href="Documents/Complines_How_To_En.jpg">Complaints Handling Process</a></li>
+                                <li><a href="http://careers.aljfinance.com/">Careers</a></li>
+                                <li><a href="feedbacks_training.aspx.html">Training Request</a></li>
+                                <li><a href="Documents/ALJUF_Terms_en.pdf">Financial Leasing Conditions</a></li>
+                                <li><a href="finance_reports.aspx.html">Financial Reports</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingEn.pdf">General terms and conditions</a></li>  
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram" target="_blank">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                              
+							  <li><a href="https://www.facebook.com/Aljfinance" title="Facebook" target="_blank">
+                                    <!-- <i class="fa fa-facebook"></i> --> 
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter" target="_blank">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks.aspx.html" class="btn-block footerFeedback">Complaints</a>
+                            <a href="WS_login.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">Wholesalers</a>
+                            <span id="siteseal" class=" btn-block footerFeedback"><script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script></span>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                            <!--<span class="c-icon appleStore-icon"></span>-->
+                                            <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>APP STORE</p>
+                                        </a></li>
+
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                            <!--<span class="c-icon blackberry-icon"></span>-->
+                                            <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>GOOGLE PLAY</p>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreApp.png" alt="iOS App" title="iOS App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                    <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>APP STORE</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayApp.png" alt="Google App" title="Google App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>GOOGLE PLAY</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">
+                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer.aspx.html">Copyright</a></li>
+                                <li><a href="terms_of_use.aspx.html">Terms of Usage</a></li>
+                                <li><a href="cookie_policy.aspx.html">Cookies Policy</a></li>
+                                <li><a href="accessibility_policy.aspx.html">Accessibility Policy</a></li>
+                                <li><a href="privacy_policy.aspx.html">Privacy Policy</a></li>
+                                <li><a href="Documents/Personal_Data_Protection_En.pdf" target="_blank">Personal Data Protection Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 Abdul Latif Jameel United Finance Company. Permission to use this site is granted strictly subject to the Terms of Use. The Abdul Latif Jameel logotype and pentagon-shaped graphic are trademarks, or registered trademarks of Abdul Latif Jameel IPR Company Limited.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index.aspx.html">Home</a></li>
+                        
+                          <li class="dropdownTab"><a href="#" data-toggle="dropdown">Financial products</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">Financial products</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                                <li><a href="cash_financing.aspx.html">Cash finance for individual</a></li>
+                                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance</a></li>
+                                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                                <li><a href="how_to_auto_finance.aspx.html">How to vehicle finance?</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="Offers_listing.aspx.html">Offers</a></li>
+                        <li><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                        <li><a href="locations.aspx.html">Locations</a></li>
+                        <li><a href="news_listing.aspx.html">News</a></li>
+                        
+                        <li class="dropdownTab"><a href="vehicle.aspx.html" data-toggle="dropdown">About Us</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="index.aspx.html"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">About Us</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about.aspx.html">Mission and Vision</a></li>
+                                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="Account_login.aspx.html">Account Login</a></li>
+                        <li><a href="account_registration.aspx.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>Call us 8002442211</a></li>
+                  
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="Search ALJ Finance" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                <img class="float-xs-left" title="App Store" alt="App Store" src="img/appStore.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>APP STORE</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                <img class="float-xs-left" title="Google play" alt="Google play" src="img/googlePlay.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>GOOGLE PLAY</p>
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+  <style type="text/css">
+        /*common*/
+      .loading-wrap
+      {
+          background: rgba(128,128,128,0.8);
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 2000;
+          display: none;
+      }
+
+        .loading-wrap .loading{
+            max-width:617px;
+            max-height:210px;
+            margin: auto;
+            position: relative;
+            top: 180px;
+            overflow: hidden;
+            -moz-border-radius: 3px 3px 0 0;
+            -webkit-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0; /* border radius */
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box; /* prevents bg color from leaking outside the border */
+            background-color: #fff; /* layer fill content */
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+            background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+        }
+        .loading-wrap .loading-head{
+            border-bottom: 7px solid #4d8092;
+            background-color: #fff;
+            padding: 17px 30px;
+        }
+        .loading-wrap .loading-content{
+            background-color: #fff;
+            padding: 21px 30px 18px;
+        }
+        .loading-wrap .loading-head figure{
+            position: relative;
+            top: -1px;
+        }
+
+        .font-18{font-size: 18px;}
+        .font-14{font-size: 14px;}
+        .mb25{margin-bottom:25px;}
+
+        @media (max-width: 767px)  {
+            .loading-wrap .loading{
+                max-height:inherit;
+            }
+            .loading-wrap .loading-head h1{
+                font-size: 40px;
+            }
+        }
+
+        .one {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.0s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.0s;
+        }
+
+        .two {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.2s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.2s;
+        }
+
+        .three {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.3s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.3s;
+        }
+
+        @-webkit-keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+/*en only*/
+    .loading-wrap .loading-head h1{
+        font-size: 52px;
+    }
+    </style>
+
+    <section class="loading-wrap" style="display:block;z-index: 9999;visibility:hidden;" id="PleaseWait" tabindex="-1">
+            
+        <div class="loading">
+            <div class="loading-head">
+                
+                   <button type="button" class="close closeRoundWhite-icon" style="margin:-10px -20px 0 0 ;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span>Loading</span><span class="one">.</span><span class="two">.</span><span class="three">.</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">Please wait. We are loading the information you are requesting.</p>
+                <p class="font-14">Does it take more time than expected? Please <a href="feedbacks.aspx.html"> contact us</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Tablet menu end -->
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">SADAD Payment</button>
+
+        <div class="form-popup" id="myForm">
+          <div class="form-container">
+              <div class="survey-logo"><img src="img/logo-tamakan.svg"></div>
+              <div class="survey-bg">
+                <h1 class="survey-title">Dear Guest</h1>
+                <p class="survey-text">As we value your health and your loved ones<br>you can perform your monthly payments by SADAD via your banking payment channels.</p>    
+              </div>
+              <div class="survey-footer">
+                <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">SADAD</button>
+                <button type="button" class="btn cancel" onclick="javascript:closeForm()">CLOSE</button>
+              </div>
+    
+          </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <!-- Script for tablet menu -->
+        <script src="js/sideMenu-script.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+          <script src="js/jquery.md5.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Int_Datepicker(true);//]]>
+</script>
+</form>
+    
+    <!-- YAMLI CODE START -->
+    <script type="text/javascript" src="js/yamli_api.js"></script>
+    <script type="text/javascript">
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name_Update", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name_Update", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street_Home", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Sponser_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Driver_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative1_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative2_Name", { settingsPlacement: "hide" });
+        }
+        
+        
+    </script>
+    <!-- YAMLI CODE END -->
+     <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+   
+
+
+</body>
+</html>

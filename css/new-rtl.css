@@ -1,0 +1,56 @@
+.contact_list ,.list-dash-tabs{
+	padding-right: 0;
+}
+.list-dash-tabs_num{
+	right: 0;
+	left: auto !important;
+}
+.list-dash-tabs li{
+	padding-right: 55px !important;
+}
+/*======================*/
+/* privace policy 		*/
+/*======================*/
+.policey__desc{
+	font-size: 20px;
+	line-height: 30px;
+	margin-bottom: 30px;
+}
+.policey__desc > a{
+	color: #88AAB4;
+}
+.policey__contet{
+	margin-top: 60px;
+}
+.policey__list{
+	margin-bottom: 30px;
+	list-style: none;
+}
+.policey__list li{
+	position: relative;
+	padding-right: 30px;
+}
+.policey__list li{
+	font-size: 20px;
+	line-height: 30px;
+}
+.policey__list li:before{
+	content:"\f04d";
+	position: absolute;
+	right: 0;
+	font-family: "FontAwesome";
+	color: #4F869A;
+	font-size: 12px;
+}
+.tel-code ,.tel-number{
+	padding-right: 10px;
+}
+@media (max-width: 999px){
+	.row__tab_donwlowd {
+	  	display: block !important;
+	}	
+	.row__tab:hover .row__tab_donwlowd{
+		position: static !important	;
+	}
+
+}

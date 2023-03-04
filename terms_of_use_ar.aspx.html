@@ -1,0 +1,1508 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="تويوتا, لكزس, الشركة المتحدة للبيع بالتقسيط, تمويل , سيارات ,  تويوتا, تقسيط السيارات, تأجير السيارات, سيارات, تقسيط أجهزة منزلية, تقسيط , تأجير , سيارة , كامري, كورولا, كيا, هيونداي, جيلي, مستعمل, يارس, ليموزين, لكزس, لاندكروزر, برادو, عبد اللطيف جميل , تويوتا, تويوتا السعودية. تأجير السيارات, أفضل , عروض , السعودية , السعوديين , وظائف , وكلاء السيارات, معارض , وكيل , معرض , أسعار, شريعة , إسلام , بالتقسيط , بالتأجير , تمويل المستعمل"><meta property="og:locale" content="ar_SA"><meta property="og:type" content="article"><meta property="og:title" content="شركة عبد اللطيف جميل المتحدة للتمويل"><meta property="og:description" content="تقوم شركة عبد اللطيف جميل المتحدة للتمويل بتمويل جميع أنواع  السيارات الجديدة والمستعملة وكذلك الأجهزة المنزلية و الإلكترونيات وبعض أنواع المعدات الثقيلة من خلال نظامي الإيجار التمويلي  أو المرابحة ضمن الشروط والأحكام الخاصة بها ."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan-ar.svg">
+
+    <!-- Boots`trap CSS-->
+
+    <link href="css/bootstrap.rtl.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/global-style.css" rel="stylesheet" type="text/css"><link href="css/bootstrap3-rtl-custom.css" rel="stylesheet">
+
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/media-queries-ar.css" rel="stylesheet"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.5.1.js"></script>
+     <script src="js/jquery.md5.js"></script>
+    <script type="text/javascript">
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        var newsLink;
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            if (url.toLowerCase().indexOf(".aspx") <= 0) {
+                url = url + "index_ar.aspx";
+            }
+
+            newURL = 'http://' + document.location.host + url.split('_ar')[0] + url.split('_ar')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#English"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "English" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment_ar.aspx';
+            } else {
+                newsLink = 'SADAD_payment_ar.aspx';
+            }
+
+            var links = ['index',
+                'Offers_listing',
+                'fleet_and_business',
+                'vehicle_listing',
+                'vehicles_comparison',
+                'feedbacks',
+                'account_dashboard',
+                'offers_details'];
+
+            links.forEach(function (item) {
+
+                if (url.indexOf(item) !== -1) {
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                //swal({
+                //    html: true,
+                //    title: "<hr>رأيك يهمنا",
+                //    text: "تهـــدف شركة عبداللطيف جميل للتمويــل إلى تطوير موقعها الإلكتروني.<br> نأمل تخصيص دقيقة من وقتكم لمشاركتنا بعض الافكار<br><br>",
+                //    imageUrl: "img/logo-ar.png",
+                //    imageSize: '200x50',
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "تخطي",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'دخول'
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+                document.getElementById("myForm").style.display = "block";
+
+            } else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            };
+
+            //end of VAT popup code
+            //=====================================================================
+
+
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+
+            var index = url.search("index");
+
+            if (index > 0) {
+            //    if (true) {
+            //        mobile_Div.style.display = "none";;
+            //    }
+            //    else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر التطبيقات";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon-a appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر جوجل للأندرويد";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon-a googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر ويندوز";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon-a winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+            }
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        };
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        };
+
+        function openInNewTab() {
+            var win = window.open(newsLink, '_blank');
+            win.focus();
+        };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+    
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script>
+
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+    
+<title>
+	شروط الاستخدام
+</title></head>
+<body>
+    <!-- Google Tag Manager -->
+   
+
+    <script async="" src="gtag/js?id=UA-7444353-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-7444353-1');
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./terms_of_use_ar.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="w1FYZCDPG1BS528W7VfNPC+e4bBe8tzhA4SjunV7mzOIN22/8FD2bT2APnAhqI8NZrlhstHDE6Jw76yq6KWEnIidJem9vuhZc0/QZ3Ol9dgtHvjH/Dwl6bWbDBWSvdWWdPJqChRTLJ7iCBmX184hazJoHtqBAe9cyTVzoohvgkJjlu9olHYgiqUGnjMA29XDY8BYWBtUkZ9k0GMFqEAkyLWONPpNPfpZ0p14DLGhVcU=">
+
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BE30026B">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Q29ddTTciTcNj5X75xiQ12LphLEGf1nTBqXpIMD3YG3KUxYhGxDvBYudO7tVaYCxaxwMY8YlPc3+G7EAwNomZfzlojjLnVqtS3TtDgHcfvRH2WkqITCCWq8D5CeihVYEXOc3mK89gV9ZqsDVUgTRAorYWZcS6kXLkpimXqfeo9LVeePjKvCypZ54FXwoogmR3p373zmF9M2KNCsmf8Xqr97iNmMmqlcaBjYgHtP1ruCI/LQ5mghYuQ2mQ5MkeeM/04e5Jjwf19HcL8M1NZ41ug==">
+         
+        
+        <!-- Wrapper start -->
+        <div class="wrapper">
+            
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-sm-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">التأجير التمويلي</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            اتصل بنا: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="account_login_ar.aspx.html">تسجيل الدخول</a></li>
+    <li><a href="account_registration_ar.aspx.html">مستخدم جديد</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class=""><a href="#English" class="activelangbutton">English</a></li>
+                                            <li class="active"><a href="#" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                            <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>القائمة</a>
+                                </div>
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo tabLogoAr">
+                                        <a href="index_ar.aspx.html">
+                                            <img src="img/logo-tamakan-ar.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item"><a href="index_ar.aspx.html" class="nav-link">الرئيسية</a></li>
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">أسعار المنتجات التمويلية</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products_ar.aspx.html">
+                                                                            <h6>الإيجار التمويلي للسيارات</h6>
+                                                                            <p>احصل على سعر تمويل السيارة التي تختارها.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic_ar.aspx.html">
+                                                                            <h6>تمويل السيارات بالمرابحة</h6>
+                                                                            <p>قم بالاستعلام عن تمويل المرابحة </p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance_ar.aspx.html">
+                                                                            <h6>تمويل المنتجات الاستهلاكية</h6>
+                                                                            <p>احصل على تمويل للإلكترونيات والأجهزة المنزلية</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">
+                                                                            <h6>تمويل السيارات المستعملة</h6>
+                                                                            <p>أحصل على سياراتك المستعملة بالتمويل</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div> 
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing_ar.aspx.html">
+                                                                            <h6> التمويل النقدي للأفراد</h6>
+                                                                            <p>منتج تمويلي يسمح للأفراد بتلبية احتياجاتهم المالية </p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref_ar.aspx.html">
+                                                                            <h6>التمويل العقاري</h6>
+                                                                            <p> نقدم حلول مالية ميسرة ومتوافقة مع الشريعة الإسلامية</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf_ar.aspx.html">
+                                                                            <h6>باب رزق جميل</h6>
+                                                                            <p>التمويل المتناهي الصغر</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="offers_listing_ar.aspx.html">عروض التمويل</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business_ar.aspx.html">تمويل الشركات</a></li>
+                                            <li class="nav-item"><a href="locations_ar.aspx.html">فروعنا</a></li>
+                                            <li class="nav-item"><a href="news_listing_ar.aspx.html">أخبارنا</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw selected">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">من نحن</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about_ar.aspx.html">
+                                                                            <h6>الرؤية و الرسالة</h6>
+                                                                            <p>نبذه عامة عن الشركة</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan_ar.aspx.html">
+                                                                            <h6>تمكّن</h6>
+                                                                            <p>نبني الثقة بتمكين الأحلام</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs_ar.aspx.html">
+                                                                            <h6>الأسئلة الشائعة</h6>
+                                                                            <p>كل ما ترغب في معرفته والإستفسار عنه</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <div class="logo">
+                                            <a href="index_ar.aspx.html">
+                                                <img src="img/logo-tamakan-ar.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top"></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="أدخل كلمة البحث" class="sb-search-input input__field" maxlength="255">
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+                
+
+     <section class="pageHeaderWide">
+        <div class="container pageHeader">
+            <div class="row">
+                <div class="col-sm-8">
+                    <ol class="breadcrumb">
+                        <li><a href="index_ar.aspx.html">الرئيسيه</a></li>
+                    </ol>
+                    <h1>شروط الاستخدام</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <br>
+                <h3>شروط الاستخدام</h3>
+                <br>
+                <p class="about__point">
+يرجى قراءة شروط الاستخدام هذه بإمعان قبل استخدام هذا الموقع الالكتروني. إن الوصول إلى هذا الموقع الالكتروني واستخدامه محكوم على نحو حاسم بشروط الاستخدام هذه. وإذا لم توافق على شروط الاستخدام هذه فيجب أن تتوقف عن استخدام هذا الموقع الالكتروني على الفور. ويرجى على وجه الخصوص ملاحظة فقرات تحديد المسئولية واستثناء الضمانات الموضحة أدناه. 
+
+                </p>
+                <br>
+            </div>
+            <div class="col-md-12">
+                <h3>شروط استخدام الموقع الالكتروني </h3>
+                <br>
+                <p class="about__point">
+يوفر هذا الموقع الالكتروني معلومات عن الشركة شركة عبد اللطيف جميل المتحدة للتمويل وخدماتها.                 </p>
+                <p class="about__point">
+                  تطلعك هذه الصفحة الالكترونية (وكذلك المستندات المشار إليها فيها) على شروط الاستخدام التي يستخدم من خلالها الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل، على النطاق ALJFinance.com  ("الموقع الالكتروني لشركة عبداللطيف جميل المتحدة للتمويل"). ويشمل استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل الوصول إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل أو تصفحه أو الارتباط به أو التسجيل فيه من أجل استخدامه. 
+                </p>
+                <p class="about__point">
+إن الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل هو موقع الكتروني تملكه وتشغله شركة عبد اللطيف جميل المتحدة للتمويل، وهي شركة مساهمة مغلقة بترخيص من مؤسسة النقد العربي السعودي (SAMA) سجل تجاري رقم 4030206631 في المملكة العربية السعودية، وعنوانها الرئيسي هو صندوق بريد 54609، جدة 21524 (الشركة). 
+وعلى الشركة المسئولية الحصرية عن المحتوى المتضمن في الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل. 
+                </p>
+                <p class="about__point">
+يرجى قراءة شروط الاستخدام هذه بإمعان قبل استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل، حيث أن شروط الاستخدام هذه سوف تسري على استخدامك للموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل وعلى وصولك إليه. ويُحبَّذ أن تطبع نسخة من شروط الاستخدام من أجل الرجوع المستقبلي إليها.                 </p>
+                <p class="about__point">
+وفي كل مرة تستخدم فيها الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل فإنك تصدق على شروط الاستخدام هذه وتقبلها، وتوافق على الامتثال لها تماماً. وإذا لم توافق على شروط الاستخدام هذه، فلا يجوز أن تستخدم الموقع الالكتروني لشركة عبداللطيف جميل المتحدة للتمويل أو أن تصل إليه، ويجب أن تغادر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل على الفور.                 </p>
+                <p class="about__point">
+وقد تُعدَّل شروط الاستخدام هذه من طرفنا في أي وقت عن طريق تعديل هذه الصفحة. ويُرجَى التحقق من الصفحة الالكترونية هذه من وقت إلى آخر لملاحظة أي تغييرات تتم، نظراً لأنها تصبح ملزمة لك بمجرد أن تصل إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.                 </p>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-12">
+
+                <h3>معلومات حول شركة عبد اللطيف جميل المتحدة للتمويل </h3>
+                <br>
+                <p class="about__point">
+لأي استفسارات مرتبطة بأي كيانات اقتصادية معينة مذكورة على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل، أو لأي استفسارات معينة مرتبطة بمصالح شركة عبد اللطيف جميل المتحدة للتمويل في تمويل السيارات، يرجى التواصل عبر البريد الالكتروني aljufcrm@aljfs.com  .
+                </p>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>الشروط الأخرى سارية المفعول</h3>
+                <br>
+                <p class="about__point">
+تشير شروط الاستخدام هذه إلى الشروط الإضافية التالية، التي تسري أيضاً على استخدامك للموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل، وباستخدامك للموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل فإنك توافق على الامتثال لها:</p> 
+                <br>
+                <ol>
+                        <li><a href="privacy_policy_ar.aspx.html">سياسة الخصوصية</a> التي تبيّن الشروط التي تُجمع على أساسها أي معلومات شخصية (إن وجدت) منك، أو التي تمد بها، والتي تُعالَج عبر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.
+                        </li>
+                         <li><a href="accessibility_policy_ar.aspx.html">سياسة إمكانية الوصول</a>سياسة إمكانية الوصول  التي تبيّن توافر الموقع الالكتروني لشركة عبد اللطيف جميل  المتحدة للتمويل للمستخدمين ذوي الاحتياجات الخاصة. </li>
+                        <li> <a href="cookie_policy_ar.aspx.html">سياسة ملفات تعريف الارتباط</a> التي تبيّن المعلومات حول استخدام ملفات تعريف الارتباط على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل. </li>
+                    </ol>
+                
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>الدخول إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل واستخدامه</h3>
+                <br>
+                <p class="about__point">
+                    لا نضمن أن يكون موقعنا أو أي من محتوياته متاحاً بصورة دائمة بدون انقطاع. يُسمح بالدخول على موقعنا على أساس مؤقت و بحالتة القائمة في حينه. ويجوز لنا تعليق أو سحب أو وقف أو تغيير كامل أو أي جزء من موقعنا دون إشعار مسبق .ولن تكون شركة عبد اللطيف جميل المتحدة للتمويل مسئولة قانونياً تجاهك إذا كان الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل (لأي سبب كان) غير متوفر (بصورة مؤقتة أو دائمة) في أي وقت أو لأي مدة زمنية. 
+                </p>
+                <p class="about__point">
+                    وتقع على عاتقكم مسؤولية اتخاذ جميع الترتيبات اللازمة للتمكن من الدخول على موقعنا.. كما تقع على عاتقكم مسؤولية التأكد بأن جميع الأشخاص الذين يدخلون على موقعنا من خلال الاتصال عن طريق  الشبكة بواسطة أجهزتكم على علم تام بشروط الاستخدام والشروط والأحكام المرعية الأخرى، والامتثال لها.
+                </p>
+                <p class="about__point">
+                   يمكنك استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل للأغراض القانونية ( مشروعة ) فقط. وأنت تقر وتوافق على أنه لا يمكنك أن تستخدم الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل:
+                </p>
+
+                <ol>
+                    <li>بأي طريقة تنطوي على مخالفة أي من القوانين والأنظمة المرعية على المستويات المحلية أو الوطنية أو الدولية.</li>
+                    <li>بأي طريقة غير قانونية أو احتيالية، أو تنطوي على أي غرض أو يكون لها أثر غير قانوني أو احتيالي. </li>
+                    <li>لغرض إلحاق الضرر أو محاولة إلحاق الضرر بالقاصرين بأية طريقة</li>
+                    <li>القيام عن قصد بإرسال أو استقبال أو تحميل أو تنزيل أو استخدام أو إعادة استخدام أي مادة لا تتوافق مع معايير المحتوى المعتمدة لدينا كما هو مبين أدناه.</li>
+                    <li>لنشر إعلانات أو للترويج لمواقع الكترونية تابعة للغير. </li>
+                    <li>نقل، أو تكليف من يلزم لإرسال، أي إعلانات أو مواد دعائية غير مطلوبة أو غير مصرح بها أو أي شكل آخر من أشكال الالتماس المماثل (البريد المزعج). </li>
+                    <li>القيام عن علم بنقل أي بيانات، وإرسال أو تحميل أي مواد تحتوي على فيروسات، أو أحصنة طروادة، أو ديدان، أو قنابل موقوتة، أو متلصصين، أو تجسس، أو أي برامج ضارة أخرى أو رمز كمبيوتر مماثل مصمم ليؤثر سلباً على تشغيل أي برامج أو أجهزة كمبيوتر.</li>
+
+                </ol>
+                <p class="about__point">
+                  أنت تقر وتوافق أيضاً: 
+                </p>
+                <ol>
+                    <li>الامتناع عن إعادة إنتاج أو تكرار أو نسخ أو إعادة بيع أي جزء من موقع شركة عبداللطيف جميل المتحدة للتمويل  بطريقة مخالفة لأحكام شروط استخدام هذا الموقع.</li>
+                    <li>على أن لا يوجه خط سير المستخدم بالانترنت بعيداً عن الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل. </li>
+                    <li>الامتناع عن الدخول غير المصرح به، أو التدخل أو إلحاق الضرر أو تعطيل:
+                            <ol type="a">
+                                <li>أي جزء من الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.</li>
+                                <li>أو أي أجهزة (بما في ذلك أي حاسوب خادم) أو شبكة يُخزَّن عليها الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.</li>
+                                <li>أو أي برامج تستخدم في الإمداد بالموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل. </li>
+                                <li>أو أي حاسوب خادم أو حاسوب أو قاعدة بيانات متصلة بالموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.</li>
+                                <li>أو أي جهاز أو شبكة أو برنامج يملكه أو يستخدمه طرف ثالث. </li>
+                            </ol>
+                    </li>
+                    <li>على ألا تسئ استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل بأن تدخل عن عمد فيروسات أو فيروسات حصان طروادة أو فيروسات متنقلة أو قنابل الكترونية منطقية أو أي مادة أخرى مؤذية أو ضارة من الناحية الالكترونية. </li>
+                    <li>على ألا تهاجم الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل عبر هجوم رفض الخدمة أو هجوم موزع  لرفض الخدمة. وبخرقك لهذا الشرط فإنك ترتكب جريمة جنائية، على سبيل المثال بموجب نظام مكافحة جرائم الإنترنت لعام 2007 المطبق في المملكة العربية السعودية و إساءة استخدام الحاسوب لعام 1990. فقد تبلغ شركة عبد اللطيف جميل المتحدة للتمويل السلطات المعنية عن أي خرق من هذا القبيل، وسوف تتعاون مع هذه السلطات بأن تكشف لهم عن هويتك. وفي حالة حدوث خرق من هذا القبيل، فقد يتوقف حقك في استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل على الفور. </li>
+                    <li>على ألا تتنكر أو تتدخل بأي طريقة (باستخدام عنوان بروتوكول الانترنت الخاص بالحاسوب الذي تستخدمه) لكي تدخل إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل أو تتخذ خطوات بطريقة أو بأخرى لكي تمنع تحديد هوية عنوان بروتوكول الانترنت الحقيقي الخاص بالحاسوب الذي تستخدمه أثناء دخولك إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل. </li>
+
+                </ol>
+                <br>
+                <p class="about__point">
+لا تضمن شركة عبد اللطيف جميل المتحدة للتمويل أن الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل سيكون آمناً أو خالياً من الأخطأ أو الفيروسات أو المواد الأخرى الضارة من الناحية التكنولوجية. فأنت مسئول عن تكوين تكنولوجيا المعلومات الخاصة بك وبرامج الحاسوب الخاصة بك والبرمجيات والمنصات الخاصة بك لكي تدخل إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل بطريقة تَعتبرها ملائمة وآمنة. وينبغي أن تستخدم البرامج الخاصة بك للحماية من الفيروسات. وينبغي أن تستخدم البرمجيات الخاصة بك للحماية من الفيروسات. 
+
+                </p>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>الأمان </h3>
+                <br>
+                <p class="about__point">
+إن المواد المرسلة عبر الانترنت غير سرية أو آمنة تماماً على الإطلاق، ومن ثم فإنه ثمة خطر أن تعامل أي رسالة أو معلومات تُرسَل عبر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل على أنها غير خصوصية، أو قد يعترضها آخرون وربما يقرؤونها. ولن تتحمل شركة عبد اللطيف جميل المتحدة للتمويل مسئولية تجاهك فيما يتعلق بأي مواد ترسلها إليها، ولكنك تقوم بذلك على مسئوليتك الخاصة تماماً.                 </p>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>حقوق الملكية الفكرية واستخدام محتوى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل </h3>
+                <br>
+                <p class="about__point">
+الشركة هي المالكة أو صاحب ترخيص الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل، وجميع محتوى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل، وجميع المواد التي تُنشَر على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل، وأي تحديثات ورسائل إلكترونية وتوجيهات الكترنبية ونشرات إخبارية خاصة بشركة عبد اللطيف جميل المتحدة للتمويل، وأي وسائل تواصل اجتماعي أو تحديثات إعلامية و/أو نشرات ("المحتوى") خاصة بشركة عبد اللطيف جميل المتحدة للتمويل، وجميع حقوق الملكية الفكرية في المحتوى. والمحتوى محمي بموجب قوانين ومعاهدات حقوق النشر 
+والتأليف السارية في جميع أرجاء العالم. وتحتفظ الشركة بالكامل بجميع الحقوق التي من هذا القبيل.                </p>
+                <p class="about__point">
+تمتلك شركات عبد اللطيف جميل الحقوق في كل أرجاء العالم في شكل علامات تجارية (مسجلة أو غير مسجلة) وعلامات خدمة ورسومات وشعارات وتصميمات وترويسات ورموز أزرار وأشكال الخطوط وأسماء خدمات ("العلامات التجارية الخاصة  بشركات عبد اللطيف جميل ").                </p>
+                <p class="about__point">
+                   أي استخدام غير مصرح به لأي من العلامات التجارية لشركات عبد اللطيف جميل يشكل انتهاكا لحقوق شركات عبد اللطيف جميل في العلامات التجارية الخاصة بشركات عبد اللطيف جميل واستخدامك الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل لا يمنحك أي حق أو ترخيص لإعادة إنتاج أو استخدام أي من العلامات التجارية الخاصة بشركات عبد اللطيف جميل أو العلامات التجارية الخاصة بالطرف الثالث. </p>
+                <p class="about__point">
+أي نسخ أو تحميل لأي محتوى لن ينقل ملكية هذا المحتوى لك ولا يمنحك أي ترخيص لاستخدام هذا المحتوى لأغراض غير شخصية ويجب عدم استخدام أي جزء من المحتوى لأغراض غير شخصية مثل الأغراض التجارية دون الحصول على ترخيص كتابي مسبق للقيام بذلك من الشركة والذي ستمنحه الشركة وفق تقديرها المطلق.
+يجب أن لا تستغل أي محتوي كليا أو جزئيا دون الحصول على إذن كتابي مسبق من الشركة ( يكون القرار وفقا لتقدير الشركة المطلق) بما في ذلك (ولكن ليس على سبيل الحصر).
+                </p>
+                <ul>
+
+                    <li>أولا. لا يجب أن تقوم بتعديل أي نسخ من أي محتوى تمت طباعته أو قمت بتحميله بأي شكل من الأشكال.</li>
+                    <li>ثانيا. يجب عدم استخدام أي الرسوم التوضيحية والصور والفيديو أو الإصدارات الصوتية أو أية رسومات بشكل منفصل عن أي نص مصاحب لها.</li>
+                    <li>ثالثا. لا يجب إزالة أي حقوق الطبع والنشر أو إشعارات الملكية الأخرى من المحتوى الذي قمت بنسخه أو تحميله.</li>
+                    <li>رابعا. يجب عدم استخدام المحتوى بأي شكل من أشكال الاحتيال أو غير قانوني.</li>
+                    <li>خامسا. يجب أن لا تعتمد على المحتوى علي أنه دقيق تماما وكامل أو حديث .</li>
+                    <li>سادسا. يجب عدم استخدام المحتوى بطريقة لا تتوافق تماما مع شروط الاستخدام .</li>
+                </ul>
+                <br>
+                <p class="about__point">
+إذا قمت بطباعة أو نسخ أو تحميل أو تعديل أو ربط أي جزء من المحتوى المتاح عبر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل بشكل يخالف شروط الاستخدام فإن حقك في استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل قد يتوقف فورا ويجب عليك، وفق خيار الشركة، رد أو تدمير أي نسخ (إلكترونية أو غير ذلك) من المواد التي قمت بعملها.
+                </p>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>الروابط</h3>
+                <br>
+                <p class="about__point">
+يحتوي الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل علي روابط لمواقع ومصادر أخري مقدمة من قبل أطراف ثالثة أخرى، يجري توفير هذه الروابط لاطلاعكم فحسب ، ما لم يرد صراحة خلاف ذلك، ونحن ليس لدينا أي سيطرة على محتويات تلك المواقع أو الموارد أو المصادر ولا تتحمل الشركة أي مسؤولية عن محتوى المواقع المرتبطة بالموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل ولا ينبغي تفسير مثل هذه الروابط كإقرار من شركة عبد اللطيف جميل المتحدة للتمويل لتلك المواقع المرتبطة.                </p>
+                <p class="about__point">
+لا يمكنكم الربط بالصفحة الرئيسية للشركة ، إلا بعد  مراعاة القيام بذلك بطريقة عادلة وقانونية لا تضر بسمعتنا أو تنطوي على إساءة استغلال موقعنا ويكون القرار وفق تقديرها المطلق ولا يجب أن يظهر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل علي أي موقع أخر.                </p>
+                <p class="about__point">
+في حال جري منحك إذن كتابي مسبق لتدخل إلي الصفحة الرئيسية للموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل يجب عليك:                </p>
+
+
+                <ul>
+                    <li>أولا. إنشاء الرابط فقط على  الصفحة الرئيسية  للموقع  الالكتروني  لشركة عبد اللطيف جميل المتحدة  للتمويل.
+
+</li>
+                    <li>ثانيا. تدخل فقط بطريقة سليمة وقانونية ولا تضر بسمعة الشركة و / أو سمعة عبد اللطيف جميل المتحدة للتمويل ولا تستفيد من هذه السمعة.</li>
+                    <li>ثالثا. يجب عدم إقامة مثل هذا الرابط بطريقة توحي بأي شكل من أشكال الشراكة أو الموافقة أو تأييد من جانبنا في حال عدم وجود شيء من هذا القبيل.</li>
+                    <li>رابعا. يجب عدم إنشاء رابط للاتصال بين موقعنا وأي موقع لا يكون ملكا لكم.</li>
+                    <li>خامسا. يراعى أن الموقع الذي يتم الربط بينه وبين موقعنا يجب أن يكون ملتزما من كافة النواحي بمعايير المحتوى المنصوص عليها في شروط الاستخدام هذه. </li>
+                </ul>
+
+                <p class="about__point">
+                   تحتفظ الشركة بحقها في سحب إذن الدخول إلي الموقع دون إنذار مسبق.
+                </p>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>الخدمات التفاعلية</h3>
+                <br>
+                <p class="about__point">
+                    من وقت لآخر يمكن توفير التحديثات الإعلامية وغيرها من الخدمات التفاعلية على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل ("الخدمات التفاعلية" أو " برنامج عمل ") وسيوفر هذه البرنامج المعلومات عن السلع والخدمات التي تقدمها شركات عبد اللطيف جميل المتحدة للتمويل هذا ويجري تشغيل البرنامج وإدارته والإشراف عليه من قبل شركة عبد اللطيف  جميل المتحدة للتمويل ولا تقوم شركة عبد اللطيف جميل المتحدة للتمويل بمراجعة واعتماد المحتوى المدرج ضمن البرنامج قبل ظهور هذا المحتوى للنور هذا ولا تقوم شركة عبد اللطيف جميل المتحدة للتمويل بالمراقبة الفعالة ولا تفرض رقابة على المحتوى إلا في الظروف الموضحة في مواصفات المحتوى (انظر أدناه).
+                </p>
+                <p class="about__point">
+                    حيثما يجري توفير خدمة تفاعلية آخرى سيجري توفير معلومات واضحة عن نوع الخدمة المقدمة إذا جري مراقبتها وأي شكل من أشكال المراقبة يجري استخدامه (بما في ذلك ما إذا كان بشري أو فني).
+                </p>
+                <p class="about__point">
+لا يوجد أي التزام للإشراف ومتابعة أو مراجعة أي خدمة تفاعلية وسيجري استبعاد بشكل صريح المسؤولية عن أي خسارة أو ضرر ناجم عن استخدام أي خدمة تفاعلية من قبل المستخدم بشكل مخالف لمواصفات المحتوى (انظر أدناه)  سواء كانت الخدمة التفاعلية مراقبة أم لا ومع ذلك سوف تُبذل محاولات لتقييم المخاطر المحتملة للمستخدمين (وعلى وجه الخصوص للأطفال) من أطراف ثالثة عند استخدامهم لأي من الخدمات التفاعلية وأيضا سيُقرر في كل حالة ما إذا كان من المناسب مراقبة الخدمة ذات الصلة (بما في ذلك أي نوع من المراقبة يمكن استخدامه) في ضوء تلك المخاطر.                </p>
+                <p class="about__point">
+استخدام أي من الخدمات التفاعلية من قبل القصر يخضع لموافقة الوالدين أو ولي الأمر وينصح الآباء والأمهات بأهمية التواصل مع أبنائهم بخصوص تأمين استخدامهم للإنترنت ولا تعطل المراقبة استخدامهم للإنترنت ويجب أن يكون القصر الذين يستخدمون أي خدمة تفاعلية على دراية بالمخاطر المحتملة هذا ويرجى الرجوع إلى الشروط أدناه التي تتناول استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل من قبل الأطفال.                </p>
+                <p class="about__point">
+                   حيثما تكون الخدمة التفاعلية مراقبة يمكنك الاتصال بنا عن طريق البريد الإلكتروني علي  aljufcrm@aljfs.com   إذا كان هناك قلق أو صعوبة بخصوص الخدمة التفاعلية أو محتواها.
+                </p>
+                <br>
+                <br>
+            </div>
+
+
+            <div class="col-md-12">
+
+                <h3>مواصفات المحتوى</h3>
+                <br>
+                <p class="about__point">
+تنطبق معايير المحتوى هذه على جميع المواد التي تساهمون بها على موقع شركة عبداللطيف جميل المتحدة للتمويل
+ ( المشاركات )  وعلي أي من الخدمات التفاعلية المرتبطة بها ويجب عليكم الالتزام بروح ونص المعايير التالية، التي تنطبق على كل جزء من أي مشاركة وعلى جميع المشاركات بوجه عام.
+                </p>
+                <p class="about__point">
+                   يجب أن تكون المشاركات
+                </p>
+                <ul>
+                    <li>تكون دقيقة (حيثما تنطوي على إعطاء حقائق).</li>
+                    <li>تعقد بصدق وإخلاص (حيثما تنطوي على التعبير عن آراء).</li>
+                    <li>تكون ملتزمة بأحكام القوانين والأنظمة المرعية في المملكة العربية السعودية وفي أي بلد يتم نشرها منه.</li>
+
+                </ul>
+
+                <p class="about__point">
+                    <br>
+                    يجب أن لا تتضمن المشاركات مايلي : 
+                </p>
+                <ul>
+                    <li>•	تتضمن أي مواد تشهيرية بأي شخص</li>
+                    <li>•	تحتوي على أي مواد مخلة بالآداب أو مستهجنة أو تشجع  للكراهية أو تحريضية.</li>
+                    <li>تتضمن أي ألفاظ نابية أو غيرها من المواد التي من شأنها أن تحط من قدر أو تُسئ إلى الآخرين.</li>
+                    <li>تتضمن أي مواد جنسية صريحة.</li>
+                    <li>تشجع العنف.</li>
+                    <li>تشجع التمييز على أساس العرق أو الجنس أو الثقافة أو الدين أو الجنسية أو الإعاقة أو التوجه الجنسي أو العمر.</li>
+                    <li>تنتهك أي حق من حقوق التأليف والنشر وخصوصية قاعدة البيانات والعلامة التجارية أو غيرها من حقوق الملكية الفكرية لأي شخص آخر.</li>
+                    <li>تنطوي على الخداع لأي شخص.</li>
+                    <li>تنطوي على الإخلال بأي واجب قانوني مملوك لطرف ثالث، مثل الواجب التعاقدي أو واجب المحافظة على السرية.</li>
+                    <li>تشجيع أي نشاط غير قانوني</li>
+                    <li>أن تهدد أو تسئ أو تعتدي على خصوصية الآخر أو تتسبب  في  إزعاج أو مضايقة  أو قلق لا داعي لها.</li>
+                    <li>تتسبب أغلب الظن في إرهاق أو إزعاج أو إحراج أو فزع  أو مضايقة أي شخص آخر.</li>
+                    <li>تُستخدم لانتحال شخصية أي شخص أو تزوير هويتك أو الإنتماء لأي شخص.</li>
+                    <li>إعطاء الانطباع بأنها صادرة من أو معتمدة من قبل شركة عبد اللطيف جميل المتحدة للتمويل أو أي من أعضائها إذا كان هذا ليس هو الواقع.</li>
+                    <li>تدعو وتشجيع أو تساعد أي فعل غير مشروع مثل (على سبيل المثال فقط) التعدي على حق المؤلف أو إساءة استخدام الكمبيوتر.</li>
+                    <li>الانخراط في الرسائل الغير مرغوب فيها والبرمجيات الخبيثة والانتحال أو ما قد يشكل البريد الالكتروني غير المرغوب مبني علي أحدث حيل وأساليب الأشخاص الذين يرسلون الرسائل الغير مرغوب فيها.
+</li>
+                </ul>
+
+                <br>
+                <br>
+            </div>
+
+
+            <div class="col-md-12">
+
+                <h3>التعليق والإنهاء</h3>
+                <br>
+                <p class="about__point">
+تقرر الشركة وفق تقديرها ما إذا كان هناك خرق لشروط الاستخدام من خلال استخدامك الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل وعند حدوث خرق لشروط الاستخدام يجوز للشركة (أو أي من شركات عبد اللطيف جميل) أن تتخذ من الإجراءات ما تراه مناسبا ويشكل عدم الامتثال لمواصفات المحتوى خرقا ماديا لشروط الاستخدام التي تم السماح لك باستخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل بناء عليها.                </p>
+                <p class="about__point">
+                   وأي خرق لشروط الاستخدام قد يضطر الشركة (أو أي من شركات عبد اللطيف جميل)، وفقا لتقديرها 
+الكامل، لاتخاذ كافة أو أي من الإجراءات التالية:
+                </p>
+                <ul>
+                    <li>السحب الفوري بصورة مؤقتة أو دائمة و/ أو مصادرة حقك في استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.</li>
+                    <li>الإزالة الفورية أو المؤقتة أو الدائمة لأي منشور أو مواد قمتم  بتحميلها على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.</li>
+                    <li>توجيه تنبيه لكم.</li>
+                    <li>اتخاذ إجراءات قانونية بحقكم لطلب التعويض عن كافة التكاليف (بما في ذلك، ولكن ليس على سبيل الحصر، التكاليف الإدارية والقانونية بحدود المعقول) الناتجة عن الإخلال بالشروط.</li>
+                    <li>اتخاذ مزيد من الإجراءات القانونية بحقكم.</li>
+                    <li>الإفصاح عن المعلومات للسلطات المختصة بتنفيذ القانون والنظام وفق ما نراه ضرورياً.</li>
+                </ul>
+                <br>
+                <p class="about__point">
+                  تسقط كل المسؤولية عن الإجراءات المتخذة من قبل الشركة و / أو أي من شركات عبد اللطيف جميل ردا على خرق شروط الاستخدام والردود الموضحة في هذه الوثيقة ليست محدودة ويمكن أن تتخذ إجراءات أخرى من قبل شركة عبد اللطيف جميل المتحدة للتمويل.
+للإبلاغ عن أي انتهاك مزعوم لمواصفات المحتوى يرجى مراسلتنا علي البريد الالكتروني aljufcrm@aljfs.com
+
+                </p>
+                <br>
+                <br>
+            </div>
+
+
+            <div class="col-md-12">
+
+                <h3>الاعتماد على المعلومات</h3>
+                <br>
+                <p class="about__point">
+يوفر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل معلومات موجزة ولمحة عامة عن عبد اللطيف جميل المتحدة للتمويل ولا يوفر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل أي معلومات يمكن استخدامها للاستثمار و / أو في قرارات إبرام الصفقات يجري توفير المحتوى للحصول على معلومات فقط ذات طابع عام وتقريبي وليس المقصود بها تقدير الموقف ، ولا هي، معلومات أو مشورة يمكن الاعتماد عليها وعلى وجه الخصوص لا يشكل المحتوى مشورة مهنية أو مالية أو استثمارية حيث يجب الحصول على المشورة المهنية أو التخصصية قبل القيام، أو الامتناع عن أي اجراء استنادا إلي المحتوى.                </p>
+                <p class="about__point">
+عند توفير المعلومات عن شركة عبد اللطيف جميل المتحدة للتمويل فإن الشركة لا تعمل، كما أنها لا تسعى للعمل، كوسيط أو وكيل في ما يتعلق بأي من الأوراق المالية لأي من الشركات أو المعلومات المتعلقة بهذه الشركات.
+                </p>
+                <p class="about__point">
+ليس مضمون عدم وجود أخطأ أو عدم دقة أو سهو في الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل أو أي محتوى  بالموقع ومن مسؤوليتكم التحقق من دقة وسلامة أي محتوى.
+                </p>
+                <p class="about__point">
+قد يجري تحديث الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل من وقت لآخر وقد يجري تغيير المحتوى في أي وقت وعلى الرغم من أن الشركة تبذل جهودا معقولة لتحديث المعلومات على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل فإنه لا ضمانات أو تعهدات سواء كانت صريحة أو ضمنية بأن يكون المحتوي دقيقا وكامل أو جري تحديثه يرجى ملاحظة أن الشركة ليست ملزمة بتحديث المحتوى.                </p>
+                <br>
+                <br>
+            </div>
+
+
+             <div class="col-md-12">
+
+                <h3>لا للعروض</h3>
+                <br>
+                <p class="about__point">
+لا ينبغي أن يفسر أي شيء على الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل علي أنه التماس أو عرض أو توصية للدخول أو الانسحاب من أي استثمار أو الدخول في أي صفقة أخرى أو لتقديم أي مشورة أو خدمة استثمارية .            </p>    <br>
+                <br>
+            </div>
+
+
+             <div class="col-md-12">
+
+                <h3>القيود الرقابية المحلية</h3>
+                <br>
+                <p class="about__point">
+الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل ليس موجها إلي أي شخص في أي سلطة قضائية حيثما يكون (بسبب الجنسية أو الإقامة أو غير ذلك) الوصول إلى أو توافر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل محظور أو خاضع لأي قيد بما في ذلك التسجيل أو غيره من المتطلبات في نطاق الاختصاص تحتفظ الشركة بالحق في أن تحد من وصول أي من هؤلاء الأشخاص إلي الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل والأشخاص الذين يدخلون إلى الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل يفعلون ذلك من تلقاء أنفسهم وهم يتحملون مسؤولية الامتثال للقوانين والأنظمة المحلية المعمول بها اذا كان عندك شك يتعين عليك الحصول على المشورة القانونية المستقلة. 
+                </p>
+                <br>
+                <br>
+            </div>
+
+             <div class="col-md-12">
+
+                <h3>حدود مسؤوليتنا</h3>
+                <br>
+                <p class="about__point">
+
+لا يوجد شيء في شروط الاستخدام يُسقط أو يحد من مسئولية الشركة أو أي من شركات عبد اللطيف  جميل عن الوفاة أو الإصابة الشخصية الناشئة عن الإهمال أو الغش أو التضليل أو أية مسؤولية أخرى لا يمكن إسقاطها أو تقييدها بموجب القانون السعودي .                    </p> 
+                  <p class="about__point">
+نحن لا نتحمل أية مسؤولية أو تبعة في مواجهة أي مستخدم عن أية خسارة أو ضرر، سواء من الناحية التعاقدية أو المسؤولية التقصيرية (بما في ذلك الإهمال)، أو الإخلال بالواجب القانوني، أو خلاف ذلك، حتى لو كان ذلك متوقعاً وناشئاً بموجب أو فيما يتعلق بما يلي:  </p> 
+    <ul>
+         <li>استخدام أو عدم القدرة علي استخدام توافر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل.</li>
+         <li>استخدام أو الاعتماد علي المحتوي المعروض أو المواد المقدمة عبر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.</li>
+         <li>استخدام أو الاعتماد علي المحتوى  المعروض على  أو المواد المقدمة عبر المواقع الإلكترونية المرتبطة بالموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل والتي  تتضمن  دون حصر المحتوى.</li>
+         <li>الاستخدام من قبل أي شخص في السلطة القضائية حيث يكون الوصول إلي أو توافر عبر الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل محظور أو رهنا بأي تقييد.
+</li>
+    </ul>
+ <br>
+
+  <p class="about__point">
+  إذا كنت من  المستخدمين للأغراض التجارية يرجى ملاحظة أن الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل متوفر للاستخدام الشخصي فقط وبالإضافة إلى ذلك  أن الشركة لن تكون مسئولة عن:      </p>
+      <ul>
+          <li>خسارة أي أرباح أو مبيعات أو أعمال تجارية أو إيرادات.</li>
+          <li>توقف العمل</li>
+          <li>فقدان البيانات</li>
+          <li>خسارة المدخرات المتوقعة</li>
+          <li>خسارة الفرص التجارية وثقة الجمهور والسمعة الطيبة</li>
+          <li>أي خسارة أو أضرار غير مباشرة أو تبعية.</li>
+      </ul>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>لا ضمانات</h3>
+                <br>
+                <p class="about__point">
+
+الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل متوفر كما هو ولن تُقدم ضمانات من أي نوع بشكل صريح أو ضمني فيما يتعلق بالموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل أو كل محتوياته والمواد المنشورة علي الموقع بما في ذلك دون حصر المحتوي وعلي وجه التحديد وعلي سبيل المثال لا الحصر لا تضمن الشركة أن:
+                    </p>
+                <ul>
+                    <li>تكون قادرا على استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل أو أن يظل متاحا في شكله الحالي أو أي شكل آخر.</li>
+                    <li>يكون المحتوى أو المواد المقدمة علي الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل دقيقة وكاملة وجري تحديثها .</li>
+                    <li>يكون الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل أو أي برامج أو مواد مهما كانت طبيعتها متاحة أو قمت بتحميلها من علي الموقع خالية من الفيروسات والعيوب أو متوافقة مع الأجهزة الخاصة بك أو تصلح لأي غرض. </li>
+                </ul>
+<p class="about__point">
+باستثناء ما هو منصوص عليه صراحة في شروط الاستخدام فإن جميع الضمانات والشروط والتعهدات الصريحة أو الضمنية بموجب التشريعات أو القانون العام أو خلافه (بما في ذلك على سبيل المثال لا الحصر، الضمانات بالجودة المناسبة وملائمة الغرض أو المهارة والإتقان) ملغاة إلى أقصى حد يسمح به القانون.                </p>
+                <br>
+                <br>
+            </div>
+
+            <div class="col-md-12">
+
+                <h3>التعويض</h3>
+                <br>
+                <p class="about__point">
+
+توافق على تعويض الشركة و / أو عبد اللطيف جميل المتحدة للتمويل وكل شركات عبد اللطيف  جميل أو أفراد الشركة والمسئولين والمديرين والموظفين مباشرة عند الطلب ضد كل الدعاوى والمطالبات والأضرار والتكاليف والنفقات بما في ذلك الرسوم القانونية الناشئة عن أي خرق لشروط الاستخدام من قبلك أو أي مطالبات أخرى ناشئة عن استخدامك الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.                </p>
+                <br>
+                <br>
+            </div>
+
+    <div class="col-md-12">
+
+                <h3>الأطفال مادون 18 سنة</h3>
+                <br>
+                <p class="about__point">
+
+إذا كنت تحت 18 سنة يجب عليك أن تسأل أحد والديك أو ولي الأمر قبل: </p>
+                    <ul>
+                        <li>أن تراسل بالبريد الالكتروني الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل أو تقدم تحقيق في مسألة تهم الرأي العام.</li>
+                        <li>أن تقوم بعمل مساهمة.</li>
+                        <li>الطلب من  شركة عبد اللطيف جميل المتحدة للتمويل  بارسل معلومات أو اي طلب اخر عبر البريد الالكتروني.</li>
+                        <li>ارسال أي معلومات إلي عبد اللطيف جميل المتحدة  للتمويل.</li>
+                    </ul>
+         <p class="about__point">
+باستمرارك في استخدام الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة للتمويل وأي من الخدمات التي يوفرها فأنت تؤكد أنك حصلت على الموافقة المسبقة من والديك أو الوصي القانوني.                </p>
+                <br>
+                <br>
+            </div>
+
+
+    <div class="col-md-12">
+
+                <h3>التغيير</h3>
+                <br>
+                <p class="about__point">
+لا يتم أي تغيير في شروط الاستخدام من قبلكم نافذا إلا إذا كان مكتوبا وموقعا من قبل كل من الطرفين.                </p>
+                <br>
+                <br>
+            </div>
+
+
+    <div class="col-md-12">
+
+                <h3>قابلية الانفصال</h3>
+                <br>
+                <p class="about__point">
+إذا قررت أي سلطة قانونية مختصة أن أي جزء من شروط الاستخدام غير قانوني أو غير قابل للتنفيذ سيلغي هذا الجزء وتظل شروط  الاستخدام المتبقية سارية المفعول والتأثير ويستمر تطبيقها عند استخدامك الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.                </p>
+                <br>
+                <br>
+            </div>
+
+              <div class="col-md-12">
+
+                <h3>القانون المعمول به</h3>
+                <br>
+                <p class="about__point">
+شروط الاستخدام هذه، وموضوعها وتشكيلها (وأي نزاعات أو مطالبات غير تعاقدية) ، تخضع لأحكام القوانين والأنظمة المرعية في المملكة العربية السعودية. ونحن نوافق معكم على أن محاكم المملكة العربية السعودية سيكون لها الاختصاص الحصري في هذا الخصوص لتسوية أي نزاع أو خلاف أو مطالبة تنشأ عن أو مرتبطة بشروط الاستخدام.
+                </p>
+                <br>
+                <br>
+            </div>
+              <div class="col-md-12">
+
+                <h3>الاتصال بنا</h3>
+                <br>
+                <p class="about__point">
+للتواصل معنا يرجي مراسلاتنا علي البريد الالكتروني aljufcrm@aljfs.com أو استخدم نموذج الاستعلام الخاص بنا الموجود علي الموقع الالكتروني لشركة عبد اللطيف جميل المتحدة  للتمويل.              </p>
+                  <small>التاريخ : 28 يونيه 2015</small>
+                <br>
+
+                <br>
+            </div>
+            
+             <div class=" marginb35"> 
+              
+                        <ul class="socialMediaSet margintop30">
+                            
+
+
+
+<script type="text/javascript" src="js/sharethis.js#property=606ad8e1b7dede001191f64e&product=inline-share-buttons" async="async"></script>
+
+<!-- Do not put <ul> starter Tag here , it's intended to be removed, and included in the parent page with suitable classes
+<li><a ><span class="c-icon instgramLarge-icon"></span></a></li>
+<li><a href="#" onClick='window.open("https://twitter.com/share?url=" + location.href + "&amp;name=ALJFinance&amp;hashtags=ALJFinance", "_blank")'><span class="c-icon twitterLarge-icon"></span></a></li>
+<li><a href="#" onClick='window.open("http://www.facebook.com/sharer.php?u=" + location.href, "_blank")'><span class="c-icon facebookLarge-icon"></span></a></li>
+
+<li id="WhatsappLi"><a href="#" onClick='window.open("whatsapp://send?text=I%20saw%20this%20and%20thought%20of%20you!%20 " + location.href, "_blank")'><span class="c-icon WhatsappLarge-icon"></span></a></li>
+ -->
+<div class="sharethis-inline-share-buttons"></div>
+</ul>
+
+    <div id="send-friend" class="modal fade modal-alj login" tabindex="-1" role="dialog" aria-labelledby="advisorLocator" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close modal-alj" data-dismiss="modal" aria-label="Close">
+                        <span class="" aria-hidden="true">x</span>
+                    </button>
+                    <h4 class="modal-title">أرسل إلى صديق</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="height7 bg-blue"></p>
+                    <div class="login-wrap">
+                        <div role="form" action="">
+                            <div class="form-group">
+                                <label for="Yourname">الاسم:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block$Yourname" type="text" id="Yourname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الالكتروني:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block$email" type="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="your_frind">أسم صديقك:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block$your_frind" type="text" id="your_frind" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="friende_mail">البريد الالكتروني الخاص بصديقك:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block$friende_mail" type="text" id="friende_mail" class="form-control">
+                            </div>
+                            <div class="checkbox">
+                                <span class="styled"><input id="newsEvent_sendFriend" type="checkbox" name="ctl00$ContentPlaceHolder1$SocialBar_Block$newsEvent_sendFriend"><label for="newsEvent_sendFriend">أطلعني دائما على اخر الأخبار والأحداث</label></span>
+                            </div>
+
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$SocialBar_Block$btn_Send_Friend" value="إرسال" id="ContentPlaceHolder1_SocialBar_Block_btn_Send_Friend" class="gbtn btn-slate btn-regular">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<!-- /.modal -->
+                            <!-- Do not put </ul> closing Tag here , it's intended to be removed and included in the User Control -->
+                    </div>
+        </div>
+    </div>
+    <!-- Wrapper end -->
+
+
+            </main>
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h6><strong>السيارات</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options_ar.aspx.html?BrandID=1">تويوتا</a></li>
+                                <li><a href="finance_options_ar.aspx-1.html?BrandID=2">لكزس</a></li>
+                                <li><a href="finance_options_ar.aspx-2.html?BrandID=2015">هيونداي</a></li>
+                                <li><a href="finance_options_ar.aspx-3.html?BrandID=2019">كيا</a></li>
+                                <li><a href="finance_options_ar.aspx-4.html?BrandID=2053">جيلي</a></li>
+                                <li><a href="vehicles_comparison_ar.aspx.html">مقارنة السيارات</a></li>
+
+                            </ul>
+
+                            <h6><strong>تمويل الشركات</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry_ar.aspx.html">تقديم الطلب</a></li>
+                                <li><a href="fleet_and_business_ar.aspx.html">إستعراض فروع الشركات</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">خدمات الموردين</a></li>
+                            </ul>
+
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>أدوات التمويل</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan_ar.aspx.html">تمكن</a></li>
+                                <li><a href="products_ar.aspx.html">حاسبة التمويل</a></li>
+                                <li><a href="finance_options_generic_ar.aspx.html">حاسبة المرابحه</a></li>
+                                <li><a href="home_appliances_finance_ar.aspx.html">تمويل المنتجات الاستهلاكية</a></li>
+                                <li><a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">تمويل السيارات المستعملة</a></li>
+                                <li><a href="cash_financing_ar.aspx.html"> التمويل النقدي للأفراد</a></li>
+                                <li><a href="aljuref_ar.aspx.html">التمويل العقاري</a></li>
+                                <li><a href="brjmf_ar.aspx.html">باب رزق جميل</a></li>
+                                <li><a href="affordability_calculator_ar.aspx.html">أي السيارات تناسبني؟</a></li>
+                                <li><a href="how_to_auto_finance_ar.aspx.html">كيف أتقدم بطلب تمويل؟</a></li>
+                                <li><a href="offers_listing_ar.aspx.html">عروض التأجير التمويلي</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>إدارة حسابك</strong></h6>
+                            <ul class="footerTopMenu">
+
+                                <li><a href="account_login_ar.aspx.html">تسجل الدخول</a></li>
+                                <li><a href="account_registration_ar.aspx.html">تسجيل مستخدم جديد</a></li>
+                                <li><a href="account_password_reset_ar.aspx.html">هل نسيت كلمة المرور؟</a></li>
+                                <li><a href="SADAD_payment_ar.aspx.html">الدفع عن طريق سداد</a></li>
+                                <li><a href="Documents/ServicesFeesListAr.pdf">رسوم الخدمات</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>اتصل بنا</strong></h6>
+                            <ul class="footerTopMenu">
+
+                                <li><a href="feedbacks_ar.aspx.html">الاستفسارات</a></li>
+                                <li><a href="feedbacks_ar.aspx.html">الشكاوي</a></li>
+                                <li><a href="feedbacks_whistleblowing_ar.aspx.html">المخالفات</a></li>
+                            </ul>
+                            <h6><strong>فروعنا</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations_ar.aspx.html">خريطة المواقع</a></li>
+                                <li><a href="locations_ho_ar.aspx.html">دعنا نتصل بك</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">قائمة تجار الجملة</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>شركة عبداللطيف جميل المتحدة للتمويل</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about_ar.aspx.html">من نحن</a></li>
+                                <li><a href="Documents/doc_ar.pdf">حماية العملاء</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_Ar.pdf">مبادئ التمويل المسئول للأفراد</a></li>
+                                <li><a href="FAQs_ar.aspx.html">أسئلة شائعة</a></li>
+                                <li><a href="http://careers.aljfinance.com/ar/">تقدم بطلب توظيف</a></li>
+                                <li><a href="feedbacks_training_ar.aspx.html">تقدم بطلب تدريب</a></li>
+                                <li><a href="Documents/Complines_How_To_Ar.jpg">آلية تقديم الشكوى</a></li>
+                                <li><a href="Documents/ALJUF_Terms_ar.pdf">شروط التأجير التمويلي</a></li>
+                                <li><a href="finance_reports_ar.aspx.html">التقارير المالية</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingAr.pdf">الشروط و الأحكام العامة</a></li>    
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                                <li><a href="https://www.facebook.com/Aljfinance" title="Facebook">
+                                    <!-- <i class="fa fa-facebook"></i> -->
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks_ar.aspx.html" class="btn-block footerFeedback">الشكاوي</a>
+                            <a href="WS_login_ar.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">تجار السيارات</a>
+                            <span id="siteseal" class=" btn-block footerFeedback">
+                                <script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                         <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                            	<!--<span class="c-icon appleStore-icon"></span>-->
+                              <img src="img/appStore.png" alt="App Store" title="App Store" class="float-left  ">
+                                <p><small>نتزيل تطبقنا</small></p>
+                                <p>متجر التطبيقات</p>
+                            </a></li>
+
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                         <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                          	<!--<span class="c-icon blackberry-icon"></span>-->
+                              <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-left  ">
+                               <p><small>نتزيل تطبقنا</small></p>
+                                <p>جوجل بلاي</p>
+                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreAppAr.png" alt="iOS App" title="iOS App" class="center-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li>
+                                    <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                                        <img src="img/appStore.png" alt="App Store" title="App Store" class="float-left  ">
+                                        <p><small>نتزيل تطبقنا</small></p>
+                                        <p>متجر التطبيقات</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayAppAr.png" alt="Google App" title="Google App" class="center-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-left  ">
+                                    <p><small>نتزيل تطبقنا</small></p>
+                                    <p>جوجل بلاي</p>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+
+                        
+                            
+
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer_ar.aspx.html">حقوق الطبع </a></li>
+                                <li><a href="terms_of_use_ar.aspx.html">شروط  الاستخدام</a></li>
+                                <li><a href="cookie_policy_ar.aspx.html">سياسة الكوكيز</a></li>
+                                <li><a href="accessibility_policy_ar.aspx.html">سياسة الوصول</a></li>
+                                <li><a href="privacy_policy_ar.aspx.html">سياسة الخصوصية</a></li>
+                                <li><a href="Documents/Personal%20Data%20Protection%D9%80_Ar.pdf" target="_blank">سياسة حماية البيانات الشخصية</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 شركة عبد اللطيف جميل المتحدة للتمويل. جميع الحقوق محفوظة. مسموح لك باستخدام هذا الموقع شريطة الالتزام التام بشروط الاستخدام. يُمثل اسم "عبد اللطيف جميل" وشعارها المكتوب والتصميم الخماسي الشكل علاماتٍ تجارية (مُسجلة أو غير مُسجلة) تعود ملكيتها الفكرية إلى شركة عبد اللطيف جميل للملكية الفكرية المحدودة. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index_ar.aspx.html">الرئيسية</a></li>
+                        <li class="dropdownTab"><a href="#" data-toggle="dropdown">أسعار المنتجات التمويلية</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>للخلف</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">أسعار المنتجات التمويليه</a>
+                                            <ul class="navTabSubMenu">
+
+                                                <li><a href="products_ar.aspx.html">الإيجار التمويلي للسيارات</a></li>
+                                                <li><a href="finance_options_generic_ar.aspx.html">تمويل السيارات بالمرابحة</a></li>
+                                                <li><a href="home_appliances_finance_ar.aspx.html">تمويل الاجهزة المنزلية</a></li>
+                                                <li><a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">تمويل السيارات المستعملة</a></li>
+                                                <li><a href="cash_financing_ar.aspx.html"> التمويل النقدي للأفراد</a></li>
+                                                <li><a href="aljuref_ar.aspx.html">التمويل العقاري</a></li>
+                                                <li><a href="brjmf_ar.aspx.html">باب رزق جميل</a></li>
+                                                <li><a href="affordability_calculator_ar.aspx.html">أي السيارات تناسب ميزانيتي؟</a></li>
+                                                <li><a href="how_to_auto_finance_ar.aspx.html">كيفية الحصول على تمويل؟</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="offers_listing_ar.aspx.html">عروض التمويل</a></li>
+                        <li><a href="locations_ar.aspx.html">فروعنا</a></li>
+                        <li><a href="fleet_and_business_ar.aspx.html">تمويل الشركات</a></li>
+                        <li><a href="news_listing_ar.aspx.html">أخبارنا</a></li>
+                        <li class="dropdownTab"><a href="#" data-toggle="dropdown">من نحن</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>للخلف</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">من نحن</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about_ar.aspx.html">الرؤية و الرسالة</a></li>
+                                                <li><a href="tamakan_ar.aspx.html">تمكّن</a></li>
+                                                <li><a href="FAQs_ar.aspx.html">الأسئلة الشائعة</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="account_login_ar.aspx.html">تسجبل الدخول </a></li>
+                        <li><a href="account_registration_ar.aspx.html">تسجيل جديد</a></li>
+                        <li><a href="account_password_reset_ar.aspx.html">إستعادة كلمة المرور</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>اتصل بنا 8002442211</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="أدخل كلمة البحث" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                    <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                    <img class="float-left  " title="App Store" alt="App Store" src="img/appStore.png">
+                    <p><small>نتزيل تطبقنا</small></p>
+                    <p>متجر التطبيقات</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                    <img class="float-left  " title="Google play" alt="Google play" src="img/googlePlay.png">
+                    <p><small>نتزيل تطبقنا</small></p>
+                    <p>جوجل بلاي</p>
+                    </a>
+                </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Tablet menu end -->
+        
+
+
+<style type="text/css">
+/*common*/
+.loading-wrap{
+    background: rgba(128,128,128,0.8);
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    z-index:2000;
+    display: none;
+}
+    .loading-wrap .loading{
+        max-width:617px;
+        max-height:210px;
+        margin: auto;
+        position: relative;
+        top: 180px;
+        overflow: hidden;
+        -moz-border-radius: 3px 3px 0 0;
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0; /* border radius */
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box; /* prevents bg color from leaking outside the border */
+        background-color: #fff; /* layer fill content */
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+        background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+    }
+    .loading-wrap .loading-head{
+        border-bottom: 7px solid #4d8092;
+        background-color: #fff;
+        padding: 17px 30px;
+    }
+.loading-wrap .loading-content{
+    background-color: #fff;
+    padding: 21px 30px 18px;
+}
+.loading-wrap .loading-head figure{
+    position: relative;
+    top:-1px;
+}
+
+.font-18{font-size: 18px;}
+.font-14{font-size: 14px;}
+.mb25{margin-bottom:25px;}
+@media (max-width: 767px)  {
+    .loading-wrap .loading{
+        max-height:inherit;
+    }
+    .loading-wrap .loading-head h1{
+        font-size: 40px;
+    }
+}
+
+.one {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.0s;
+}
+
+.two {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.2s;
+}
+
+.three {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.3s;
+}
+
+@-webkit-keyframes dot {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dot {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ar only*/
+.loading-wrap .loading-head h1{
+    font-size: 40px;
+    margin-bottom: 11px;
+}
+.loading-wrap .loading {
+    top: 177px;
+}
+</style>
+
+<section class="loading-wrap" style="display:block;z-index: 9998;visibility:hidden;" id="PleaseWait" tabindex="-1">
+      
+      <div class="loading">
+          
+            <div class="loading-head">
+              
+                <button type="button" class="close closeRoundWhite-icon" style="margin-left: -10px;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo-ar.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span class="three">.</span><span class="two">.</span><span class="one">.</span><span>جاري التحميل</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">  الرجاء الانتظار ، طلبك قيد التنفيذ .</p>
+                <p class="font-14">هل  استغرقت هذه العملية أكثر مما ينبغي؟  من فضلك  <a href="feedbacks_ar.aspx.html" target="_blank"> أبلغنا  </a></p>
+            </div>
+          
+        </div>
+</section>
+
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">خدمة سداد</button>
+
+        <div class="form-popup" id="myForm">
+            <div class="form-container">
+                <div class="survey-logo">
+                    <img src="img/logo-tamakan-ar.svg">
+                </div>
+                <div class="survey-bg">
+                    <h1 class="survey-title">عميلنا العزيز</h1>
+                    <p class="survey-text">
+                        حفاظًا على صحتك وصحة من تحب<br>
+                        سدد دفعاتك الشهرية من خلال خدمة سداد عبر القنوات البنكية
+                    </p>
+                </div>
+                <div class="survey-footer">
+                    <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">سداد</button>
+                    <button type="button" class="btn cancel" onclick="javascript:closeForm()">إغلاق</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/sideMenu-script-ar.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    </form>
+    <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+</body>
+</html>

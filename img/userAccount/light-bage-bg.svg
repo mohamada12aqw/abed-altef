@@ -1,0 +1,12 @@
+<svg id="light-bage-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="193.644" viewBox="0 0 390 193.644">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_46770" data-name="Rectangle 46770" width="390" height="193.333" transform="translate(390 193.333) rotate(180)" fill="#e5e5e6"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_31215" data-name="Rectangle 31215" width="389" height="193.644" transform="translate(389 193.644) rotate(180)" fill="#e6e6e5"/>
+  <g id="Mask_Group_2" data-name="Mask Group 2" clip-path="url(#clip-path)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="124.328" cy="124.328" r="124.328" transform="translate(-19.003 -124.328)" fill="#fff" opacity="0.28"/>
+    <circle id="Ellipse_1775" data-name="Ellipse 1775" cx="53.495" cy="53.495" r="53.495" transform="translate(311.672 115.172)" fill="#fff" opacity="0.28"/>
+  </g>
+</svg>

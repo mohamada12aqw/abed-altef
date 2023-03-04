@@ -1,0 +1,1720 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="Toyota, Lexus, UIS, United Installment, Toyota Financing, Vehicle Installment, Vehicle Financing, Vehicle Leasing, Vehicle installment, Corolla, Camry, Yaris, Limousine, Lexus, Land Cruiser, Prado, Daihatsu, Abdul Latif Financing, Toyota Saudi, Rent a car, Vehicle Dealer, car loan"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Abdul Latif Jameel United Finance Co"><meta property="og:description" content="Abdul Latif Jameel United Finance Co. provides financial leasing and Murabaha services for all car brands, home appliances, electronics and certain types of heavy equipment subject to terms and conditions."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan.svg">
+
+   
+    <!-- Boots`trap CSS-->
+    <!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="css/bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/bootstrap3-custom.css" rel="stylesheet"><link href="css/global-style.css" rel="stylesheet" type="text/css">
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 40%;
+        }
+    </style>
+ 
+     <script src="js/jquery-3.5.1.js"></script> 
+
+    <script type="text/javascript">
+        var newsLink ;
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            newURL = 'http://' + document.location.host + url.split('.aspx')[0] + "_ar.aspx" + url.split('.aspx')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#Arabic"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "العربية" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+            
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment.aspx';
+            }else {
+                newsLink = 'SADAD_payment.aspx';
+            }
+
+            var links = ['index',
+                      'Offers_listing',
+                      'fleet_and_business',
+                      'vehicle_listing',
+                      'vehicles_comparison',
+                      'feedbacks',
+                      'account_dashboard',
+                      'offers_details'];
+
+
+            links.forEach(function (item) {
+                
+                if (url.indexOf(item) !== -1) {
+
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                
+                //swal({
+                //    html: true,
+                //    title: "<hr>We value your Feedback",
+                //    text: "Abdul Latif Jameel Finance aims to improve your website experience.<br>Please spare a minute to share your thoughts<br><br>",
+                //    imageUrl: "img/logo.png",
+                //    imageSize: '200x50',          
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "SKIP",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'VISIT'
+
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+            document.getElementById("myForm").style.display = "block";
+                
+            }else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            }
+
+
+            //end of VAT popup code
+            //=====================================================================
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+            var index = url.search("index");
+
+            if (index > 0) {
+                //if (true) {
+                //     mobile_Div.style.display = "none";;
+                //}
+                //else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From App Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From GOOGLE PLAY</p>";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From Windose Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+               
+            }
+
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+        function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+            };
+
+            function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+            };
+
+            function openInNewTab() {
+              var win = window.open(newsLink, '_blank');
+              win.focus();
+            };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+  
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script> 
+    
+    
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+   
+<title>
+	Vehicles
+</title></head>
+<body>
+    <!-- Google Tag Manager -->
+
+
+    <!-- Google tag (gtag.js) -->
+
+<script async="" src="gtag/js?id=UA-7444353-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7444353-1');
+</script>
+
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./vehicle.aspx?ProductID=251" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Bwfrvub6P6nu/u4HNNT3gj8TnFeDhYCRWQeMsDOla31Fn642n8wBasMeXnRLkg79lMO+9dcdzgdo7vno2wrD43zdWYpoQbiKIU8e3tHOmf0DJKeBSrYdUFNWCgUvnp9HRHjgiornEaV0e5EQO5aU6YoHzqd94Xl1iv0M9SQlA6Ei6RLzYfsQ5D4atExY74aetMByT+EfdUzXytZRaKgtWB+tlxJI3/HGLps9qwEuZ0gbsEa1kPRN4+kGbeIp4X6rEtrgBmmMfDk+I8qemW/op2qO/2td3mx7gW6yku/SLkqLd1jtI/Qwd2X5Uo4QFVSTzLepV34L5qvtb5wPAI/Rfd1nUzIKclN+bCMwAYkEI4xgd1jLN0dYgAEeGGILif3rSd22mxZkiD9JCPth6dj83ENkgEhcvL45wpMbwVQ1SiNOvKh0sGcSVws1a2FQ3k5yXtlajW6g84tlbjnzda8Tq2MPlrSAnpvkY46vmGXIIm60pEEsvTHJX0zxtCKrZBkuYDEUEtMOiTrnr787mAEv8S/HCbVHnS8z1CxdmUddQofU3+6o1go19ne7pFuYtlxplOA96JpUivmX0V8ObYkCWRDfn0wfA1NQZvAxvj31zXrCeZGpBwSUJ/oGEIxr9z1v1q4yCFA8OkVdKpAz+r6+X37yeeHRro4pfNMviqbKqdRyCHKs1clCSmE9B6/4YpUugKzmJa8W82jDPzkXDONG6/E+UCEqotl+fRnCty6+iymhTS3qPN0IdkDQZctNksEHSStT9XVwQufSxtk1TQdfntZGe5H+wk2K7/y8uQge3TOuQIfYfUuM2WqY1BlpiiIENq+P7Eyih3TxS0YUcG3G11mbJxktpPeloXMtucZ4VsBNuZ2zjOgI1bSUh+nxrTNHuAGsPg3Lkim7yAgjU4Rr2sTZbqTi3J2nKc/gmt8hoqUG39+vYoMchgb6gnn6htISHkDI/4iqrgvfHZXP9oJQojD/fsB2YzPXnNBqkDsSGwhnPsCWhTCd4DYNeFeWOcfd5BqBfUtxx//pCFkOMsvtD13ty8qX2083Xe2EKsbL1epuCqFW1Vd0+OqClXOL8+7xTxkOGyvUBggebV68G8aZJofNOyRcitCqIdfg/FRdRJYOWe04XJxEuTR0a6QDBZvnFPHZbaSRZvuTFgVdZ2we/4nFUF8kiEMzw0adVkl5WKOeRxF9h7pa0PKdklsHt2bDtDWwi4uUsMX6O9vdL4vdFqxMpwmGWf+5otoCv/whhSeEJqdrsSFMt7XNstlaFMWeEZ8szj4CTCultNpHXboh+pzgYaYzgdAooMqvdRvCZDLcFaA5vEF3kVXXxFzOzYBf9LNAlsMDPScahGKKxPRm2oqNGwzXzEUSLFv7wmXSzfmrg0kAO8/YtA/9+uwivPr5C7VxDjmL+uAnQUUx88vlNHeFcdZhMLwAxtSNkBP0uDNvDeYeC4rHwhMgI/BMPDMLqOTdc7EYJeBy+ByhaHPALDH6hzYgzj2cIfDnCPYLHbd5bobaY31bAjYpkIRZ7CDh7vglON1LPNTApsEJOocXbaJSYubHoSFFrv7g5ogYucxCw72ySzP3cHtDo0iXTgDvn3epmvRFyiJj5OySXoJWntIXw1ZyrC45ji/MbLsi8L+KN4tNGvc++5ztsL0AFnQfN0fjQkb0b9f8Tvvox1+1oQ1KKXNT2E0sZ9HIudnj163c20YvlCO01P8TO6HTpgU4wx/FDoEA1iMDxN1btKMiEJa/4YDE6LQBxSOOL/9+ZSQ35RX826FfgQ4Dqa7siwjgVhBToTnkDoANg+29edY9D9br2MN+ol1ckG9KK1oKADSXcp/kqFGh6tUL0jLWnUUs84OF4rfh4i4JY8Q2rCr545qYi6F4uRfUN0ICxIeMiLfVM1ZLGEN4ea/yf8wB6l9Zrq3RUd9ME141r+X5G/8Xxbff8bzP28sJiQ9YhEf4QLQZD47q2BJE+wPrxG0C3Jlloz6rPZDbbyYhQYuvYl77WGpE05lCXLm12tc2wl0cgvp1weQ6OfML5J0lc7Daykwb7pZzd9vCWmsIe6BluFDyD7EjNFAzZvOfFuvVJW+v+ubdPFF5FDQU12zyWbl7kLTtmY3qzZppK/n8rmKVMjd8ODCkurbyNVhbKycQxzgpOSlxuvR3rxmdCKqHiSJVqdSo0rLCWzIKk9qBZE7rnf/slq1mbO/yUwNDu3p0DuVZK8IlF6llt+OjVJvg9z0FyLdXD6oLMMEsHU9WiEmTvoPh/yVlVOReodDlYRe5ljvCG/qIuc2q84i5Vi3aRqS4Nv72ISdAiifW3hAG4BHozpOg22AsMAtpk4m1kpZ+0Xu5kERjmG8ldd+hwav0XWlarVfiJnptiVEcrPNhsJqWISmvJFIIYfVJW4G7XJLNbQtuS92nLc5e8CshPpVq5UfYXfXFeK2HxfFZ1UcyoFoQekXkx+ANZk015BBx/5Fm7fEYDnzmY3NLqNgtC30J5o0/1JHl9jrz2Ugwilt5qeiBPChzoERxT14IyZyD5g0dN5ZLhhpq6tlgpDrmiPhx8phWdxfqrnFWZoQVbdjPHN24bYTZKwWA5UC3EWY06vRXBGBJNxSQWMIVi5Lm8V0dahev4r+C6KJCe0UvIph8jnUcQbYvT8hpB3OWimDreop5nOi1nocxr+uEM/QE/GcPfsT9JtOLNUX4HCm81VNrsxWtCTr+ZI0JouEBFNYcV5IyKb8mVJK6T4NY8jyYZ0F3OGb1zBI4BDZoNPvEP5Xx5Nj5mWeYYh7L9evfvNuidI4I25fJ7c6WC9jJJFrEM8Kz/JsZKTiLF+/Yd6IhiQ7GuK9DXGfO8rLPTiA2SQAt7g9TmCWVrZhb29nFf/6w5dEk4s3UKVcDGG7y/GrYwvbYv3l4gX6McJJSEwz4khH9GT7jchf4HgDxWaBj/XMHcPo2Za+Bpdug0XaSk5CaVnKvcmJrkuB8VRtSs89jiibXVtwfFuu5j1807gtFjJOxw0FA1K8bai60kBMjYQfnrvo0OMU7fLk5zDlx7rC7w6bnIpQvFT1O6NlPjncXvQdXS4NnVdh7ItGBoEniQ7Wd+U5T7DvevgSm7OSQrZ4wED5yzNm4LyivnAXe7zlJ4kJEjRjK2JahTIeJ9TxGTfmS3hNPjUKJYFA2V6bQ4UwJ9OUlDFf6k6jrDiGh2QJCpuMzqtid5jULQkNRl2NKeuZPM6SFZT2n95+Isg==">
+
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="35933522">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="NnQyg+Wb7bCdj1BTKGO34EiAdEouht4Dor4bZGxOkCCJyOvZq3A64BjkFuoXZn4v4cyP7AlEkepLP5f0iZzRUhuYuky4NVhTLvSPEzmZL+yEFhmOz7HYEN9o87jkrHrLlHKj8PfXA+sPPrFp4tIYl9OVy1Gs3HXKGofjBcpigc8W7G8ccIgiNr1R0/ZQsemPRqKFA2RdZHJ4Lg65nPt2alldsSRIEy54y6PyTE0kTmYAGpnJ1dk/suw0jKTlv9JmUpN5804TL26K9mm0ZP5WU25vm4Vr3ymg38yyuXk9XsNjPjKxeHxKlVMHAbGDxbO+OiazwlLh6NQMV5RFZxEKxhO0SeZplLKG5+WgmbmF5hJbM0rNhIRTatDe9fWydsZHfuBmK50L/VS9212UbVcN7Wdt/IdbgxR65NMzMvh4kEoqgPSZHGTX3ukC4z9hyJ/KGgCRfMQ9fj9+lRJW8/v6xy+G5lvSR+JAwVULJfxjA1xoMp1q2MXpfKLZ2XWJkf4PGwTHwbJ7elV12RiWLlEH4EhRV39d1IDHagLvp06S8aTOtK2yrW0m/9V1qVLamGMkRtZ+Za1Efpaqfl+Lq4hn403IwOnSBeBfAZucujJPwxP3sLP1UmIqa8M/J3Tzdp//LBysS2s0uLyifrkjRWyHD6Ufq+OL4rcZJmV5P8TrSz6XrBgH01rv4LcO0yqdSDR8CgO0xZ6LFsXo6ULqb8nolKYVF6gGEhjZ6d1GMvfLjU8=">
+        
+       
+        <!-- Wrapper start -->
+        <div class="wrapper">
+
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">Financial Leasing</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            Call us: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="Account_login.aspx.html">Login</a></li>
+    <li><a href="account_registration.aspx.html">Register</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class="active"><a href="#" class="activelangbutton">English</a></li>
+                                            <li><a href="#Arabic" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                             <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>Menu</a>
+                                </div>
+
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo">
+                                        <a href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item"><a href="index.aspx.html" class="nav-link">Home</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Financial products</a>
+                                                <div class="dropdown-menu">
+                                                    <div class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products.aspx.html">
+                                                                            <h6>Finance Calculator</h6>
+                                                                            <p>Get a finance quotation for the vehicle of your choice</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic.aspx.html">
+                                                                            <h6>Murabaha Calculator</h6>
+                                                                            <p>Get a finance quotation</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance.aspx.html">
+                                                                            <h6>Consumer Goods Finance</h6>
+                                                                            <p>Get a Electronics & Home Appliances Finance</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="used_cars_campaign.aspx.html">
+                                                                            <h6>Used Vehicles</h6>
+                                                                            <p>Get your used vehicle with financing.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>  
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing.aspx.html">
+                                                                            <h6>Cash finance for individual</h6>
+                                                                            <p>A financing product that allows individuals to fulfill their financial needs.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref.aspx.html">
+                                                                            <h6>Real Estate Financing</h6>
+                                                                            <p>We provide affordable, Sharia-compliant financial solutions</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf.aspx.html">
+                                                                            <h6>Bab Rizq Jameel Microfinance</h6>
+                                                                            <p>We provide Small and medium-sized enterprises with sharia compliant financing</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="nav-item"><a href="Offers_listing.aspx.html">Offers</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                                            <li class="nav-item"><a href="locations.aspx.html">Locations</a></li>
+                                            <li class="nav-item"><a href="news_listing.aspx.html">News</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about.aspx.html">
+                                                                            <h6>Mission and Vision </h6>
+                                                                            <p>Abdul Latif Jameel United Finance Co. (ALJUF)</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan.aspx.html">
+                                                                            <h6>Tamakan</h6>
+                                                                            <p>We build confidence by enabling dreams</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs.aspx.html">
+                                                                            <h6>FAQ’s</h6>
+                                                                            <p>Everything you need to know</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>                                    
+                                       
+                                        <a class="navbar-brand logo-en" href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top">
+                                        </a>
+                                    </div>
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                <!--<input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength="255" />
+                                                <input name="ctl00$btn_Search" type="submit" id="btn_Search" class="sb-search-submit" />-->
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input id="txt_Search" type="text" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength='255'>
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+    
+
+    <!-- Page header start -->
+    <section class="pageHeaderWide">
+        <div class="container pageHeader">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li><a href="index.aspx.html">Homepage</a></li>
+                        <li><a href="vehicle_listing.aspx.html">Vehicles</a></li>
+                 
+                    </ol>
+                </div>
+                <div class="col-sm-6">
+                    <h1>
+                        <img id="ContentPlaceHolder1_img_BrandLogo">
+                        </h1>
+                </div>
+                <div class="col-sm-6">
+                    <h5 class="text-right displaynone"><a href="how_to_auto_finance.aspx.html">How to finance this vehicle?<span class="c-icon rightCaretWhite-icon"></span></a></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page header start -->
+
+    <!-- Sub Navigation start -->
+    <section class="subNavigationWide">
+        <div class="container subNavigation">
+            <div class="row">
+                <div class="col-sm-8">
+                    <ul class="nav justify-content-center subNav d-none d-sm-none d-md-inline-flex" role="tablist">
+                        <li class="nav-item" role="presentation"><a href="#vehicleSpecGallery" class="nav-link smoothScrollTarget">Gallery</a></li>
+                        <li class="nav-item" role="presentation"><a href="#vehicleSpecColrAvail" class="nav-link smoothScrollTarget">Colors Availability</a></li>
+                        <li class="nav-item" role="presentation"><a href="#vehicleSpec" class="nav-link smoothScrollTarget">Specifications</a></li>
+                        <li class="nav-item" role="presentation"><a href="#vehicleSpecBrochure" class="nav-link smoothScrollTarget">Download Vehicle Brochure</a></li>
+                        <li class="nav-item" role="presentation"><a href="#vehicleSpecFinance" class="nav-link smoothScrollTarget">Finance Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="socialMediaSet navbar-right">
+                        
+
+
+
+<script type="text/javascript" src="js/sharethis.js#property=606ad8e1b7dede001191f64e&product=inline-share-buttons" async="async"></script>
+
+
+
+<!-- Do not put <ul> starter Tag here , it's intended to be removed, and included in the parent page with suitable classes
+<li><a href="http://instagram.com/alj_finance/" target="_blank"><span class="c-icon instgramLarge-icon" ></span></a></li>
+<li><a href="#" onClick='window.open("https://twitter.com/share?url=" + location.href + "&amp;name=ALJFinance&amp;hashtags=ALJFinance", "_blank")'><span class="c-icon twitterLarge-icon"></span></a></li>
+<li><a href="#" onClick='window.open("http://www.facebook.com/sharer.php?u=" + location.href, "_blank")'><span class="c-icon facebookLarge-icon"></span></a></li>
+<li id="WhatsappLi"><a href="#" onClick='window.open("whatsapp://send?text=I%20saw%20this%20and%20thought%20of%20you!%20 " + location.href, "_blank")'><span class="c-icon WhatsappLarge-icon"></span></a></li>
+ -->
+<div class="sharethis-inline-share-buttons"></div>
+</ul>
+
+
+
+
+
+
+    <div id="send-friend" class="modal fade modal-alj login" tabindex="-1" role="dialog" aria-labelledby="advisorLocator" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close modal-alj" data-dismiss="modal" aria-label="Close">
+                        <span class="" aria-hidden="true">x</span>
+                    </button>
+                    <h4 class="modal-title">Send to A Friend</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="height7 bg-blue"></p>
+                    <div class="login-wrap">
+                        <div role="form" action="">
+                            <div class="form-group">
+                                <label for="Yourname">Yourname:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBarBlock$Yourname" type="text" id="Yourname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your E-Mail:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBarBlock$email" type="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="your_frind">Your Friend’s Name:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBarBlock$your_frind" type="text" id="your_frind" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="friende_mail">Your Friend’s E-mail:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBarBlock$friende_mail" type="text" id="friende_mail" class="form-control">
+                            </div>
+                            <div class="checkbox">
+                                <span class="styled"><input id="newsEvent_sendFriend" type="checkbox" name="ctl00$ContentPlaceHolder1$SocialBarBlock$newsEvent_sendFriend"><label for="newsEvent_sendFriend">Keep Me Informed of news and eventes</label></span>
+                            </div>
+
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$SocialBarBlock$btn_Send_Friend" value="Send" id="ContentPlaceHolder1_SocialBarBlock_btn_Send_Friend" class="gbtn btn-slate btn-regular">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<!-- /.modal -->
+
+                        <!-- Do not put </ul> closing Tag here , it's intended to be removed and included in the User Control -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sub Navigation end -->
+
+    <!-- Banner area start -->
+    <section class="sliderWide">
+        <div>
+            <!-- Wrapper for slides start-->
+            <div class="carousel-inner">
+                
+                <div class="fill">
+                    <img id="vehicleImage">
+                </div>
+                <div class="container carouselCaptionWraper">
+                    <div class="row">
+                        <div class="vehicleSpecificationCaptionWraper float-left d-none d-sm-none d-md-block">
+                            <div class="vehicleSpecificationCaptionTop">
+                                <h2 id="vehicleModelTitle">
+                                    </h2>
+                                <h3>  </h3>
+                                
+                            </div>
+                            <div id="vehicleMounthPriceCaption" class="vehicleSpecificationCaptionBottom">
+                                <p><span>
+                                    </span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Wrapper for slides end-->
+        </div>
+    </section>
+    <!-- Banner area end -->
+
+    <div class="vehicleSpecificationCaptionWraper d-lg-none d-md-none float-left">
+        <div class="vehicleSpecificationCaptionTop">
+            <h2 id="vehicleModel">
+                </h2>
+            <h3> 
+                </h3>
+
+
+         
+        </div>
+        <div class="vehicleSpecificationCaptionBottom">
+            <p><span id="vehicleMounthPrice">
+                </span></p>
+        </div>
+    </div>
+    <!-- Content area start -->
+    <div class="clearfix"></div>
+    <section class="contentAreaWide">
+
+        <div class="container">
+            <!-- Carousel with lightbox start -->
+            <div id="vehicleSpecGallery">
+                <div class="col-sm-12">
+                    <div class="owl-slider">
+
+                        
+                                <a class="item" href='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%201.jpg' rel="prettyPhoto[gallery1]" title="This is the description">
+                                    <img src='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%201.jpg' class="img-fluid p-0 m-0">
+                                </a>
+                            
+                                <a class="item" href='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%202.jpg' rel="prettyPhoto[gallery1]" title="This is the description">
+                                    <img src='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%202.jpg' class="img-fluid p-0 m-0">
+                                </a>
+                            
+                                <a class="item" href='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%203.jpg' rel="prettyPhoto[gallery1]" title="This is the description">
+                                    <img src='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%203.jpg' class="img-fluid p-0 m-0">
+                                </a>
+                            
+                                <a class="item" href='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%204.jpg' rel="prettyPhoto[gallery1]" title="This is the description">
+                                    <img src='WebImages/Products/TOYOTA/GRANVIA/Gallery/gallery-image%204.jpg' class="img-fluid p-0 m-0">
+                                </a>
+                            
+                        
+                    </div>
+
+                    <div class="carouselControllerWraper">
+                        <div class="sliderController float-left" style="left: 90%;">
+                            <!-- Left Controls -->
+                            <a href="#blank" class="next"><i class="c-icon next-icon"></i></a>
+                            <a href="#blank" class="prev"><i class="c-icon prev-icon"></i></a>
+                        </div>
+
+                        <div class="sliderController float-right">
+                            <!-- Right Controls -->
+                            <a href="#blank" class="next"><i class="c-icon next-icon"></i></a>
+                            <a href="#blank" class="prev"><i class="c-icon prev-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel with lightbox end -->
+            <div class="clearfix"></div>
+            <div class="row" id="vehicleSpecColrAvail">
+                <div class="col-sm-7">
+                    <div class="colrAvail">
+                        <h3>Color Availability</h3>
+                        <ul id="CouldBeASPRepeaterForDifferentSetsOfColors" class="nav colrNav">
+                            
+                        </ul>
+                        <p>Prices and colors may vary by model.</p>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="askQuestion blueBox">
+                        <h3>Ask a Question</h3>
+                        <p>We will gladly assist, If you have any questions about . Send them to us through our Enquiry Form and we will answer you within the next 48 hours.  </p>
+                        <button type="button" data-modal="ask-question" class="gbtn btn-white btn-regular block">Send your Question</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row" id="vehicleSpec">
+                <div class="col-sm-12">
+                    <div class="vehicleFeatureSpecific">
+                        <h3>Vehicle Features, Specifications and Price</h3>
+                        <!-- Tabs start -->
+                        <div class="tabPanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs border-gray" role="tablist">
+                                <li class="nav-item" role="presentation"><a href="#vehicleOverview" data-toggle="tab" class="nav-link active" role="tab" aria-controls="vehicleOverview" aria-selected="true"><span>Features</span></a></li>
+                                <li class="nav-item" role="presentation"><a href="#vehicleSpecifications" data-toggle="tab" class="nav-link" role="tab" aria-controls="vehicleSpecifications" aria-selected="false"><span>Specifications & Financing</span></a></li>
+                            </ul>
+                            <!-- Tab panes -->
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active vehicleOverview" id="vehicleOverview" role="tabpanel">
+                                                                        
+                                    
+                                </div>
+                                <div class="tab-pane fade" id="vehicleSpecifications" role="tabpanel">
+                                    <div class="row">
+
+                                        <div class="col-sm-8">
+                                            <div class="blueBox chooseCarModel">   
+                                                <div id="ContentPlaceHolder1_UpdatePanelSelect">
+	
+                                                <h5>Choose Car Model to display it’s specifications</h5>
+                                                <select name="ctl00$ContentPlaceHolder1$lst_ClassModel" id="lst_ClassModel" class="selectpicker">
+		<option selected="selected" value="0"> Select Class</option>
+		<option value="10617-178900">Toyota GRANVIA 2020 EXECUTIVE RWD 2.8 DIESEL MPV 5Dr AUTOMATIC  178,900 SR</option>
+		<option value="10621-176800">Toyota GRANVIA 2020 EXECUTIVE RWD 3.5 PETROL MPV 5Dr AUTOMATIC  176,800 SR</option>
+		<option value="10619-182000">Toyota GRANVIA 2020 PREMIUM RWD 3.5 PETROL MPV 5Dr AUTOMATIC  182,000 SR</option>
+
+	</select>
+                                                  
+
+                                
+</div>
+                                            </div>
+                                          
+
+                                 <div id="ContentPlaceHolder1_UpdatePanelClass">
+	
+
+                                            <div class="accordion__model">
+                                                <div id="accordion" class="panel-group">
+                                                    <div class="panel panel-default">
+                                                        
+
+                                                                        <div class="alert alert-danger" role="alert">
+                                                                <h6>VAT is not included in the prices displayed
+                                                                </h6></div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                      
+                                            <div id="ContentPlaceHolder1_Panel_Apply">
+		
+                                            <div class="blueBox applyFinanceBox">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td valign="middle" class="auto-style1">
+                                                            <h5>
+                                                        </h5></td>
+                                                        <td width="60%">
+                                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btn_apply" value="Apply for financing" id="ContentPlaceHolder1_btn_apply" class="gbtn btn-teal btn-regular">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            
+	</div>
+                                 
+
+                                     
+</div>
+
+                                        </div>  
+                                        <div class="col-sm-4">
+                                          
+                                            <div class="blueBox compareVehicle">
+                                                <div class="compareVehicleWraper text-center">
+                                                    <img src="img/vehiclesComparison.png" alt="Vehicles Comparison" title="Vehicles Comparison">
+                                                    <h3>Compare this vehicle</h3>
+                                                    <p>Compare vehicles and financing features</p>
+                                                    <button onclick="__doPostBack('ctl00$ContentPlaceHolder1$btn_compare','')" id="ContentPlaceHolder1_btn_compare" class="gbtn btn-white btn-regular center-block" type="submit">Vehicle Comparison Tool</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                        <!-- Tabs end -->
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row pt-4" id="vehicleSpecBrochure">
+                <div id="ContentPlaceHolder1_div_downloadBrochure" class="col-sm-8 downloadContent">
+                    <h5>Looking for more information about this vehicle<span>?</span></h5>
+                    <h3>Download Full Specifications Brochure</h3>
+                    <button id="ContentPlaceHolder1_btn_Brochure" class="gbtn btn-slate btn-regular" type="button">Download Vehicle Brochure <i class="c-icon download-icon"></i></button>
+                    <div class="clearfix"></div>
+                     <div class=" marginb35">
+                          <p class="MsoNormal">
+                              Share with your fri<span>e</span>nds.</p>
+                          <p class="sharing--box__text">&nbsp;</p>
+                         <ul class="socialMediaSet margintop30"> 
+                            
+
+
+
+<script type="text/javascript" src="js/sharethis.js#property=606ad8e1b7dede001191f64e&product=inline-share-buttons" async="async"></script>
+
+
+
+<!-- Do not put <ul> starter Tag here , it's intended to be removed, and included in the parent page with suitable classes
+<li><a href="http://instagram.com/alj_finance/" target="_blank"><span class="c-icon instgramLarge-icon" ></span></a></li>
+<li><a href="#" onClick='window.open("https://twitter.com/share?url=" + location.href + "&amp;name=ALJFinance&amp;hashtags=ALJFinance", "_blank")'><span class="c-icon twitterLarge-icon"></span></a></li>
+<li><a href="#" onClick='window.open("http://www.facebook.com/sharer.php?u=" + location.href, "_blank")'><span class="c-icon facebookLarge-icon"></span></a></li>
+<li id="WhatsappLi"><a href="#" onClick='window.open("whatsapp://send?text=I%20saw%20this%20and%20thought%20of%20you!%20 " + location.href, "_blank")'><span class="c-icon WhatsappLarge-icon"></span></a></li>
+ -->
+<div class="sharethis-inline-share-buttons"></div>
+</ul>
+
+
+
+
+
+
+    <div id="send-friend" class="modal fade modal-alj login" tabindex="-1" role="dialog" aria-labelledby="advisorLocator" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close modal-alj" data-dismiss="modal" aria-label="Close">
+                        <span class="" aria-hidden="true">x</span>
+                    </button>
+                    <h4 class="modal-title">Send to A Friend</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="height7 bg-blue"></p>
+                    <div class="login-wrap">
+                        <div role="form" action="">
+                            <div class="form-group">
+                                <label for="Yourname">Yourname:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block1$Yourname" type="text" id="Yourname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your E-Mail:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block1$email" type="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="your_frind">Your Friend’s Name:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block1$your_frind" type="text" id="your_frind" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="friende_mail">Your Friend’s E-mail:</label>
+                                <input name="ctl00$ContentPlaceHolder1$SocialBar_Block1$friende_mail" type="text" id="friende_mail" class="form-control">
+                            </div>
+                            <div class="checkbox">
+                                <span class="styled"><input id="newsEvent_sendFriend" type="checkbox" name="ctl00$ContentPlaceHolder1$SocialBar_Block1$newsEvent_sendFriend"><label for="newsEvent_sendFriend">Keep Me Informed of news and eventes</label></span>
+                            </div>
+
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$SocialBar_Block1$btn_Send_Friend" value="Send" id="ContentPlaceHolder1_SocialBar_Block1_btn_Send_Friend" class="gbtn btn-slate btn-regular">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<!-- /.modal -->
+
+                    </div>
+                </div>
+                <div id="ContentPlaceHolder1_div_downloadfuelConsumption" class="col-sm-4 downloadContent fuelConsumption">
+                    <h3>Fuel consumption detail</h3>
+                    <h5>Discription paragraph about brochure content and benefites</h5>
+                    <button class="gbtn btn-slate btn-regular" type="button">Download Vehicle Fuel Consumption <i class="c-icon download-icon"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div></div></div></div></section>
+    <!-- Content area end -->
+
+    <!-- Monthly offer area start -->
+    <section class="monthlyOfferWide blueBox">
+        <div class="container monthlyOffer">
+            <div class="row" id="vehicleSpecFinance">
+                <div class="col-sm-12 offerHeading">
+                    <h3>Financing Offers <span class="float-right"><a href="Offers_listing.aspx.html">View Our Offers</a></span></h3>
+                </div>
+                
+                        <div class="col-sm-4">
+                            <div class="monthlyOfferBox flipWrap">
+                                <div class="front">
+                                    <div class="text-center">
+                                        <img id="ContentPlaceHolder1_Rep_Offers_img_Brand_0" class="OfferBoxCarLogo center-block" alt="MG" title="MG" src="img/calculator/MG-color-01.png">
+                                        <img id="ContentPlaceHolder1_Rep_Offers_img_Offer_0" class="OfferBoxCarImage img-responsive center-block" alt="STD" title="STD" src="WebImages/Products/MG/MG5/VehicleListing.png">
+                                        <h3>MG5 2023</h3>
+                                        <p class="subHeading">STD</p>
+                                        <p class="carPrice">Monthly Payment <span> 1,047 SR SAR</span></p>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="backCarImage" style="background-image: url('WebImages/Products/MG/MG5/VehicleListing.png');"></div>
+                                    <h3>
+                                        <img id="ContentPlaceHolder1_Rep_Offers_Image1_0" alt="MG" title="MG" src="img/calculator/MG-color-01.png">
+                                        MG5 2023</h3>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                        
+                                            <tr>
+                                                <td>Price</td>
+                                                <td>45,679 SR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Down Payment</td>
+                                                <td>0 SR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Residual Value</td>
+                                                <td>13,704 SR</td>
+                                            </tr>
+                                                <td>Total Cost</td>
+                                                <td>76,512 SR</td>
+                                            
+                                            <tr>
+                                                <td colspan="2">
+                                                    <a href='offers_details.aspx-3.html?offerNo=1341' class="gbtn btn-teal btn-regular">View Offer Details</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-sm-4">
+                            <div class="monthlyOfferBox flipWrap">
+                                <div class="front">
+                                    <div class="text-center">
+                                        <img id="ContentPlaceHolder1_Rep_Offers_img_Brand_1" class="OfferBoxCarLogo center-block" alt="MG" title="MG" src="img/calculator/MG-color-01.png">
+                                        <img id="ContentPlaceHolder1_Rep_Offers_img_Offer_1" class="OfferBoxCarImage img-responsive center-block" alt="COM" title="COM" src="WebImages/Products/MG/MG5/VehicleListing.png">
+                                        <h3>MG5 2023</h3>
+                                        <p class="subHeading">COM</p>
+                                        <p class="carPrice">Monthly Payment <span> 1,157 SR SAR</span></p>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="backCarImage" style="background-image: url('WebImages/Products/MG/MG5/VehicleListing.png');"></div>
+                                    <h3>
+                                        <img id="ContentPlaceHolder1_Rep_Offers_Image1_1" alt="MG" title="MG" src="img/calculator/MG-color-01.png">
+                                        MG5 2023</h3>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                        
+                                            <tr>
+                                                <td>Price</td>
+                                                <td>50,487 SR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Down Payment</td>
+                                                <td>0 SR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Residual Value</td>
+                                                <td>15,146 SR</td>
+                                            </tr>
+                                                <td>Total Cost</td>
+                                                <td>84,566 SR</td>
+                                            
+                                            <tr>
+                                                <td colspan="2">
+                                                    <a href='offers_details.aspx-3.html?offerNo=1341' class="gbtn btn-teal btn-regular">View Offer Details</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-sm-4">
+                            <div class="monthlyOfferBox flipWrap">
+                                <div class="front">
+                                    <div class="text-center">
+                                        <img id="ContentPlaceHolder1_Rep_Offers_img_Brand_2" class="OfferBoxCarLogo center-block" alt="MG" title="MG" src="img/calculator/MG-color-01.png">
+                                        <img id="ContentPlaceHolder1_Rep_Offers_img_Offer_2" class="OfferBoxCarImage img-responsive center-block" alt="STD 1.5" title="STD 1.5" src="WebImages/Products/MG/GT/VehicleListing.png">
+                                        <h3>GT 2023</h3>
+                                        <p class="subHeading">STD 1.5</p>
+                                        <p class="carPrice">Monthly Payment <span> 1,279 SR SAR</span></p>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="backCarImage" style="background-image: url('WebImages/Products/MG/GT/VehicleListing.png');"></div>
+                                    <h3>
+                                        <img id="ContentPlaceHolder1_Rep_Offers_Image1_2" alt="MG" title="MG" src="img/calculator/MG-color-01.png">
+                                        GT 2023</h3>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                        
+                                            <tr>
+                                                <td>Price</td>
+                                                <td>55,777 SR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Down Payment</td>
+                                                <td>0 SR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Residual Value</td>
+                                                <td>16,733 SR</td>
+                                            </tr>
+                                                <td>Total Cost</td>
+                                                <td>93,426 SR</td>
+                                            
+                                            <tr>
+                                                <td colspan="2">
+                                                    <a href='offers_details.aspx-3.html?offerNo=1341' class="gbtn btn-teal btn-regular">View Offer Details</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                
+
+            </div>
+        </div>
+    </section>
+    <!-- Monthly offer area end -->
+
+    
+
+<div id="ask-question" class="modal fade modal-alj login" tabindex="-1" role="dialog" aria-labelledby="advisorLocator" aria-hidden="true" style=" z-index:9997;">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close modal-alj" data-dismiss="modal" aria-label="Close">
+                    <span class="" aria-hidden="true">x</span>
+                </button>
+                <h4 class="modal-title">Ask A Question</h4>
+                <p class="modal-sub_title">
+                    We will gladly assist if you have any questions about (automate the vehicle and year).         
+                </p>
+            </div>
+            <div class="modal-body">
+                <p class="bg-blue sub_desc">
+                    Send them to us through our Enquiry Form and we will answer you within 48 hours. 
+                </p>
+                <div class="login-wrap">
+                    <p class="login-wrap_desc">
+                        * This Information that you provide to us for communcation purposes only 
+                    </p>
+                    <div role="form">
+                        <div id="ContentPlaceHolder1_AskQuestionForm_UpdatePanel1">
+	
+                                <div class="form-group">
+                                    <label for="username">Name:</label>
+                                    <input name="ctl00$ContentPlaceHolder1$AskQuestionForm$txt_Name" type="text" id="txt_Name" class="form-control">
+                                    
+                                    
+                                 </div>
+                                <div class="form-group">
+                                    <label for="yourMmail">E-mail:</label>
+                                    <input name="ctl00$ContentPlaceHolder1$AskQuestionForm$txt_Email" id="txt_Email" class="form-control" type="email">
+                                    
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="Telephone">Mobile:</label>
+                                    <span class="formInlinegroup mobileNumber">
+                                        <input name="ctl00$ContentPlaceHolder1$AskQuestionForm$txt_Mobile" maxlength="10" id="txt_Mobile" class="form-control" type="tel">
+                                    </span>
+                                    
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Your question:</label>
+                                    <textarea name="ctl00$ContentPlaceHolder1$AskQuestionForm$txt_Message" rows="5" cols="20" maxlength="4000" id="txt_Message" class="form-control">
+</textarea>
+                                    
+                                    
+
+                                </div>
+                                <div class="checkbox">
+                                    <span class="styled"><input id="newsEvent_askQuestion" type="checkbox" name="ctl00$ContentPlaceHolder1$AskQuestionForm$newsEvent_askQuestion"><label for="newsEvent_askQuestion">Keep Me Informed of news and eventes</label></span>
+                                </div>
+
+                            
+</div>
+
+                        <div class="form-group">
+                            <label for="">Are you a robot?</label>
+                            <div class="g-recaptcha" data-sitekey="6LcLFwwTAAAAANyLXxeMItgo8kMZsG4itE9PxTh6"></div>
+                            <script src='recaptcha/api-2.js?hl=en' async="" defer=""></script>
+                        </div>
+                        <br>
+
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$AskQuestionForm$button_askQuestion" value="Send your question" onclick="WaitMessage_popup();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$AskQuestionForm$button_askQuestion&quot;, &quot;&quot;, true, &quot;VG_Feedback&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_AskQuestionForm_button_askQuestion" class="gbtn btn-slate btn-regular">
+
+                        <input name="ctl00$ContentPlaceHolder1$AskQuestionForm$Hid_captcha" type="hidden" id="Hid_captcha" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+
+    function WaitMessage_popup() {
+        if (IsPersonValid() && captchaValidation()) {
+            showWaitMessage();
+        }
+    }
+
+    function captchaValidation() {
+        if (grecaptcha.getResponse() === '') {
+            //reCaptcha not verified
+            document.getElementById('Hid_captcha').value = 0;
+            Alert_Warning('Warning!', 'Please verify if you are not a robot!');
+            event.returnValue = false;
+            return false;
+        } else {
+            //reCaptch verified
+            document.getElementById('Hid_captcha').value = 1;
+            return true;
+        }
+    }
+
+    function IsPersonValid() {
+        var flag = true;
+
+        if ($("#txt_Email").val() == "") return false;
+        if ($("#txt_Mobile").val() == "") return false;
+        if ($("#txt_Subject").val() == "") return false;
+        if ($("#txt_Message").val() == "") return false;
+
+        return flag;
+    }
+
+</script>
+
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$Hid_Period" id="ContentPlaceHolder1_Hid_Period">
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$Hid_ChangePar" id="ContentPlaceHolder1_Hid_ChangePar">
+    <!-- /.modal-content -->
+
+    <!-- /.modal-dialog -->
+
+    <!-- /.modal -->
+    <!-- Script for lightbox -->
+    <script src="js/prettyPhoto.js"></script>
+    <!-- Script for carousel -->
+    <script src="js/owl.js"></script>
+    <script src="js/owlCarousel-script.js"></script>
+    <!-- Script for sticky nav menu -->
+    <script src="js/stickyNav-script.js"></script>
+    <script src="js/jquery.bootstrap.wizard.min.js"></script>
+  
+
+</main>
+
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+          
+                            <h6><strong>Vehicles</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options.aspx-5.html?BrandID=1">Toyota</a></li>
+                                <li><a href="finance_options.aspx-6.html?BrandID=2">Lexus</a></li>
+                                <li><a href="finance_options.aspx-7.html?BrandID=2015">Hyundai</a></li>
+                                <li><a href="finance_options.aspx-8.html?BrandID=2019">Kia</a></li>
+                                <li><a href="finance_options.aspx-9.html?BrandID=2053">Geely</a></li>
+                                <li><a href="vehicles_comparison.aspx.html">Vehicles Comparison</a></li>
+                             
+                            </ul>
+
+                            <h6><strong>SME Financing</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry.aspx.html">Make A Fleet Enquiry</a></li>
+                                <li><a href="fleet_and_business.aspx.html">Our Fleet Branches</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">Suppliers services</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Tools</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                <li><a href="cash_financing.aspx.html">Cash finance for individual </a></li>
+                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance </a></li>
+                                <li><a href="how_to_auto_finance.aspx.html">How to finance a vehicle?</a></li>
+                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                <li><a href="Offers_listing.aspx.html">Offers</a></li>                               
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Your Account</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="Account_login.aspx.html">Account Login</a></li>
+                                <li><a href="account_registration.aspx.html">New Registration</a></li>
+                                <li><a href="account_password_reset.aspx.html">Recover Password</a></li>
+                                <li><a href="SADAD_payment.aspx.html">SADAD Payment</a></li>
+                                <li><a href="Documents/ServicesFeesListEn.pdf">Services Fees List</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Locations</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations.aspx.html">Branches Map</a></li>
+                                <li><a href="locations_ho.aspx.html">Let Us Call You</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">Wholesalers List</a></li>
+                            </ul>
+                            <h6><strong>Contact us</strong></h6>
+                            <ul class="footerTopMenu">
+                          
+                                <li><a href="feedbacks.aspx.html">Feedbacks</a></li>
+                                <li><a href="feedbacks.aspx.html">Complaints</a></li>
+                                <li><a href="feedbacks_whistleblowing.aspx.html">Whistleblowing</a></li>
+
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Abdul Latif Jameel Finance</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about.aspx.html">About Us</a></li>
+                                <li><a href="WebImages/Links/27/File_en.pdf">Consumer Protection</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_En.pdf">Principles of Responsible Financing for Individuals</a></li>
+                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                <li><a href="Documents/Complines_How_To_En.jpg">Complaints Handling Process</a></li>
+                                <li><a href="http://careers.aljfinance.com/">Careers</a></li>
+                                <li><a href="feedbacks_training.aspx.html">Training Request</a></li>
+                                <li><a href="Documents/ALJUF_Terms_en.pdf">Financial Leasing Conditions</a></li>
+                                <li><a href="finance_reports.aspx.html">Financial Reports</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingEn.pdf">General terms and conditions</a></li>  
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram" target="_blank">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                              
+							  <li><a href="https://www.facebook.com/Aljfinance" title="Facebook" target="_blank">
+                                    <!-- <i class="fa fa-facebook"></i> --> 
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter" target="_blank">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks.aspx.html" class="btn-block footerFeedback">Complaints</a>
+                            <a href="WS_login.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">Wholesalers</a>
+                            <span id="siteseal" class=" btn-block footerFeedback"><script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script></span>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                            <!--<span class="c-icon appleStore-icon"></span>-->
+                                            <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>APP STORE</p>
+                                        </a></li>
+
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                            <!--<span class="c-icon blackberry-icon"></span>-->
+                                            <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>GOOGLE PLAY</p>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreApp.png" alt="iOS App" title="iOS App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                    <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>APP STORE</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayApp.png" alt="Google App" title="Google App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>GOOGLE PLAY</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">
+                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer.aspx.html">Copyright</a></li>
+                                <li><a href="terms_of_use.aspx.html">Terms of Usage</a></li>
+                                <li><a href="cookie_policy.aspx.html">Cookies Policy</a></li>
+                                <li><a href="accessibility_policy.aspx.html">Accessibility Policy</a></li>
+                                <li><a href="privacy_policy.aspx.html">Privacy Policy</a></li>
+                                <li><a href="Documents/Personal_Data_Protection_En.pdf" target="_blank">Personal Data Protection Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 Abdul Latif Jameel United Finance Company. Permission to use this site is granted strictly subject to the Terms of Use. The Abdul Latif Jameel logotype and pentagon-shaped graphic are trademarks, or registered trademarks of Abdul Latif Jameel IPR Company Limited.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index.aspx.html">Home</a></li>
+                        
+                          <li class="dropdownTab"><a href="#" data-toggle="dropdown">Financial products</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">Financial products</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                                <li><a href="cash_financing.aspx.html">Cash finance for individual</a></li>
+                                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance</a></li>
+                                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                                <li><a href="how_to_auto_finance.aspx.html">How to vehicle finance?</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="Offers_listing.aspx.html">Offers</a></li>
+                        <li><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                        <li><a href="locations.aspx.html">Locations</a></li>
+                        <li><a href="news_listing.aspx.html">News</a></li>
+                        
+                        <li class="dropdownTab"><a href="vehicle.aspx.html" data-toggle="dropdown">About Us</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="index.aspx.html"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">About Us</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about.aspx.html">Mission and Vision</a></li>
+                                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="Account_login.aspx.html">Account Login</a></li>
+                        <li><a href="account_registration.aspx.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>Call us 8002442211</a></li>
+                  
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="Search ALJ Finance" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                <img class="float-xs-left" title="App Store" alt="App Store" src="img/appStore.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>APP STORE</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                <img class="float-xs-left" title="Google play" alt="Google play" src="img/googlePlay.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>GOOGLE PLAY</p>
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+  <style type="text/css">
+        /*common*/
+      .loading-wrap
+      {
+          background: rgba(128,128,128,0.8);
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 2000;
+          display: none;
+      }
+
+        .loading-wrap .loading{
+            max-width:617px;
+            max-height:210px;
+            margin: auto;
+            position: relative;
+            top: 180px;
+            overflow: hidden;
+            -moz-border-radius: 3px 3px 0 0;
+            -webkit-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0; /* border radius */
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box; /* prevents bg color from leaking outside the border */
+            background-color: #fff; /* layer fill content */
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+            background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+        }
+        .loading-wrap .loading-head{
+            border-bottom: 7px solid #4d8092;
+            background-color: #fff;
+            padding: 17px 30px;
+        }
+        .loading-wrap .loading-content{
+            background-color: #fff;
+            padding: 21px 30px 18px;
+        }
+        .loading-wrap .loading-head figure{
+            position: relative;
+            top: -1px;
+        }
+
+        .font-18{font-size: 18px;}
+        .font-14{font-size: 14px;}
+        .mb25{margin-bottom:25px;}
+
+        @media (max-width: 767px)  {
+            .loading-wrap .loading{
+                max-height:inherit;
+            }
+            .loading-wrap .loading-head h1{
+                font-size: 40px;
+            }
+        }
+
+        .one {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.0s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.0s;
+        }
+
+        .two {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.2s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.2s;
+        }
+
+        .three {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.3s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.3s;
+        }
+
+        @-webkit-keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+/*en only*/
+    .loading-wrap .loading-head h1{
+        font-size: 52px;
+    }
+    </style>
+
+    <section class="loading-wrap" style="display:block;z-index: 9999;visibility:hidden;" id="PleaseWait" tabindex="-1">
+            
+        <div class="loading">
+            <div class="loading-head">
+                
+                   <button type="button" class="close closeRoundWhite-icon" style="margin:-10px -20px 0 0 ;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span>Loading</span><span class="one">.</span><span class="two">.</span><span class="three">.</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">Please wait. We are loading the information you are requesting.</p>
+                <p class="font-14">Does it take more time than expected? Please <a href="feedbacks.aspx.html"> contact us</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Tablet menu end -->
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">SADAD Payment</button>
+
+        <div class="form-popup" id="myForm">
+          <div class="form-container">
+              <div class="survey-logo"><img src="img/logo-tamakan.svg"></div>
+              <div class="survey-bg">
+                <h1 class="survey-title">Dear Guest</h1>
+                <p class="survey-text">As we value your health and your loved ones<br>you can perform your monthly payments by SADAD via your banking payment channels.</p>    
+              </div>
+              <div class="survey-footer">
+                <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">SADAD</button>
+                <button type="button" class="btn cancel" onclick="javascript:closeForm()">CLOSE</button>
+              </div>
+    
+          </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <!-- Script for tablet menu -->
+        <script src="js/sideMenu-script.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+          <script src="js/jquery.md5.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    </form>
+    
+    <!-- YAMLI CODE START -->
+    <script type="text/javascript" src="js/yamli_api.js"></script>
+    <script type="text/javascript">
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name_Update", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name_Update", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street_Home", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Sponser_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Driver_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative1_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative2_Name", { settingsPlacement: "hide" });
+        }
+        
+        
+    </script>
+    <!-- YAMLI CODE END -->
+     <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+   
+
+
+</body>
+</html>

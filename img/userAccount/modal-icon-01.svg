@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="122" height="85" viewBox="0 0 122 85">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.865" y1="0.103" x2="0.038" y2="0.972" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#23b3ce"/>
+      <stop offset="1" stop-color="#437f96"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Rectangle_46854" data-name="Rectangle 46854" d="M20,0H122a0,0,0,0,1,0,0V85a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V20A20,20,0,0,1,20,0Z" transform="translate(28 104)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="modal-icon-01" transform="translate(-28 -104)" opacity="0.4" clip-path="url(#clip-path)">
+    <g id="Group_49376" data-name="Group 49376" transform="translate(12.359 100.32)">
+      <g id="Group_49376-2" data-name="Group 49376">
+        <path id="Path_96722" data-name="Path 96722" d="M1302.835,2585.139l-3.5,5.208h-20.645l-3.5-5.208h-51.139v6.891c0,4.346,3.919,7.869,8.752,7.869h112.427c4.832,0,8.752-3.523,8.752-7.869v-6.891Z" transform="translate(-1224.042 -2515.805)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_96723" data-name="Path 96723" d="M1266.367,2307.039v-60.447a3.5,3.5,0,0,1,3.5-3.5h105.771a3.5,3.5,0,0,1,3.5,3.5v60.447" transform="translate(-1257.787 -2243.091)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <rect id="Rectangle_46971" data-name="Rectangle 46971" width="19.719" height="19.719" transform="translate(27.26 38.907)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_96724" data-name="Path 96724" d="M1378.246,2305.122v8.837h-19.719V2294.24h14.963" transform="translate(-1331.267 -2283.872)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_96725" data-name="Path 96725" d="M1402.7,2300.1l-11.111,11.111-4.275-4.275" transform="translate(-1354.222 -2288.544)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_389" data-name="Line 389" x2="38.887" transform="translate(63.786 15.325)" fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_390" data-name="Line 390" x2="38.887" transform="translate(63.786 25.129)" fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_391" data-name="Line 391" x2="38.887" transform="translate(63.786 43.865)" fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_392" data-name="Line 392" x2="38.887" transform="translate(63.786 53.67)" fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

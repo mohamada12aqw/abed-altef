@@ -1,0 +1,1754 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="Toyota, Lexus, UIS, United Installment, Toyota Financing, Vehicle Installment, Vehicle Financing, Vehicle Leasing, Vehicle installment, Corolla, Camry, Yaris, Limousine, Lexus, Land Cruiser, Prado, Daihatsu, Abdul Latif Financing, Toyota Saudi, Rent a car, Vehicle Dealer, car loan"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Abdul Latif Jameel United Finance Co"><meta property="og:description" content="Abdul Latif Jameel United Finance Co. provides financial leasing and Murabaha services for all car brands, home appliances, electronics and certain types of heavy equipment subject to terms and conditions."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan.svg">
+
+   
+    <!-- Boots`trap CSS-->
+    <!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="css/bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/bootstrap3-custom.css" rel="stylesheet"><link href="css/global-style.css" rel="stylesheet" type="text/css">
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="On this page you may find most of the answers you are looking for">
+ 
+     <script src="js/jquery-3.5.1.js"></script> 
+
+    <script type="text/javascript">
+        var newsLink ;
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            newURL = 'http://' + document.location.host + url.split('.aspx')[0] + "_ar.aspx" + url.split('.aspx')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#Arabic"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "العربية" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+            
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment.aspx';
+            }else {
+                newsLink = 'SADAD_payment.aspx';
+            }
+
+            var links = ['index',
+                      'Offers_listing',
+                      'fleet_and_business',
+                      'vehicle_listing',
+                      'vehicles_comparison',
+                      'feedbacks',
+                      'account_dashboard',
+                      'offers_details'];
+
+
+            links.forEach(function (item) {
+                
+                if (url.indexOf(item) !== -1) {
+
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                
+                //swal({
+                //    html: true,
+                //    title: "<hr>We value your Feedback",
+                //    text: "Abdul Latif Jameel Finance aims to improve your website experience.<br>Please spare a minute to share your thoughts<br><br>",
+                //    imageUrl: "img/logo.png",
+                //    imageSize: '200x50',          
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "SKIP",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'VISIT'
+
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+            document.getElementById("myForm").style.display = "block";
+                
+            }else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            }
+
+
+            //end of VAT popup code
+            //=====================================================================
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+            var index = url.search("index");
+
+            if (index > 0) {
+                //if (true) {
+                //     mobile_Div.style.display = "none";;
+                //}
+                //else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From App Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From GOOGLE PLAY</p>";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From Windose Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+               
+            }
+
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+        function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+            };
+
+            function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+            };
+
+            function openInNewTab() {
+              var win = window.open(newsLink, '_blank');
+              win.focus();
+            };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+  
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script> 
+    
+    
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+   
+<title>
+	Frequently Asked Questions | Abdul Latif Jameel United Finance
+</title></head>
+<body>
+    <!-- Google Tag Manager -->
+
+
+    <!-- Google tag (gtag.js) -->
+
+<script async="" src="gtag/js?id=UA-7444353-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7444353-1');
+</script>
+
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./FAQs.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="K7XBu+09LBJk/xjj6hzoSJwZ38ASl//sbs12FxYL1wwlgmguQMcDSSKbbdiEgVrhxuzMkanOKQhq4EQVl4gs6X3az7400onegV2TAySCmpk=">
+
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FFA2CE73">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="soF9hspWPUF0ihpqEgoyKIJlGOAVZ+z8As+aB+t+mi9Pl6ESUJjLo2YgAyBIqNw6CFWqgXoCEScdD2XxM8xRv1liaDi1WyyCaxopcEfPctOAxyxn/wPHqLgQ52cDXSqoNCyiCBcD8iZTs5nT7beIunUxyhwCx5YbXAYEH0FjBmQ=">
+        
+       
+        <!-- Wrapper start -->
+        <div class="wrapper">
+
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">Financial Leasing</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            Call us: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="Account_login.aspx.html">Login</a></li>
+    <li><a href="account_registration.aspx.html">Register</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class="active"><a href="#" class="activelangbutton">English</a></li>
+                                            <li><a href="#Arabic" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                             <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>Menu</a>
+                                </div>
+
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo">
+                                        <a href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item"><a href="index.aspx.html" class="nav-link">Home</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Financial products</a>
+                                                <div class="dropdown-menu">
+                                                    <div class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products.aspx.html">
+                                                                            <h6>Finance Calculator</h6>
+                                                                            <p>Get a finance quotation for the vehicle of your choice</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic.aspx.html">
+                                                                            <h6>Murabaha Calculator</h6>
+                                                                            <p>Get a finance quotation</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance.aspx.html">
+                                                                            <h6>Consumer Goods Finance</h6>
+                                                                            <p>Get a Electronics & Home Appliances Finance</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="used_cars_campaign.aspx.html">
+                                                                            <h6>Used Vehicles</h6>
+                                                                            <p>Get your used vehicle with financing.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>  
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing.aspx.html">
+                                                                            <h6>Cash finance for individual</h6>
+                                                                            <p>A financing product that allows individuals to fulfill their financial needs.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref.aspx.html">
+                                                                            <h6>Real Estate Financing</h6>
+                                                                            <p>We provide affordable, Sharia-compliant financial solutions</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf.aspx.html">
+                                                                            <h6>Bab Rizq Jameel Microfinance</h6>
+                                                                            <p>We provide Small and medium-sized enterprises with sharia compliant financing</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="nav-item"><a href="Offers_listing.aspx.html">Offers</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                                            <li class="nav-item"><a href="locations.aspx.html">Locations</a></li>
+                                            <li class="nav-item"><a href="news_listing.aspx.html">News</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about.aspx.html">
+                                                                            <h6>Mission and Vision </h6>
+                                                                            <p>Abdul Latif Jameel United Finance Co. (ALJUF)</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan.aspx.html">
+                                                                            <h6>Tamakan</h6>
+                                                                            <p>We build confidence by enabling dreams</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs.aspx.html">
+                                                                            <h6>FAQ’s</h6>
+                                                                            <p>Everything you need to know</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>                                    
+                                       
+                                        <a class="navbar-brand logo-en" href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top">
+                                        </a>
+                                    </div>
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                <!--<input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength="255" />
+                                                <input name="ctl00$btn_Search" type="submit" id="btn_Search" class="sb-search-submit" />-->
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input id="txt_Search" type="text" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength='255'>
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+    
+    
+    <section class="pageHeaderWide">
+        <div class="container pageHeader">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li><a href="index.aspx.html">Homepage</a></li>
+                    </ol>
+                </div>
+                <div class="col-sm-6">
+                    <h1 itemprop="name">Frequently Asked Questions</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- header end -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="faqs__desc">
+                    We encourage you to review the frequently asked questions we received and our responses to them. If you have another question, please fill in the form <a href="feedbacks.aspx.html">here.</a>
+                </p>
+            </div>
+            
+            <div class="clearfix"></div>
+            <div class="col-md-6">
+                <div class="accordion">
+                    <div class="accordion--head">
+                        <h3>Leasing
+                        </h3>
+                        <div class="panel-group" id="accordion">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-01">
+                                                <h6 class="card-title">What is leasing?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-01">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-01" class="collapse">
+                                    <div class="card-body">
+                                        A contract under which the Company retains the leased asset (ownership of the car) until the end of the contract and the payment of all staggered lease payments. 
+                            The Guest has the right to use the car in exchange for agreed monthly lease payments to the Company. 
+                            The Guest is entitled to own the car after paying of all payments and all the terms of the contract which includes the Residual Value, or the Guest can return the car to the Company at the end of the lease term if he does not wish to own it.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-02">
+                                                <h6 class="card-title">Does the financial leasing contract comply with Shariah principles?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-02">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-02" class="collapse">
+                                    <div class="card-body">
+                                        ALJ United Finance commenced Shariah compliant lease program since  1994. Our services and products are constantly scrutinized and vetted by Shariah Board. 
+                            For more information, you may check the Shariah Board Approval of our Lease to own product using the following link <a href="Documents/shariah.pdf">Shariah Board</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-03">
+                                                <h6 class="card-title">What is the Residual Value or Final Payment?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-03">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-03" class="collapse">
+                                    <div class="card-body">
+                                        The residual value or final payment is the amount for which you may purchase the vehicle at the end of the lease, if you decide so. 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-04">
+                                                <h6 class="card-title">Is the financing percentage fixed?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-04">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-04" class="collapse">
+                                    <div class="card-body">
+                                        Yes, it is fixed during the entire contract period.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-05">
+                                                <h6 class="card-title">Will you ask me for down payment in certain situations?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-05">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-05" class="collapse">
+                                    <div class="card-body">
+                                        The monthly payment must meet the 30% of the guest salary. In case the monthly payment is more than 30% of the salary, we will calculate the difference as a down payment, as well as in some occasions ALJUF will request for a down payment when the terms are not complied with instead of rejecting the application.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-06">
+                                                <h6 class="card-title">Can I own the car before the end of contract? In addition, is there any amount that I should pay?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-06">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-06" class="collapse">
+                                    <div class="card-body">
+                                        Yes, you can. However, you will have to pay the rest of the car value in addition to the three monthly payments to fund the cost of early closing of the contract after deduction of previous payments.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-07">
+                                                <h6 class="card-title">Can I also finance the residual value (last payment)?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-07">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-07" class="collapse">
+                                    <div class="card-body">
+                                        Yes, you can refinance the last payment for 24 months, if the total original period of the contract and refinancing do not exceed 72 months in accordance with the terms and conditions.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-08">
+                                                <h6 class="card-title">What should I do when my leasing ends?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-08">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-08" class="collapse">
+                                    <div class="card-body">
+                                        Once the current lease term ends and you have fulfilled your lease obligations, you have three options:<br>
+                                        <ol>
+                                            <li>Return your vehicle and enter into a new lease arrangement on a brand new one. This is our most popular option: It allows you to return your current vehicle, and if you qualify drive off with a new vehicle. For many customers, this option is one of the deciding factors for leasing - no worries with trade-in values or hassles with selling a used vehicle.</li>
+                                            <li>Purchase the vehicle - Your lease agreement includes a lease-end Purchase Option Price. This allows you the flexibility to purchase the vehicle at an amount determined at the beginning of your lease. The company will collect any applicable fees and costs (registration, license, etc.) if you exercise this option.</li>
+                                            <li>Return the vehicle - Another option is to return your vehicle and walk away.</li>
+                                         </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-09">
+                                                <h6 class="card-title">What is the Residual Final Payment?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-09">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-09" class="collapse">
+                                    <div class="card-body">
+                                        The residual final payment is the amount for which you can purchase the vehicle at the end of the lease, if you decide so.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-10">
+                                                <h6 class="card-title">What are the advantages of leasing?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-10">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-10" class="collapse">
+                                    <div class="card-body">
+
+                                        <ol>
+                                            <li>Lower Monthly Payments:
+                                                Due to the mechanics of the lease to own arrangement which include a final payment, your monthly                                     payments are 30%-60% lower than the installment module to rent a vehicle.
+                                            </li>
+                                            <li>Warranty Comfort:
+                                                Most people like to lease for a term that coincides with the length of the manufacturer's                                            warranty coverage so that if something goes wrong with the vehicle, the repairs are always                                           covered.
+                                            </li>
+                                            <li>Lower Upfront Cash Outlay:
+                                                The lease to own arrangement requires little or no down payment*, which makes getting a new car                                       more affordable and frees up your cash. However, you can choose to make a down payment, or trade                                     in your old vehicle, to lower your monthly payment amount.
+                                            </li>
+                                            <li>No Used-Car Hassles
+                                                With leasing, the headaches of selling a used car are eliminated. When your lease ends, you                                          simply turn it back to the company and walk away, unless you decide to buy it or trade it.
+                                            </li>
+                                        </ol>
+                                        <br>
+                                        <p>
+                                            * Specific Conditions apply.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-11">
+                                                <h6 class="card-title">Can I buy my leased car before termination date?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapse-11">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-11" class="collapse">
+                                    <div class="card-body">
+                                        Your financial lease agreement allows you to pre-pay and purchase your vehicle. If you wish to exercise this option, please contact the branch for additional assistance. This transaction needs to be facilitated through the branch. A voluntary early purchase option fee, together with title, and license registration fees shall apply. 
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OCORDION 1 -->
+            <div class="col-md-6">
+                <div class="accordion">
+                    <div class="accordion--head">
+                        <h3>Account Maintenance
+                        </h3>
+                        <div class="panel-group" id="accordion4">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-12">
+                                                <h6 class="card-title">How can I create or update my username and password online?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-12">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-12" class="collapse">
+                                    <div class="card-body">
+                                        You can create or update your username and password through the site by following this <a href="Account_login.aspx.html">link</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-12b">
+                                                <h6 class="card-title">Can I pay via Credit cards?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-12b">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-12b" class="collapse">
+                                    <div class="card-body">
+                                        Yes, you can pay by bank card or alternative payment methods such as direct deposit, bank transfer or payment service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-13">
+                                                <h6 class="card-title">Can I specify the date for the monthly payments?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-13">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-13" class="collapse">
+                                    <div class="card-body">
+                                        Yes. However, the new date should fall before due date.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-14">
+                                                <h6 class="card-title">Can I transfer my file from branch to branch or from city to city?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-14">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-14" class="collapse">
+                                    <div class="card-body">
+                                        Yes. However, you would need to inform the branch.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-15">
+                                                <h6 class="card-title">Should I pay the monthly payment even though I do not use the vehicle?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-15">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-15" class="collapse">
+                                    <div class="card-body">
+                                        Yes, the guest is obliged to pay the agreed payment on the dates specified on the contract, even though if he does not benefit from the leased vehicle for any reason.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-16">
+                                                <h6 class="card-title">What should I do when the contract ends?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-16">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-16" class="collapse">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><strong>Option 1</strong>: You have the right to purchase the car after fulfilling all the required payments and terms of a new purchase contract with the agreed residual value</li>
+                                            <li><strong>Option 2</strong>: Return the car to the company, in which case the guest must return the car to the company intact, in working condition, with no defects and damages, except for which resulted into normal consumption and use</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-17">
+                                                <h6 class="card-title">Are there any obligations to fulfill in the event of the expiration of the contract 
+                                                    period and my desire to own the car or my desire to return the car before the end of the contract?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-17">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-17" class="collapse">
+                                    <div class="card-body">
+                                        The Guest has the right to exercise withdrawal (cancellation of the contract). However, the following terms need to be considered:
+                                          <ul>
+                                              <li>The lease termination will be approved on the basis of the tenant's use of the leased vehicle up to a maximum of thirty thousand kilometers annually or 2500 thousand (five hundred kilometers) per month calculated from the meter reading at the conclusion of the contract. The meter reading is (50) fifty halal per additional kilometer</li>
+                                              <li>The price of lost equipment and accessories shall be calculated</li>
+                                              <li>Repair costs of any mechanical, electrical or structural damage are added</li>
+                                              <li>Any traffic or other fines are added to the calculation</li>
+                                          </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-18">
+                                                <h6 class="card-title">In the case of any of breach on any of the terms and conditions mentioned in the contract, 
+                                                    do I have to pay any obligations towards the company?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-18">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-18" class="collapse">
+                                    <div class="card-body">
+                                        Yes, in some cases, you have to pay the value of the original cost (the cost of the term) in addition to three monthly payments following the month of cancellation. 
+                                The value will be calculated based on the guest usage of the vehicle.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-19">
+                                                <h6 class="card-title">What is the mechanism of car retrieval in case of non-compliance with the required monthly payments?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-19">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-19" class="collapse">
+                                    <div class="card-body">
+                                        The mechanism is conducted through specialized third party entities.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-20">
+                                                <h6 class="card-title">Is the company responsible for personal belongings when the vehicle is retrieved?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-20">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-20" class="collapse">
+                                    <div class="card-body">
+                                        The company is not responsible for the loss of any personal belongings in the car in case the vehicle is retrieved.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapse-21">
+                                                <h6 class="card-title">Why is my file transferred to another branch?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion4" href="#collapse-21">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-21" class="collapse">
+                                    <div class="card-body">
+                                        Transfer of files may result to assignment to one of our collection centers in other locations. However, the guest could deal with any branch of the company, in any region in the Kingdom, or any branch is considered as representative of the company.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <!-- END OCORDION 2 -->
+            
+            <!-- END ECORDION 3 -->
+            <div class="col-md-6">
+                <div class="accordion4 mb100">
+                    <div class="accordion--head">
+                        <h3>Other
+                        </h3>
+                        <div class="panel-group" id="accordion2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-23">
+                                                <h6 class="card-title">When should I renew the driving delegation?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapse-23">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-23" class="collapse">
+                                    <div class="card-body">
+                                        The delegation should be renewed every three months.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-24">
+                                                <h6 class="card-title">Can I take the vehicle outside the Kingdom during the lease term?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapse-24">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-24" class="collapse">
+                                    <div class="card-body">
+                                        Yes for GCC and Egypt but excludes Qatar and Yemen.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-25">
+                                                <h6 class="card-title">What is the procedure to be performed when I cannot benefit from the vehicle?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapse-25">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-25" class="collapse">
+                                    <div class="card-body">
+                                        The guest is obliged to notify the Company whenever a situation occurred that prevent the use of the vehicle completely or in part. You can contact the nearest branch or through the ALJUF CRM 8002442211
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-26">
+                                                <h6 class="card-title">Can I take the vehicle outside the Kingdom during the lease term?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapse-26">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-26" class="collapse">
+                                    <div class="card-body">
+                                        No. You must comply with specific terms & conditions that are set by the Company.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                      <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-27">
+                                                <h6 class="card-title">Where can I obtain information regarding any special incentives/finance plans?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapse-27">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-27" class="collapse">
+                                    <div class="card-body">
+                                        Finance plans depend upon the season and differ with the make and model of the vehicle. You're welcome to see your <a href="locations.aspx.html">nearest branch</a> for specific details.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-28">
+                                                <h6 class="card-title">During the repair period, will the company provide me with a substitute vehicle?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapse-28">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-28" class="collapse">
+                                    <div class="card-body">
+                                        No. Unless the workshop has exceeded the estimated time communicated to you to repair the vehicle or as a result of the manufacturer's warranty repair. Under these specific limited conditions the company reserves the right to monetarily compensate you.  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OCORDION 4 -->
+            <div class="col-md-6">
+                <div class="accordion5 mb100">
+                    <div class="accordion--head">
+                        <h3>Financing Tools 
+                        </h3>
+                        <div class="panel-group" id="accordion3">
+                            
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-xs-9">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-22">
+                                                <h6 class="card-title">Will I be guaranteed on the amounts indicated on the Calculator?</h6>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 no-padding-left">
+                                            <span class="mg-t-r gbtn btn-white btn-v-small pull-right" data-toggle="collapse" data-parent="#accordion3" href="#collapse-22">
+                                                <img src="img/arrow.png" alt="" title="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-22" class="collapse">
+                                    <div class="card-body">
+                                        The actual price and payment amount quoted on the Calculator is an approximation and is to be used as a financial guide only. The actual price and payment amount may vary due to many factors and does not include title and registration fees. Contact the branch for complete details. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END ECORDION 5 -->
+            <div class="col-md-6">
+            </div>
+            <!-- END Col 6 -->
+
+        </div>
+    </div>
+
+</main>
+
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+          
+                            <h6><strong>Vehicles</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options.aspx-5.html?BrandID=1">Toyota</a></li>
+                                <li><a href="finance_options.aspx-6.html?BrandID=2">Lexus</a></li>
+                                <li><a href="finance_options.aspx-7.html?BrandID=2015">Hyundai</a></li>
+                                <li><a href="finance_options.aspx-8.html?BrandID=2019">Kia</a></li>
+                                <li><a href="finance_options.aspx-9.html?BrandID=2053">Geely</a></li>
+                                <li><a href="vehicles_comparison.aspx.html">Vehicles Comparison</a></li>
+                             
+                            </ul>
+
+                            <h6><strong>SME Financing</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry.aspx.html">Make A Fleet Enquiry</a></li>
+                                <li><a href="fleet_and_business.aspx.html">Our Fleet Branches</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">Suppliers services</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Tools</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                <li><a href="cash_financing.aspx.html">Cash finance for individual </a></li>
+                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance </a></li>
+                                <li><a href="how_to_auto_finance.aspx.html">How to finance a vehicle?</a></li>
+                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                <li><a href="Offers_listing.aspx.html">Offers</a></li>                               
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Your Account</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="Account_login.aspx.html">Account Login</a></li>
+                                <li><a href="account_registration.aspx.html">New Registration</a></li>
+                                <li><a href="account_password_reset.aspx.html">Recover Password</a></li>
+                                <li><a href="SADAD_payment.aspx.html">SADAD Payment</a></li>
+                                <li><a href="Documents/ServicesFeesListEn.pdf">Services Fees List</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Locations</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations.aspx.html">Branches Map</a></li>
+                                <li><a href="locations_ho.aspx.html">Let Us Call You</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">Wholesalers List</a></li>
+                            </ul>
+                            <h6><strong>Contact us</strong></h6>
+                            <ul class="footerTopMenu">
+                          
+                                <li><a href="feedbacks.aspx.html">Feedbacks</a></li>
+                                <li><a href="feedbacks.aspx.html">Complaints</a></li>
+                                <li><a href="feedbacks_whistleblowing.aspx.html">Whistleblowing</a></li>
+
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Abdul Latif Jameel Finance</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about.aspx.html">About Us</a></li>
+                                <li><a href="WebImages/Links/27/File_en.pdf">Consumer Protection</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_En.pdf">Principles of Responsible Financing for Individuals</a></li>
+                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                <li><a href="Documents/Complines_How_To_En.jpg">Complaints Handling Process</a></li>
+                                <li><a href="http://careers.aljfinance.com/">Careers</a></li>
+                                <li><a href="feedbacks_training.aspx.html">Training Request</a></li>
+                                <li><a href="Documents/ALJUF_Terms_en.pdf">Financial Leasing Conditions</a></li>
+                                <li><a href="finance_reports.aspx.html">Financial Reports</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingEn.pdf">General terms and conditions</a></li>  
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram" target="_blank">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                              
+							  <li><a href="https://www.facebook.com/Aljfinance" title="Facebook" target="_blank">
+                                    <!-- <i class="fa fa-facebook"></i> --> 
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter" target="_blank">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks.aspx.html" class="btn-block footerFeedback">Complaints</a>
+                            <a href="WS_login.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">Wholesalers</a>
+                            <span id="siteseal" class=" btn-block footerFeedback"><script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script></span>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                            <!--<span class="c-icon appleStore-icon"></span>-->
+                                            <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>APP STORE</p>
+                                        </a></li>
+
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                            <!--<span class="c-icon blackberry-icon"></span>-->
+                                            <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>GOOGLE PLAY</p>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreApp.png" alt="iOS App" title="iOS App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                    <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>APP STORE</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayApp.png" alt="Google App" title="Google App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>GOOGLE PLAY</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">
+                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer.aspx.html">Copyright</a></li>
+                                <li><a href="terms_of_use.aspx.html">Terms of Usage</a></li>
+                                <li><a href="cookie_policy.aspx.html">Cookies Policy</a></li>
+                                <li><a href="accessibility_policy.aspx.html">Accessibility Policy</a></li>
+                                <li><a href="privacy_policy.aspx.html">Privacy Policy</a></li>
+                                <li><a href="Documents/Personal_Data_Protection_En.pdf" target="_blank">Personal Data Protection Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 Abdul Latif Jameel United Finance Company. Permission to use this site is granted strictly subject to the Terms of Use. The Abdul Latif Jameel logotype and pentagon-shaped graphic are trademarks, or registered trademarks of Abdul Latif Jameel IPR Company Limited.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index.aspx.html">Home</a></li>
+                        
+                          <li class="dropdownTab"><a href="#" data-toggle="dropdown">Financial products</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">Financial products</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                                <li><a href="cash_financing.aspx.html">Cash finance for individual</a></li>
+                                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance</a></li>
+                                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                                <li><a href="how_to_auto_finance.aspx.html">How to vehicle finance?</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="Offers_listing.aspx.html">Offers</a></li>
+                        <li><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                        <li><a href="locations.aspx.html">Locations</a></li>
+                        <li><a href="news_listing.aspx.html">News</a></li>
+                        
+                        <li class="dropdownTab"><a href="vehicle.aspx.html" data-toggle="dropdown">About Us</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="index.aspx.html"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">About Us</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about.aspx.html">Mission and Vision</a></li>
+                                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="Account_login.aspx.html">Account Login</a></li>
+                        <li><a href="account_registration.aspx.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>Call us 8002442211</a></li>
+                  
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="Search ALJ Finance" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                <img class="float-xs-left" title="App Store" alt="App Store" src="img/appStore.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>APP STORE</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                <img class="float-xs-left" title="Google play" alt="Google play" src="img/googlePlay.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>GOOGLE PLAY</p>
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+  <style type="text/css">
+        /*common*/
+      .loading-wrap
+      {
+          background: rgba(128,128,128,0.8);
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 2000;
+          display: none;
+      }
+
+        .loading-wrap .loading{
+            max-width:617px;
+            max-height:210px;
+            margin: auto;
+            position: relative;
+            top: 180px;
+            overflow: hidden;
+            -moz-border-radius: 3px 3px 0 0;
+            -webkit-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0; /* border radius */
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box; /* prevents bg color from leaking outside the border */
+            background-color: #fff; /* layer fill content */
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+            background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+        }
+        .loading-wrap .loading-head{
+            border-bottom: 7px solid #4d8092;
+            background-color: #fff;
+            padding: 17px 30px;
+        }
+        .loading-wrap .loading-content{
+            background-color: #fff;
+            padding: 21px 30px 18px;
+        }
+        .loading-wrap .loading-head figure{
+            position: relative;
+            top: -1px;
+        }
+
+        .font-18{font-size: 18px;}
+        .font-14{font-size: 14px;}
+        .mb25{margin-bottom:25px;}
+
+        @media (max-width: 767px)  {
+            .loading-wrap .loading{
+                max-height:inherit;
+            }
+            .loading-wrap .loading-head h1{
+                font-size: 40px;
+            }
+        }
+
+        .one {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.0s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.0s;
+        }
+
+        .two {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.2s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.2s;
+        }
+
+        .three {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.3s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.3s;
+        }
+
+        @-webkit-keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+/*en only*/
+    .loading-wrap .loading-head h1{
+        font-size: 52px;
+    }
+    </style>
+
+    <section class="loading-wrap" style="display:block;z-index: 9999;visibility:hidden;" id="PleaseWait" tabindex="-1">
+            
+        <div class="loading">
+            <div class="loading-head">
+                
+                   <button type="button" class="close closeRoundWhite-icon" style="margin:-10px -20px 0 0 ;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span>Loading</span><span class="one">.</span><span class="two">.</span><span class="three">.</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">Please wait. We are loading the information you are requesting.</p>
+                <p class="font-14">Does it take more time than expected? Please <a href="feedbacks.aspx.html"> contact us</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Tablet menu end -->
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">SADAD Payment</button>
+
+        <div class="form-popup" id="myForm">
+          <div class="form-container">
+              <div class="survey-logo"><img src="img/logo-tamakan.svg"></div>
+              <div class="survey-bg">
+                <h1 class="survey-title">Dear Guest</h1>
+                <p class="survey-text">As we value your health and your loved ones<br>you can perform your monthly payments by SADAD via your banking payment channels.</p>    
+              </div>
+              <div class="survey-footer">
+                <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">SADAD</button>
+                <button type="button" class="btn cancel" onclick="javascript:closeForm()">CLOSE</button>
+              </div>
+    
+          </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <!-- Script for tablet menu -->
+        <script src="js/sideMenu-script.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+          <script src="js/jquery.md5.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    </form>
+    
+    <!-- YAMLI CODE START -->
+    <script type="text/javascript" src="js/yamli_api.js"></script>
+    <script type="text/javascript">
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name_Update", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name_Update", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street_Home", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Sponser_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Driver_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative1_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative2_Name", { settingsPlacement: "hide" });
+        }
+        
+        
+    </script>
+    <!-- YAMLI CODE END -->
+     <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+   
+
+
+</body>
+</html>

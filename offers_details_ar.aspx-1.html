@@ -1,0 +1,1611 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="تويوتا, لكزس, الشركة المتحدة للبيع بالتقسيط, تمويل , سيارات ,  تويوتا, تقسيط السيارات, تأجير السيارات, سيارات, تقسيط أجهزة منزلية, تقسيط , تأجير , سيارة , كامري, كورولا, كيا, هيونداي, جيلي, مستعمل, يارس, ليموزين, لكزس, لاندكروزر, برادو, عبد اللطيف جميل , تويوتا, تويوتا السعودية. تأجير السيارات, أفضل , عروض , السعودية , السعوديين , وظائف , وكلاء السيارات, معارض , وكيل , معرض , أسعار, شريعة , إسلام , بالتقسيط , بالتأجير , تمويل المستعمل"><meta property="og:locale" content="ar_SA"><meta property="og:type" content="article"><meta property="og:title" content="شركة عبد اللطيف جميل المتحدة للتمويل"><meta property="og:description" content="تقوم شركة عبد اللطيف جميل المتحدة للتمويل بتمويل جميع أنواع  السيارات الجديدة والمستعملة وكذلك الأجهزة المنزلية و الإلكترونيات وبعض أنواع المعدات الثقيلة من خلال نظامي الإيجار التمويلي  أو المرابحة ضمن الشروط والأحكام الخاصة بها ."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan-ar.svg">
+
+    <!-- Boots`trap CSS-->
+
+    <link href="css/bootstrap.rtl.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/global-style.css" rel="stylesheet" type="text/css"><link href="css/bootstrap3-rtl-custom.css" rel="stylesheet">
+
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/media-queries-ar.css" rel="stylesheet"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.5.1.js"></script>
+     <script src="js/jquery.md5.js"></script>
+    <script type="text/javascript">
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        var newsLink;
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            if (url.toLowerCase().indexOf(".aspx") <= 0) {
+                url = url + "index_ar.aspx";
+            }
+
+            newURL = 'http://' + document.location.host + url.split('_ar')[0] + url.split('_ar')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#English"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "English" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment_ar.aspx';
+            } else {
+                newsLink = 'SADAD_payment_ar.aspx';
+            }
+
+            var links = ['index',
+                'Offers_listing',
+                'fleet_and_business',
+                'vehicle_listing',
+                'vehicles_comparison',
+                'feedbacks',
+                'account_dashboard',
+                'offers_details'];
+
+            links.forEach(function (item) {
+
+                if (url.indexOf(item) !== -1) {
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                //swal({
+                //    html: true,
+                //    title: "<hr>رأيك يهمنا",
+                //    text: "تهـــدف شركة عبداللطيف جميل للتمويــل إلى تطوير موقعها الإلكتروني.<br> نأمل تخصيص دقيقة من وقتكم لمشاركتنا بعض الافكار<br><br>",
+                //    imageUrl: "img/logo-ar.png",
+                //    imageSize: '200x50',
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "تخطي",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'دخول'
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+                document.getElementById("myForm").style.display = "block";
+
+            } else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            };
+
+            //end of VAT popup code
+            //=====================================================================
+
+
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+
+            var index = url.search("index");
+
+            if (index > 0) {
+            //    if (true) {
+            //        mobile_Div.style.display = "none";;
+            //    }
+            //    else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر التطبيقات";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon-a appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر جوجل للأندرويد";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon-a googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر ويندوز";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon-a winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+            }
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        };
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        };
+
+        function openInNewTab() {
+            var win = window.open(newsLink, '_blank');
+            win.focus();
+        };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+    
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script>
+
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+    
+<title>
+	عروض التمويل | عبداللطيف جميل للتمويل
+</title><meta name="description" content=".عروض كيا "></head>
+<body>
+    <!-- Google Tag Manager -->
+   
+
+    <script async="" src="gtag/js?id=UA-7444353-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-7444353-1');
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./offers_details_ar.aspx?offerNo=1336" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="112C9529">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="YlItbrJKmiPfJriB9dxn3dHvj5vJmdlFudiNvZL0o8HawnT7VWWzZ/SLs5Og0Us8HarBEZeORU5YNVh1/a379s83lx050aaI0z7E7dhuoSCZycgdlo/UrybgN0Dt6Xnsfwyxe24jj0tT7+g0a88WuMeW09PT9r/nrYRa7/wPnSKO0Um2JDFwNDIWBsUeJjOXrDECEve2ZYHOs1uoeL7k9w==">
+         
+        
+        <!-- Wrapper start -->
+        <div class="wrapper">
+            
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-sm-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">التأجير التمويلي</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            اتصل بنا: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="account_login_ar.aspx.html">تسجيل الدخول</a></li>
+    <li><a href="account_registration_ar.aspx.html">مستخدم جديد</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class=""><a href="#English" class="activelangbutton">English</a></li>
+                                            <li class="active"><a href="#" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                            <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>القائمة</a>
+                                </div>
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo tabLogoAr">
+                                        <a href="index_ar.aspx.html">
+                                            <img src="img/logo-tamakan-ar.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item"><a href="index_ar.aspx.html" class="nav-link">الرئيسية</a></li>
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">أسعار المنتجات التمويلية</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products_ar.aspx.html">
+                                                                            <h6>الإيجار التمويلي للسيارات</h6>
+                                                                            <p>احصل على سعر تمويل السيارة التي تختارها.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic_ar.aspx.html">
+                                                                            <h6>تمويل السيارات بالمرابحة</h6>
+                                                                            <p>قم بالاستعلام عن تمويل المرابحة </p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance_ar.aspx.html">
+                                                                            <h6>تمويل المنتجات الاستهلاكية</h6>
+                                                                            <p>احصل على تمويل للإلكترونيات والأجهزة المنزلية</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">
+                                                                            <h6>تمويل السيارات المستعملة</h6>
+                                                                            <p>أحصل على سياراتك المستعملة بالتمويل</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div> 
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing_ar.aspx.html">
+                                                                            <h6> التمويل النقدي للأفراد</h6>
+                                                                            <p>منتج تمويلي يسمح للأفراد بتلبية احتياجاتهم المالية </p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref_ar.aspx.html">
+                                                                            <h6>التمويل العقاري</h6>
+                                                                            <p> نقدم حلول مالية ميسرة ومتوافقة مع الشريعة الإسلامية</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf_ar.aspx.html">
+                                                                            <h6>باب رزق جميل</h6>
+                                                                            <p>التمويل المتناهي الصغر</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="offers_listing_ar.aspx.html">عروض التمويل</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business_ar.aspx.html">تمويل الشركات</a></li>
+                                            <li class="nav-item"><a href="locations_ar.aspx.html">فروعنا</a></li>
+                                            <li class="nav-item"><a href="news_listing_ar.aspx.html">أخبارنا</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw selected">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">من نحن</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about_ar.aspx.html">
+                                                                            <h6>الرؤية و الرسالة</h6>
+                                                                            <p>نبذه عامة عن الشركة</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan_ar.aspx.html">
+                                                                            <h6>تمكّن</h6>
+                                                                            <p>نبني الثقة بتمكين الأحلام</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs_ar.aspx.html">
+                                                                            <h6>الأسئلة الشائعة</h6>
+                                                                            <p>كل ما ترغب في معرفته والإستفسار عنه</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <div class="logo">
+                                            <a href="index_ar.aspx.html">
+                                                <img src="img/logo-tamakan-ar.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top"></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="أدخل كلمة البحث" class="sb-search-input input__field" maxlength="255">
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+                
+
+<section class="pageHeaderWide">
+     <div class="container pageHeader">
+            <div class="row">
+              <div class="col-sm-12">
+                <ol class="breadcrumb">
+                  <li><a href="index.aspx.html">الرئيسية</a></li>
+                    <li class="active">تفاصيل عروض التمويل</li>
+                </ol>
+              </div>
+                <div class="col-sm-6">
+                  <h1 itemprop="name">معلومات العرض</h1>
+                </div>
+            </div>
+    </div> 
+  </section>
+
+      <header class="bg-head">
+         <div class="bg-head-img d-none d-sm-none d-md-block">
+            <img src="img/bg-deal-head.png" alt="" title="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  
+               </div>
+               <div class="col-md-3">
+                  <div class="remaindays text-center">
+                     <p class="remaindays__count">
+                         1
+                     </p>
+                    <p class="remaindays__desc text-center"> الايام المتبقية على نهاية العرض </p>
+                  </div>
+               </div>
+             
+
+                  <div class="col-md-5">
+                  <ul class="socialMediaSet margintop float-right d-none d-sm-none d-md-block">
+        
+       <li><a href="#"><span class="c-icon instgramLarge-icon"></span></a></li>
+           <li><a href="https://twitter.com/share?url=http://www.aljfinance.com/about.aspx&name=ALJFinance&hashtags=ALJFinance" target="_blank"><span class="c-icon twitterLarge-icon"></span></a></li>
+           <li><a href="login.php?u=http://www.aljfinance.com/about.aspx" target="_blank"><span class="c-icon facebookLarge-icon"></span></a></li>
+           <li><a href="https://plus.google.com/share?url=http://www.aljfinance.com/about.aspx" target="_blank"><span class="c-icon googlePlusLarge-icon"></span></a></li>
+           <li><a href="mailto:?Subject=About ALJ Finance&Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://www.aljfinance.com/about.aspx">
+           <span class="c-icon sendtoFriendLarge-icon"></span>
+           </a></li>
+          </ul>
+          </div>
+               <div class="col-md-12">
+                  <div class="text-center">
+                    
+                      <img id="ContentPlaceHolder1_img_Offer_Banner" alt="" title="" src="WebImages/offers/12023/Offerbanner_Arb_12.jpg">
+                  </div>
+               </div>
+               <div class="col-md-8 col-md-push-2">
+                  <p class="text-center">
+                     هذا عرض لمدة محدودة أو حتى نفاذ الكمية، ينتهي في 28  فبراير 2023.
+                  </p>
+                  <p class="text-center">
+                     
+                  </p>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8">
+               <div class="about--offer">
+                  <h4 class="about--offer__title title_ofer">
+                     عن هذا العرض
+                  </h4>
+                  <p class="about--offer__text">
+                      تمتع بالحصول على سيارةبالتمويل من خلال عروض التأجير التمويلي، التي تقدمها لك "شركة عبداللطيف جميل المتحدة للتمويل"، عبر  شبكة فروعنا المنتشرة في أرجاء المملكة.
+                  </p>
+                   
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="enjoybenefits">
+                  <h4 class="title_ofer">استفد من هذا العرض و تمتع بمميزاته:</h4>
+                    
+
+                   
+                           <ul class="enjoybenefits__list">
+                            <li><img src="img/Checked.png" alt="" title="">
+                        بدون دفعة أولى*
+                            </li>
+                           </ul>
+                       
+                           <ul class="enjoybenefits__list">
+                            <li><img src="img/Checked.png" alt="" title="">
+                        بدون كفيل*
+                            </li>
+                           </ul>
+                       
+                           <ul class="enjoybenefits__list">
+                            <li><img src="img/Checked.png" alt="" title="">
+                        سدد بيسر وسهولة من خلال سداد
+                            </li>
+                           </ul>
+                       
+                           <ul class="enjoybenefits__list">
+                            <li><img src="img/Checked.png" alt="" title="">
+                        دفعات شهرية تصل الى 60 شهر.
+                            </li>
+                           </ul>
+                       
+
+               
+               </div>
+            </div>
+         </div>
+         <div class="vehicles-Offers">
+            <div class="row">
+              <div class="col-md-12">
+               <h4 class="title_ofer vehicles--Offers__title"></h4>
+              </div>
+           
+              <div class="clearfix"></div>
+
+
+                
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_0" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_0" class="img-responsive" alt="Pegas" title="Pegas" src="WebImages/Products/KIA/Pegas/AffordabilityResults.jpg">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        Pegas  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        EX 1.4
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,004</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-5.html?ModelID=237894&PromoCode=KA0223&MP=1004&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-5.html?ProductID=20706' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_1" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_1" class="img-responsive" alt="Pegas" title="Pegas" src="WebImages/Products/KIA/Pegas/AffordabilityResults.jpg">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        Pegas  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        LX 1.4
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,019</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-6.html?ModelID=237894&PromoCode=KA0223&MP=1019&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-5.html?ProductID=20706' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_2" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_2" class="img-responsive" alt="Pegas" title="Pegas" src="WebImages/Products/KIA/Pegas/AffordabilityResults.jpg">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        Pegas  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        EX 1.4
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,077</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-7.html?ModelID=237896&PromoCode=KA0223&MP=1077&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-5.html?ProductID=20706' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_3" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_3" class="img-responsive" alt="ريو" title="ريو" src="WebImages/Products/KIA/Rio/AffordabilityResults.jpg">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        ريو  2022  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        1.5L LX
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,289</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-8.html?ModelID=237463&PromoCode=KA0223&MP=1289&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-6.html?ProductID=20216' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_4" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_4" class="img-responsive" alt="ريو" title="ريو" src="WebImages/Products/KIA/Rio/AffordabilityResults.jpg">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        ريو  2022  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        SC RIO 1.4L LX
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,359</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-9.html?ModelID=237467&PromoCode=KA0223&MP=1359&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-6.html?ProductID=20216' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_5" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_5" class="img-responsive" alt="سونيت" title="سونيت" src="WebImages/Products/KIA/SONET/AffordabilityResults.png">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        سونيت  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        LX 1.5
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,458</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-87.html?ModelID=237558&PromoCode=KA0223&MP=1458&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-7.html?ProductID=20764' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_6" alt="" title="">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_6" class="img-responsive" alt="" title="">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                          2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        1.5L LX
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,579</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-88.html?ModelID=237559&PromoCode=KA0223&MP=1579&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-8.html?ProductID=' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_7" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_7" class="img-responsive" alt="سيلتوس" title="سيلتوس" src="WebImages/Products/KIA/Seltos/AffordabilityResults.png">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        سيلتوس  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        LX 1.6
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,659</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-89.html?ModelID=237560&PromoCode=KA0223&MP=1659&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-9.html?ProductID=20722' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_8" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_8" class="img-responsive" alt="K5" title="K5" src="WebImages/Products/KIA/K5/AffordabilityResults.png">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        K5  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        LX 2.0
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,907</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-90.html?ModelID=237767&PromoCode=KA0223&MP=1907&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-10.html?ProductID=20738' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_9" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_9" class="img-responsive" alt="K5" title="K5" src="WebImages/Products/KIA/K5/AffordabilityResults.png">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        K5  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        L 2.0
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,952</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-91.html?ModelID=237782&PromoCode=KA0223&MP=1952&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-10.html?ProductID=20738' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_10" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_10" class="img-responsive" alt="سبورتاج" title="سبورتاج" src="WebImages/Products/Kia/Sportage/AffordabilityResults.png">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        سبورتاج  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                        LX 2.0
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,778</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-92.html?ModelID=237515&PromoCode=KA0223&MP=1778&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-11.html?ProductID=20219' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+               <div class="vehicles--Offers__item row">
+                  <div class="col-md-2">
+                     <div class="ofer_car_logo">
+                       <img id="ContentPlaceHolder1_Repeater1_Image2_11" alt="كيا" title="كيا" src="img/kia_tab.png">
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img id="ContentPlaceHolder1_Repeater1_Image3_11" class="img-responsive" alt="سبورتاج" title="سبورتاج" src="WebImages/Products/Kia/Sportage/AffordabilityResults.png">
+                  </div>
+                  <div class="col-md-3">
+                     <h3 class="Offers--car__title"> 
+                        سبورتاج  2023  
+                     </h3>
+                     <p class="Offers--car__desc">
+                         2.0L LX
+                     </p>
+                     <img src="img/hr.png" class="hr">
+                     <p class="Offers--car__sar">
+                        الدفعات الشهرية <span class="Payment_Price"> 1,898</span> ريال
+                     </p>
+                     <p class="Offers--car__payment">
+                        فترة السداد 60 شهر
+                     </p>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="discover text-center">
+                        <a href='finance_options_ar.aspx-93.html?ModelID=237887&PromoCode=KA0223&MP=1898&Period=60' class="gbtn btn-teal btn-regular">تقدم بطلب التمويل</a>
+                        <a href='vehicle_ar.aspx-11.html?ProductID=20219' class="Discover_link">إستكشف تفاصيل هذه السيارة</a>
+                     </div>
+                  </div>
+               </div>
+
+                <!-- END First item of offers -->
+                    
+
+                
+            </div>
+            <div class="col-md-12">
+               
+               <p class="text__disclaimer">
+                  صور السيارات الموجودة بالأعلى هي صور تعبيرية وقد تكون غير مطابقة لجميع الفئات.
+                   <br><br>
+                    هذا العرض التمويلي سار على موديلات محددة من السيارات.
+                    <br><br>
+                   ا لايجار الشهري لا يشمل قيمة الضريبة المضافة.
+                    <br><br>
+                   تختلف الدفعات الشهرية باختلاف مواصفات و موديلات السيارة المختارة, تحسب المصاريف الإدارية على أساس 1% من مبلغ التمويل و بحد أقصى 5000  ريال للسيارة الواحدة .هناك دفعة تملك متبقية في نهاية العقد. 
+                    <br><br>
+                   يحق للشركة تعديل العرض او إلغائها في اي وقت دون إعلان مسبق
+                   <br><br>
+                   * تطبق الشروط والاحكام:
+
+               </p>
+               <ul class="enjoybenefits__list">
+                  <li>
+                     <img src="img/Checked.png" alt="" title="">
+                      بدون دفعة أولى في حالة كانت الدفعة الشهرية تغطي 40% من صافي الدخل الشهري.
+                  </li>
+                  <li>
+                     <img src="img/Checked.png" alt="" title="">
+                    بدون كفيل عند تطابق الشروط.
+                  </li>
+                  <li>
+                     <img src="img/Checked.png" alt="" title="">
+                    إمكانية إعادة تمويل الدفعه الأخيرة.
+                  </li>
+                  <li>
+                     <img src="img/Checked.png" alt="" title="">
+                    الأسعار قابلة للتغيٌر في حال وجود عوامل مؤثرة كالسجل الائتماني للعميل.
+                  </li>
+               </ul>
+            </div>
+            <!-- END SECTION Disclaimer -->
+            <div class="upcoming--deals row">
+               <div class="col-md-7">
+                  <section class="callphone">
+                     <h2 class="callphone__title mail_icon">
+                        إبقى على إطلاع بعروضنا القادمة 
+                     </h2>
+                    <section class="callphone">
+                    
+
+<div class="callphone--content">
+    <p class="callphone--content__desc">
+     تلقى آخر الأخبار و المزايا الحصرية لك وحدك عن طريق تعبئة الاستمارة ادناه
+    </p>
+    <input type="submit" name="ctl00$ContentPlaceHolder1$Mailing_List_Box$btn" value=" اشترك في قائمتنا البريدية" id="btn" class="gbtn btn-teal btn-regular">
+</div>
+                </section>
+                        <p>
+
+                 في حالة عدم رغبتكم في تلقي اعلانات من قبلنا على هاتفكم نأمل الاتصال على
+(8002442211)
+أو على البريد
+aljufcrm@aljfs.com
+
+لإلغاء رقمكم من قائمة المرسل إليهم.
+
+             </p>
+
+                  </section>
+               </div>
+
+
+
+               <div class="col-md-4 push-md-1">
+                   <section class="callphone">
+                       <h2 class="callphone__title comment_icon">
+                           <span></span>تواصل معنا
+                       </h2>
+                       <div class="callphone">
+                           
+
+<div class="callphone--content">
+    <p class="callphone--content__desc">
+     نحن نرحب بتعليقاتكم حول خدماتنا
+    </p>
+    <input type="submit" name="ctl00$ContentPlaceHolder1$FeedBack_Box_ar$btn" value="أرسل تعليقك" id="btn" class="gbtn btn-teal btn-regular">
+</div>
+                       </div>
+                </section>
+               </div>
+
+            </div>
+         </div>
+      </div>
+     <input type="hidden" name="ctl00$ContentPlaceHolder1$hid_OfferNo" id="ContentPlaceHolder1_hid_OfferNo" value="1336">
+
+            </main>
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h6><strong>السيارات</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options_ar.aspx.html?BrandID=1">تويوتا</a></li>
+                                <li><a href="finance_options_ar.aspx-1.html?BrandID=2">لكزس</a></li>
+                                <li><a href="finance_options_ar.aspx-2.html?BrandID=2015">هيونداي</a></li>
+                                <li><a href="finance_options_ar.aspx-3.html?BrandID=2019">كيا</a></li>
+                                <li><a href="finance_options_ar.aspx-4.html?BrandID=2053">جيلي</a></li>
+                                <li><a href="vehicles_comparison_ar.aspx.html">مقارنة السيارات</a></li>
+
+                            </ul>
+
+                            <h6><strong>تمويل الشركات</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry_ar.aspx.html">تقديم الطلب</a></li>
+                                <li><a href="fleet_and_business_ar.aspx.html">إستعراض فروع الشركات</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">خدمات الموردين</a></li>
+                            </ul>
+
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>أدوات التمويل</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan_ar.aspx.html">تمكن</a></li>
+                                <li><a href="products_ar.aspx.html">حاسبة التمويل</a></li>
+                                <li><a href="finance_options_generic_ar.aspx.html">حاسبة المرابحه</a></li>
+                                <li><a href="home_appliances_finance_ar.aspx.html">تمويل المنتجات الاستهلاكية</a></li>
+                                <li><a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">تمويل السيارات المستعملة</a></li>
+                                <li><a href="cash_financing_ar.aspx.html"> التمويل النقدي للأفراد</a></li>
+                                <li><a href="aljuref_ar.aspx.html">التمويل العقاري</a></li>
+                                <li><a href="brjmf_ar.aspx.html">باب رزق جميل</a></li>
+                                <li><a href="affordability_calculator_ar.aspx.html">أي السيارات تناسبني؟</a></li>
+                                <li><a href="how_to_auto_finance_ar.aspx.html">كيف أتقدم بطلب تمويل؟</a></li>
+                                <li><a href="offers_listing_ar.aspx.html">عروض التأجير التمويلي</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>إدارة حسابك</strong></h6>
+                            <ul class="footerTopMenu">
+
+                                <li><a href="account_login_ar.aspx.html">تسجل الدخول</a></li>
+                                <li><a href="account_registration_ar.aspx.html">تسجيل مستخدم جديد</a></li>
+                                <li><a href="account_password_reset_ar.aspx.html">هل نسيت كلمة المرور؟</a></li>
+                                <li><a href="SADAD_payment_ar.aspx.html">الدفع عن طريق سداد</a></li>
+                                <li><a href="Documents/ServicesFeesListAr.pdf">رسوم الخدمات</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>اتصل بنا</strong></h6>
+                            <ul class="footerTopMenu">
+
+                                <li><a href="feedbacks_ar.aspx.html">الاستفسارات</a></li>
+                                <li><a href="feedbacks_ar.aspx.html">الشكاوي</a></li>
+                                <li><a href="feedbacks_whistleblowing_ar.aspx.html">المخالفات</a></li>
+                            </ul>
+                            <h6><strong>فروعنا</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations_ar.aspx.html">خريطة المواقع</a></li>
+                                <li><a href="locations_ho_ar.aspx.html">دعنا نتصل بك</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">قائمة تجار الجملة</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>شركة عبداللطيف جميل المتحدة للتمويل</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about_ar.aspx.html">من نحن</a></li>
+                                <li><a href="Documents/doc_ar.pdf">حماية العملاء</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_Ar.pdf">مبادئ التمويل المسئول للأفراد</a></li>
+                                <li><a href="FAQs_ar.aspx.html">أسئلة شائعة</a></li>
+                                <li><a href="http://careers.aljfinance.com/ar/">تقدم بطلب توظيف</a></li>
+                                <li><a href="feedbacks_training_ar.aspx.html">تقدم بطلب تدريب</a></li>
+                                <li><a href="Documents/Complines_How_To_Ar.jpg">آلية تقديم الشكوى</a></li>
+                                <li><a href="Documents/ALJUF_Terms_ar.pdf">شروط التأجير التمويلي</a></li>
+                                <li><a href="finance_reports_ar.aspx.html">التقارير المالية</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingAr.pdf">الشروط و الأحكام العامة</a></li>    
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                                <li><a href="https://www.facebook.com/Aljfinance" title="Facebook">
+                                    <!-- <i class="fa fa-facebook"></i> -->
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks_ar.aspx.html" class="btn-block footerFeedback">الشكاوي</a>
+                            <a href="WS_login_ar.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">تجار السيارات</a>
+                            <span id="siteseal" class=" btn-block footerFeedback">
+                                <script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                         <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                            	<!--<span class="c-icon appleStore-icon"></span>-->
+                              <img src="img/appStore.png" alt="App Store" title="App Store" class="float-left  ">
+                                <p><small>نتزيل تطبقنا</small></p>
+                                <p>متجر التطبيقات</p>
+                            </a></li>
+
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                         <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                          	<!--<span class="c-icon blackberry-icon"></span>-->
+                              <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-left  ">
+                               <p><small>نتزيل تطبقنا</small></p>
+                                <p>جوجل بلاي</p>
+                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreAppAr.png" alt="iOS App" title="iOS App" class="center-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li>
+                                    <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                                        <img src="img/appStore.png" alt="App Store" title="App Store" class="float-left  ">
+                                        <p><small>نتزيل تطبقنا</small></p>
+                                        <p>متجر التطبيقات</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayAppAr.png" alt="Google App" title="Google App" class="center-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-left  ">
+                                    <p><small>نتزيل تطبقنا</small></p>
+                                    <p>جوجل بلاي</p>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+
+                        
+                            
+
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer_ar.aspx.html">حقوق الطبع </a></li>
+                                <li><a href="terms_of_use_ar.aspx.html">شروط  الاستخدام</a></li>
+                                <li><a href="cookie_policy_ar.aspx.html">سياسة الكوكيز</a></li>
+                                <li><a href="accessibility_policy_ar.aspx.html">سياسة الوصول</a></li>
+                                <li><a href="privacy_policy_ar.aspx.html">سياسة الخصوصية</a></li>
+                                <li><a href="Documents/Personal%20Data%20Protection%D9%80_Ar.pdf" target="_blank">سياسة حماية البيانات الشخصية</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 شركة عبد اللطيف جميل المتحدة للتمويل. جميع الحقوق محفوظة. مسموح لك باستخدام هذا الموقع شريطة الالتزام التام بشروط الاستخدام. يُمثل اسم "عبد اللطيف جميل" وشعارها المكتوب والتصميم الخماسي الشكل علاماتٍ تجارية (مُسجلة أو غير مُسجلة) تعود ملكيتها الفكرية إلى شركة عبد اللطيف جميل للملكية الفكرية المحدودة. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index_ar.aspx.html">الرئيسية</a></li>
+                        <li class="dropdownTab"><a href="#" data-toggle="dropdown">أسعار المنتجات التمويلية</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>للخلف</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">أسعار المنتجات التمويليه</a>
+                                            <ul class="navTabSubMenu">
+
+                                                <li><a href="products_ar.aspx.html">الإيجار التمويلي للسيارات</a></li>
+                                                <li><a href="finance_options_generic_ar.aspx.html">تمويل السيارات بالمرابحة</a></li>
+                                                <li><a href="home_appliances_finance_ar.aspx.html">تمويل الاجهزة المنزلية</a></li>
+                                                <li><a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">تمويل السيارات المستعملة</a></li>
+                                                <li><a href="cash_financing_ar.aspx.html"> التمويل النقدي للأفراد</a></li>
+                                                <li><a href="aljuref_ar.aspx.html">التمويل العقاري</a></li>
+                                                <li><a href="brjmf_ar.aspx.html">باب رزق جميل</a></li>
+                                                <li><a href="affordability_calculator_ar.aspx.html">أي السيارات تناسب ميزانيتي؟</a></li>
+                                                <li><a href="how_to_auto_finance_ar.aspx.html">كيفية الحصول على تمويل؟</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="offers_listing_ar.aspx.html">عروض التمويل</a></li>
+                        <li><a href="locations_ar.aspx.html">فروعنا</a></li>
+                        <li><a href="fleet_and_business_ar.aspx.html">تمويل الشركات</a></li>
+                        <li><a href="news_listing_ar.aspx.html">أخبارنا</a></li>
+                        <li class="dropdownTab"><a href="#" data-toggle="dropdown">من نحن</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>للخلف</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">من نحن</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about_ar.aspx.html">الرؤية و الرسالة</a></li>
+                                                <li><a href="tamakan_ar.aspx.html">تمكّن</a></li>
+                                                <li><a href="FAQs_ar.aspx.html">الأسئلة الشائعة</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="account_login_ar.aspx.html">تسجبل الدخول </a></li>
+                        <li><a href="account_registration_ar.aspx.html">تسجيل جديد</a></li>
+                        <li><a href="account_password_reset_ar.aspx.html">إستعادة كلمة المرور</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>اتصل بنا 8002442211</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="أدخل كلمة البحث" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                    <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                    <img class="float-left  " title="App Store" alt="App Store" src="img/appStore.png">
+                    <p><small>نتزيل تطبقنا</small></p>
+                    <p>متجر التطبيقات</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                    <img class="float-left  " title="Google play" alt="Google play" src="img/googlePlay.png">
+                    <p><small>نتزيل تطبقنا</small></p>
+                    <p>جوجل بلاي</p>
+                    </a>
+                </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Tablet menu end -->
+        
+
+
+<style type="text/css">
+/*common*/
+.loading-wrap{
+    background: rgba(128,128,128,0.8);
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    z-index:2000;
+    display: none;
+}
+    .loading-wrap .loading{
+        max-width:617px;
+        max-height:210px;
+        margin: auto;
+        position: relative;
+        top: 180px;
+        overflow: hidden;
+        -moz-border-radius: 3px 3px 0 0;
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0; /* border radius */
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box; /* prevents bg color from leaking outside the border */
+        background-color: #fff; /* layer fill content */
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+        background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+    }
+    .loading-wrap .loading-head{
+        border-bottom: 7px solid #4d8092;
+        background-color: #fff;
+        padding: 17px 30px;
+    }
+.loading-wrap .loading-content{
+    background-color: #fff;
+    padding: 21px 30px 18px;
+}
+.loading-wrap .loading-head figure{
+    position: relative;
+    top:-1px;
+}
+
+.font-18{font-size: 18px;}
+.font-14{font-size: 14px;}
+.mb25{margin-bottom:25px;}
+@media (max-width: 767px)  {
+    .loading-wrap .loading{
+        max-height:inherit;
+    }
+    .loading-wrap .loading-head h1{
+        font-size: 40px;
+    }
+}
+
+.one {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.0s;
+}
+
+.two {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.2s;
+}
+
+.three {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.3s;
+}
+
+@-webkit-keyframes dot {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dot {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ar only*/
+.loading-wrap .loading-head h1{
+    font-size: 40px;
+    margin-bottom: 11px;
+}
+.loading-wrap .loading {
+    top: 177px;
+}
+</style>
+
+<section class="loading-wrap" style="display:block;z-index: 9998;visibility:hidden;" id="PleaseWait" tabindex="-1">
+      
+      <div class="loading">
+          
+            <div class="loading-head">
+              
+                <button type="button" class="close closeRoundWhite-icon" style="margin-left: -10px;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo-ar.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span class="three">.</span><span class="two">.</span><span class="one">.</span><span>جاري التحميل</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">  الرجاء الانتظار ، طلبك قيد التنفيذ .</p>
+                <p class="font-14">هل  استغرقت هذه العملية أكثر مما ينبغي؟  من فضلك  <a href="feedbacks_ar.aspx.html" target="_blank"> أبلغنا  </a></p>
+            </div>
+          
+        </div>
+</section>
+
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">خدمة سداد</button>
+
+        <div class="form-popup" id="myForm">
+            <div class="form-container">
+                <div class="survey-logo">
+                    <img src="img/logo-tamakan-ar.svg">
+                </div>
+                <div class="survey-bg">
+                    <h1 class="survey-title">عميلنا العزيز</h1>
+                    <p class="survey-text">
+                        حفاظًا على صحتك وصحة من تحب<br>
+                        سدد دفعاتك الشهرية من خلال خدمة سداد عبر القنوات البنكية
+                    </p>
+                </div>
+                <div class="survey-footer">
+                    <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">سداد</button>
+                    <button type="button" class="btn cancel" onclick="javascript:closeForm()">إغلاق</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/sideMenu-script-ar.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    </form>
+    <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+</body>
+</html>

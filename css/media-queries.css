@@ -1,0 +1,1419 @@
+/*Extra large device (Desktops)*/
+@media (min-width: 1200px) and (max-width: 1920px) {
+    .logo, .logo-en {
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .sb-search.sb-search-open,
+    .no-js .sb-search {
+        width: 74%;
+    }
+
+    .fitBudgetWraper h4 {
+        padding-left: 32px;
+    }
+
+    .dealsWraper h4 {
+        padding-left: 33px;
+    }
+
+    .padLeft {
+        padding-left: 13px;
+    }
+
+    .dealsLogo {
+        float: right;
+    }
+
+    .loginRegisterSection {
+        padding-top: 5px;
+    }
+
+    .followupLogin {
+        min-height: 496px;
+    }
+
+    .loginRegisterSection .tab-content .tab-pane {
+        padding: 33px 38px 30px 38px;
+    }
+
+    .link-boxed-list li {
+        min-height: 167px;
+    }
+
+    .vehiclesGallery {
+        padding: 55px 43px;
+    }
+
+    .dealsList li {
+        height: 103px;
+    }
+
+    .col-3,
+    .col-4,
+    .col-5 {
+        float: left;
+    }
+}
+/*Medium device (Desktops)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .logo, .logo-en {
+        /*text-align: center;*/
+        padding-top: 16px;
+        float: right;
+        width: 203px;
+    }
+
+    .tabLogo {
+        display: block;
+        float: right;
+    }
+
+    .tabLogoAr {
+        float: left;
+    }
+
+    .headerBottom .navbar-nav > li > a {
+        padding: 0 16px;
+    }
+
+    .headerSearchWraper {
+        margin-top: -113px;
+    }
+
+    .sb-search {
+        right: 0;
+    }
+
+    .vehiclesMenuItem {
+        padding: 16px 16px 10px;
+    }
+
+    .carouselCaptionWraper {
+        width: 803px;
+    }
+
+    .SliderOutput {
+        margin-right: 9px;
+    }
+
+    .loginRegisterSection .nav-tabs > li > a {
+        font-size: 17px;
+        padding: 21px 22px;
+    }
+
+    .requireDocumentSection h5 {
+        font-size: 22px;
+    }
+
+    .documentLink {
+        min-height: 177px;
+    }
+
+    .appWidget li {
+        padding: 6px 7px;
+    }
+
+    .vehiclesGallery h1 {
+        font-size: 38px;
+    }
+
+    .vehiclesGallery h5 {
+        font-size: 16px;
+    }
+
+    .link-boxed-list {
+        padding-top: 60px;
+    }
+
+        .link-boxed-list li {
+            padding: 19px 15px;
+        }
+
+    .dealsHeading {
+        padding: 16px 33px;
+    }
+
+    .followupSection h3 {
+        font-size: 26px;
+    }
+
+    .footerBottomMenu li a {
+        padding: 0 7px;
+    }
+
+    .footerMid {
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+
+    .appWidget li {
+        margin-bottom: 0;
+    }
+
+    .financeOptCalcRow {
+        padding: 23px;
+    }
+
+    .periodList li a {
+        padding: 6px 0;
+        font-size: 15px;
+        width: 29px;
+    }
+
+    .financeOptCalcRsltRow h2 {
+        font-size: 30px;
+    }
+
+    .financeOptCalcRsltRow .label-default {
+        font-size: 14px;
+        padding: 0.2em 0.4em 0.3em;
+    }
+
+    .col-3,
+    .col-4,
+    .col-5 {
+        float: left;
+    }
+
+    .subNav li a {
+        font-size: 16px;
+        padding: 13px 6px;
+    }
+
+    .monthlyOfferBox .back table tr td {
+        padding: 10px 15px;
+    }
+    .loginRegisterSection .tab-content .tab-pane {
+        padding: 33px 38px 30px 38px;
+    }
+    .success-popup-parent {
+        width: 878px;
+    }
+    .success-popup {
+        padding-bottom: 85.5%;
+    }
+    .loginRegisterSection .nav > li,
+    .loginRegisterSection .nav > li a,
+    .rootwizard .nav-pills > li,
+    .rootwizard .nav-pills > li a {
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 0px;
+    }
+
+        .loginRegisterSection .nav > li a {
+            padding: 11px 16px;
+        }
+
+    .loginRegisterSection .nav-tabs > li > a.active,
+    .loginRegisterSection .nav-tabs > li > a.active:hover,
+    .loginRegisterSection .nav-tabs > li > a.active:focus,
+    .rootwizard .nav-tabs > li > a.active,
+    .rootwizard .nav-tabs > li > a.active:hover,
+    .rootwizard .nav-tabs > li > a.active:focus {
+        background-color: #6c6c71 !important;
+        color: #fff !important;
+    }
+}
+/*Small device (Tablets)*/
+@media (max-width: 991px) {
+    .logo, .logo-en {
+        padding-top: 19px;
+        text-align: center;
+    }
+
+    .tabLogo {
+        float: right;
+        padding-top: 15px;
+        padding-bottom: 12px;
+    }
+
+    .tabLogoAr {
+        float: left;
+    }
+
+    #tabMenuTrigger {
+        padding-top: 30px;
+    }
+
+    .headerBottom .navbar-nav > li > a {
+        padding: 0 17px;
+    }
+
+    .tabNav {
+        position: static;
+    }
+
+    .vehiclesMenuItem {
+        padding: 13px 0;
+    }
+
+        .vehiclesMenuItem p {
+            font-size: 14px;
+        }
+
+    .sb-search {
+        margin-top: 8px;
+        right: 0;
+    }
+
+    .rengerInput {
+        margin: 0 0 23px 0;
+        width: 100%;
+    }
+
+    .vehiclesMenuItem .lightGray {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .vehiclesMenuItem .seaBlue {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .headerBottom {
+        min-height: 80px;
+    }
+
+        .headerBottom .navbar-nav > li {
+            padding: 30px 0;
+        }
+
+    .navbar-collapse form[role="search"] {
+        top: 11px;
+    }
+
+    .carouselCaptionWraper {
+        width: 66%;
+    }
+
+    .carouselCaption h2 {
+        font-size: 46px;
+    }
+
+    .carouselCaption h3 {
+        font-size: 36px;
+    }
+
+    .carouselCaption .white {
+        font-size: 20px;
+    }
+
+    .buttonWraper .btn {
+        font-size: 18px;
+    }
+
+    .dealsList li .defultInfo,
+    .dealsList li .hoverInfo {
+        margin-top: 11px;
+    }
+
+    .link-boxed-list li {
+        padding: 19px 15px;
+    }
+
+    .vehiclesGallery h2 {
+        font-size: 30px;
+    }
+
+    .vehiclesGallery h1 {
+        font-size: 28px;
+    }
+
+    .vehiclesGallery h5 {
+        font-size: 16px;
+    }
+
+    .loginRegisterSection .nav-tabs > li > a {
+        font-size: 14px;
+        padding: 15px 11px;
+    }
+
+    .followupSection h1 {
+        font-size: 36px;
+    }
+
+    .followupSectionH1 {
+        font-size: 36px;
+    }
+
+    .h1alternative {
+        font-size: 36px;
+    }
+
+    .followupSection h3 {
+        font-size: 20px;
+    }
+
+    .documentLink {
+        min-height: 177px;
+    }
+
+    .locateAdvisorHolder li.buttonClass a {
+        font-size: 13px;
+    }
+
+    .locateAdvisorHolder h3 {
+        font-size: 26px;
+    }
+
+    .locateAdvisorHolder .buttonClass {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .link-boxed-list li img {
+        clear: both;
+        display: block;
+        float: none !important;
+        margin: 0 auto 30px;
+    }
+
+    .link-boxed-list li h3 {
+        font-size: 26px;
+    }
+
+    .footerTopSocialMedia li a {
+        padding: 0 7px;
+    }
+
+    .copyRight {
+        text-align: center;
+        margin-bottom: 9px;
+    }
+
+    .footerBottomMenu {
+        text-align: center !important;
+    }
+
+    .footerMid {
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+
+    .financeOptionWraper {
+        margin-bottom: 50px;
+    }
+
+    .financeOptCalcRow {
+        padding: 23px;
+    }
+
+    .periodList {
+        text-align: center;
+    }
+
+        .periodList li {
+            margin: 0 4px 8px;
+        }
+
+            .periodList li:first-child {
+                margin-left: 4px;
+            }
+
+            .periodList li:last-child {
+                margin-right: 4px;
+            }
+
+    .financeOptCalcRsltRow .label-default {
+        margin-top: 14px;
+    }
+
+    .financeOptCalcRsltRow .gbtn.btn-regular {
+        font-size: 14px;
+        padding: 9px 10px;
+    }
+
+    .col-3,
+    .col-4,
+    .col-5 {
+        float: left;
+    }
+
+    .vehicleSpecificResult table tr td {
+        padding: 20px 15px;
+    }
+
+    .compareVehicleWraper {
+        padding: 10px;
+    }
+
+    .applyFinanceBox {
+        padding: 10px;
+    }
+
+    .monthlyOfferBox .back h3 {
+        font-size: 23px;
+    }
+
+    .monthlyOfferBox .back table tr td {
+        padding: 10px;
+    }
+
+    .monthlyOfferBox .back table {
+        font-size: 17px;
+    }
+
+        .monthlyOfferBox .back table .gbtn.btn-regular {
+            display: block;
+            margin: 0 auto;
+        }
+
+    .carouselControllerWraper {
+        width: 99%;
+    }
+    .emtyaz_jameel_h1_white {
+        font-size: 4rem;
+    }
+    .emtyaz_jameel_box_shadow {
+        width: 100%;
+    }
+    .loginRegisterSection .tab-content .tab-pane {
+        padding: 33px 38px 30px 38px;
+    }
+    .tabs__header {
+        display: none;
+    }
+    li.contact--list__item:not(li.bg-gray) {
+        height: 175px;
+    }
+    .success-popup-parent {
+        width: 637px;
+    }
+    .success-popup{padding-bottom: 361%;}
+
+    .loginRegisterSection .nav > li,
+    .loginRegisterSection .nav > li a,
+    .rootwizard .nav-pills > li,
+    .rootwizard .nav-pills > li a {
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 0px;
+    }
+
+        .loginRegisterSection .nav > li a {
+            padding: 11px 16px;
+        }
+
+    .loginRegisterSection .nav-tabs > li > a.active,
+    .loginRegisterSection .nav-tabs > li > a.active:hover,
+    .loginRegisterSection .nav-tabs > li > a.active:focus,
+    .rootwizard .nav-tabs > li > a.active,
+    .rootwizard .nav-tabs > li > a.active:hover,
+    .rootwizard .nav-tabs > li > a.active:focus {
+        background-color: #6c6c71 !important;
+        color: #fff !important;
+    }
+    
+
+}
+/*Extra small device (Phones)*/
+@media (max-width: 767px) {
+    .displaynone {
+        display: none;
+    }
+
+    .equal {
+        height: auto !important;
+    }
+
+    .headerTop p {
+        text-align: center;
+    }
+
+    .siteLanguage li {
+        margin: 9px -2px 0;
+    }
+
+    .footerBottom p {
+        text-align: center;
+    }
+
+    .footerBottomMenu {
+        text-align: center !important;
+    }
+
+    .navbar-collapse {
+        padding-top: 0 !important;
+    }
+
+    .navbarRow {
+        margin: 0;
+    }
+
+    .logo, .logo-en {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    .sb-search {
+        margin: 0;
+        top: 0;
+    }
+
+    .headerBottom .navbar-nav > li > a {
+        border: none;
+    }
+
+    .vehiclesMenuGrid {
+        border-right: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        background-image: url(../img/navbarHeaderIcon.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 14px;
+    }
+
+    .navbar-collapse form[role="search"] {
+        padding: 0 10px;
+        top: 0px;
+    }
+
+    .sb-icon-search, .sb-search-submit {
+        background-color: #fff;
+    }
+
+    .navbar-collapse form[role="search"] input {
+        padding: 6px 12px;
+    }
+
+    .navbar-collapse .input-group {
+        border: 1px solid #e8e8e8;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .navbar-collapse .navbar-nav {
+        padding-top: 63px;
+    }
+
+    .vehiclesMenuItem {
+        text-align: center;
+    }
+
+        .vehiclesMenuItem img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    .headerBottom .navbar-nav > li {
+        padding: 10px 0;
+    }
+
+    .financeList li {
+        max-width: 100%;
+    }
+
+    .carouselCaptionWraper {
+        padding: 0 60px;
+        top: 60%;
+        -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+        transform: translate(-50%, -60%);
+        width: 100%;
+    }
+
+    .carouselCaption .option {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .carouselCaption h3 {
+        font-size: 21px;
+    }
+
+    .carouselCaption .white {
+        font-size: 14px;
+        padding: 6px 9px;
+    }
+
+    .carouselCaption h2 {
+        font-size: 30px;
+    }
+
+    .sliderControllerWraper {
+        width: 100%;
+    }
+
+    .sliderController {
+        padding: 0;
+    }
+
+    .buttonWraper .btn {
+        font-size: 18px;
+    }
+
+    .dealsList {
+        margin-bottom: 20px;
+    }
+
+        .dealsList li {
+            padding: 11px 0;
+        }
+
+    .CalcComCta {
+        margin-bottom: 30px;
+    }
+
+        .CalcComCta li {
+            padding: 20px;
+        }
+
+            .CalcComCta li h3 {
+                font-size: 22px;
+            }
+
+    .vehiclesGallery h2 {
+        font-size: 21px;
+    }
+
+    .vehiclesGallery h1 {
+        font-size: 30px;
+    }
+
+    .vehiclesGallery h5 {
+        font-size: 16px;
+    }
+
+    .vehiclesGallery .gray {
+        padding: 11px 16px;
+    }
+
+    .followupLogin {
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
+
+    .followupSection {
+        margin-bottom: 30px;
+    }
+
+        .followupSection h1 {
+            margin-bottom: 23px;
+        }
+
+    .followupSectionH1 {
+        margin-bottom: 23px;
+    }
+    .h1alternative {
+        margin-bottom: 23px;
+    }
+
+
+    .loginRegisterSection .nav > li,
+    .loginRegisterSection .nav > li a,
+    .rootwizard .nav-pills > li,
+    .rootwizard .nav-pills > li a {
+        display: block;
+        float: none;
+    }
+
+        .loginRegisterSection .nav > li a {
+            padding: 11px 16px;
+        }
+
+    .loginRegisterSection .nav-tabs > li > a.active,
+    .loginRegisterSection .nav-tabs > li > a.active:hover,
+    .loginRegisterSection .nav-tabs > li > a.active:focus,
+    .rootwizard .nav-tabs > li > a.active,
+    .rootwizard .nav-tabs > li > a.active:hover,
+    .rootwizard .nav-tabs > li > a.active:focus {
+        background-color: #6c6c71 !important;
+        color: #fff !important;
+    }
+
+    .locateAdvisorInner {
+        margin: 0;
+    }
+
+    .locateAdvisorHolder {
+        padding: 13px;
+    }
+
+    .locateAdvisorMap iframe {
+        height: 330px;
+    }
+
+    .requireDocumentSection {
+        margin-bottom: 50px;
+    }
+
+        .requireDocumentSection:after {
+            margin: 0;
+            right: 50%;
+            top: 105%;
+        }
+
+    .documentLink {
+        min-height: auto;
+    }
+
+    .footerTopMenu li {
+        /*display: inline-block;*/
+    }
+
+        .footerTopMenu li a {
+            /*background-color: #575757;*/
+            /*border: 1px solid #7f7f7f;*/
+            padding: 2px 7px;
+            -webkit-border-radius: 0.45em;
+            -moz-border-radius: 0.45em;
+            border-radius: 0.45em;
+        }
+
+    .col-3,
+    .col-4,
+    .col-5 {
+        width: 100%;
+    }
+
+    .financeOptionWraper .col-3,
+    .financeOptionWraper .col-4,
+    .financeOptionWraper .col-5 {
+        width: 100%;
+    }
+
+    .pageHeader h5 {
+        padding-top: 0;
+        text-align: left !important;
+    }
+
+    .financeOptCalcRow .rengerWraper .valueUnit {
+        float: left;
+        margin: 10px;
+    }
+
+    .periodList li a {
+        font-size: 16px;
+        padding: 5px 0;
+        width: 29px;
+    }
+
+    .financeOptionCalculator {
+        border-left: none;
+        border-right: none
+    }
+
+    .financeOptCalcRow {
+        padding: 13px 23px;
+    }
+
+    .financeOptionWraper {
+        margin-bottom: 0;
+    }
+
+    .vehiclesGallery {
+        margin-top: 23px;
+    }
+
+        .vehiclesGallery h2,
+        .vehiclesGallery h1,
+        .vehiclesGallery h5 {
+            display: block;
+        }
+
+    .link-boxed-list li p,
+    .link-boxed-list li h3 {
+        text-align: center;
+    }
+
+    .carouselControllerWraper {
+        width: 98%;
+    }
+
+    .subNav {
+        text-align: center;
+    }
+
+        .subNav li {
+            display: inline-block;
+        }
+
+    .owl-slider {
+        margin-bottom: 0;
+    }
+
+    .askQuestion {
+        margin-bottom: 30px;
+    }
+
+    .applyFinanceBox {
+        margin-bottom: 30px;
+    }
+
+    .compareVehicle {
+        min-height: 300px;
+    }
+
+    .downloadContent {
+        text-align: center;
+    }
+
+    .downloadContent {
+        margin-bottom: 0;
+    }
+
+    .flipWrap {
+        margin: 0 auto 30px;
+    }
+
+        .flipWrap .back {
+            padding: 10px;
+        }
+
+    .subNav li a {
+        font-size: 16px;
+    }
+    .emtyaz_jameel_h1_white {
+        font-size: 4rem;
+    }
+    .emtyaz_jameel_box_shadow {
+        width: 100%;
+    }
+    .loginRegisterSection .tab-content .tab-pane {
+        padding: 33px 38px 30px 38px;
+    }
+    .dealsWraper h4 {
+        margin-top: 30px;
+    }
+    .pager.wizard {
+       min-height: 155px;
+    }
+    .rootwizard .nav-pills > li > a{width:100%}
+    #apply-finance .card .card-body {
+        padding: 15px 5px;
+    }
+    .cpatch-padding-left {
+        padding-left: 0rem !important;
+    }
+    .g-recaptcha-margin-left {
+        margin-left: -28px;
+    }
+
+    .g-recaptcha-margin-right {
+        margin-right: -28px;
+    }
+    .p-0-small{padding:0!important;}
+    li.contact--list__item:not(li.bg-gray) {
+        height: 175px;
+    }
+    .tabs_dashboard ul.nav.nav-tabs li {
+        width: 100%;
+    }
+    .new-report #finance-option, .new-report #apply-finance {
+        padding: 0px 15px 0px 15px;
+        border:0px;
+    }
+    .tabs_descover .tab-pane .tab-inner {
+        padding: 0px !important;
+        border: 0px;
+    }
+    
+}
+/*small device (Phones)*/
+@media (max-width: 480px) {
+    .new-report .nav-tabs > li {
+        margin-right: 0;
+        width: 100%;
+    }
+    .SliderOutput {
+        display: block;
+        margin: 10px auto;
+        /*text-align: center;*/
+    }
+
+    .rengerWraper .valueUnit {
+        display: block;
+        text-align: center;
+    }
+
+    .locateAdvisorWraper {
+        left: 0;
+        top: 60%;
+        -webkit-transform: translate(0%, -60%);
+        -ms-transform: translate(0%, -60%);
+        transform: translate(0%, -60%);
+    }
+
+    .followupSection h1 {
+        font-size: 30px;
+    }
+
+    .followupSectionH1 {
+        font-size: 30px;
+    }
+
+    .h1alternative {
+        font-size: 30px;
+    }
+
+    .requireDocument h1 {
+        font-size: 30px;
+    }
+
+    .requireDocument {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    .footerTop {
+        padding-top: 20px;
+    }
+
+    .footerTopMenu li a {
+        margin-bottom: 5px;
+    }
+
+    .footerMidLatestNews {
+        margin-bottom: 23px;
+    }
+
+    .footerBottomMenu li a {
+        font-size: 14px;
+    }
+    .emtyaz_jameel_h1_white {
+        font-size: 4rem;
+    }
+    .emtyaz_jameel_box_shadow {
+        width: 100%;
+    }
+    .loginRegisterSection .tab-content .tab-pane {
+        padding: 33px 38px 30px 38px;
+    }
+    .dealsWraper h4 {
+        margin-top: 30px;
+    }
+    .pager.wizard {
+        min-height: 175px;
+    }
+    .rootwizard .nav-pills > li > a, .rootwizard .nav.nav-pills > li + li, .rootwizard .nav.nav-pills > li {
+        width: 100%;
+        margin: 0px;
+    }
+    #apply-finance .card .card-body {
+        padding: 15px 5px;
+    }
+    .cpatch-padding-left {
+        padding-left: 0rem !important;
+    }
+    .g-recaptcha-margin-left {
+        margin-left: -28px;
+    }
+
+    .g-recaptcha-margin-right {
+        margin-right: -28px;
+    }
+    .p-0-small {
+        padding: 0 !important;
+    }
+    li.contact--list__item:not(li.bg-gray) {
+        height: 175px;
+    }
+    .tabs_dashboard ul.nav.nav-tabs li {
+        width: 100%;
+    }
+    .new-report #finance-option, .new-report #apply-finance {
+        padding: 0px 15px 0px 15px;
+        border: 0px;
+    }
+    .tabs_descover .tab-pane .tab-inner {
+        padding: 0px !important;
+        border: 0px;
+    }
+    .success-popup-parent {
+        width: 326px;
+    }
+
+    .success-popup {
+        padding-bottom: 663%;
+    }
+}
+
+/*-------------- Neoxero Fixes --------*/
+
+@media (max-width: 767px) {
+    .carouselCaptionWraper {
+        padding: 23px 60px;
+        top: 60%;
+        width: 100%;
+        clear: both;
+        position: static;
+        transform: none;
+        background: #55565A;
+    }
+
+    .fill {
+        display: none;
+    }
+
+    .fill-responsive-img {
+        display: block;
+        height: 400px;
+        background-size: 420px 400px;
+        /*background-position:0 0 ;*/
+        background-position: center;
+        background-size: cover;
+    }
+    .p-0-small {
+        padding: 0 !important;
+    }
+    li.contact--list__item:not(li.bg-gray) {
+        height: 175px;
+    }
+    .tabs_dashboard ul.nav.nav-tabs li {
+        width: 100%;
+    }
+    .new-report #finance-option, .new-report #apply-finance {
+        padding: 0px 15px 0px 15px;
+        border: 0px;
+    }
+    .tabs_descover .tab-pane .tab-inner {
+        padding: 0px !important;
+        border: 0px;
+    }
+}
+
+@media (max-width: 665px) {
+    .new-report .nav-tabs > li {
+        margin-right: 0;
+        width: 100%;
+    }
+    .vehicles--Offers__item {
+        text-align: center;
+    }
+
+    .adj_link {
+        text-align: left;
+    }
+
+    .ofer_car_logo {
+        text-align: center;
+    }
+
+    .hr {
+        margin: 20px auto;
+    }
+
+    .title_ofer {
+        margin-top: 20px;
+    }
+
+    .article--title {
+        font-size: 20px;
+    }
+
+    .article--part {
+        margin-bottom: 20px;
+    }
+
+    .article--part__link a {
+        font-size: 18px !important;
+        margin-right: 0;
+    }
+
+    .article--title__number {
+        margin-right: 8px;
+    }
+
+    .modal-alj .modal-body {
+        padding: 20px;
+    }
+
+    .info_right {
+        display: block !important;
+        text-align: left;
+    }
+
+    .hours--body__day, .hours--body__time {
+        padding-left: 0;
+        font-size: 16px
+    }
+
+    .hours--body li {
+        height: auto !important;
+    }
+
+    .dealsList li .defultInfo .gbtn {
+        margin-bottom: 0;
+    }
+
+    .dealsList li .defultInfo {
+        text-align: center;
+    }
+
+    .defultInfo .gbtn.btn-teal {
+        background: transparent;
+        color: #000;
+    }
+
+    .hours--head__day {
+        padding-left: 0
+    }
+
+    .dealsList li {
+        padding-left: 25px !important;
+        border-bottom: 1px solid #C3C3C3;
+    }
+    .pager.wizard {
+        min-height: 155px;
+    }
+    .rootwizard .nav-pills > li > a, .rootwizard .nav.nav-pills > li + li, .rootwizard .nav.nav-pills > li{
+        width: 100%;
+        margin:0px;
+    }
+    .p-0-small {
+        padding: 0 !important;
+    }
+    li.contact--list__item:not(li.bg-gray) {
+        height: 175px;
+    }
+    .tabs_dashboard ul.nav.nav-tabs li {
+        width: 100%;
+    }
+    .new-report #finance-option, .new-report #apply-finance {
+        padding: 0px 15px 0px 15px;
+        border: 0px;
+    }
+    .tabs_descover .tab-pane .tab-inner {
+        padding: 0px !important;
+        border: 0px;
+    }
+    .success-popup-parent {
+        width: 507px;
+    }
+
+    .success-popup {
+        padding-bottom: 663%;
+    }
+}
+/*======================================*/
+@media(max-width:425px) {
+    .new-report .nav-tabs > li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #apply-finance .form-group .form-control, .radios-content {
+        max-width: 100%;
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*.success-popup {
+        padding: 50px 35px;
+        padding-bottom: 631.8%;
+        width: 88.5%;
+    }*/
+
+        .success-popup .pop-head h4 {
+            color: #fff;
+            font-size: 29px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .success-popup p.pop-head-txt, .success-popup .pop-body .pop-left ul li {
+            font-size: 19px;
+        }
+
+        .success-popup .pop-body .pop-right {
+            padding: 20px 0;
+        }
+
+            .success-popup .pop-body .pop-right .gbtn {
+                min-width: 100%;
+                font-size: 19px;
+                text-transform: capitalize;
+                white-space:pre-wrap;
+            }
+
+    .financeOptCalcRow .rengerWraper .valueUnit {
+        float: none !important;
+        margin: 5px 0 0 !important;
+        font-size: 14px !important;
+        line-height: normal !important;
+    }
+
+    .input-hint {
+        top: 5px !important;
+    }
+
+    .new-report .radio {
+        display: block;
+        margin-right: 12px;
+        margin-left: 12px;
+        position: relative;
+        top: 8px;
+        margin-top: 0;
+    }
+
+    .new-report .financeOptCalcRow {
+        padding: 20px;
+    }
+
+
+
+    #apply-finance .form-group {
+        margin-bottom: 0;
+        padding: 20px;
+        display: inline-block;
+    }
+
+        #apply-finance .form-group:first-of-type {
+            padding-top: 0;
+        }
+
+    #apply-finance .financeOptionSelectCar {
+        padding: 15px;
+        margin: 10px 0 0;
+    }
+
+    .new-report .radio:last-of-type {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+
+    .g-recaptcha {
+        /* z-index: 9998; */
+        position: relative;
+        transform: scale(.81) translate(0) !important;
+    }
+
+    #apply-finance .form-group .gbtn {
+        padding: 5px 15px !important;
+        font-size: 17px;
+    }
+
+    div.hopscotch-bubble .hopscotch-bubble-container {
+        width: 246px !important;
+    }
+
+    #tabMenuTrigger {
+        display: inline-block;
+        padding-top: 27px;
+    }
+
+    .gbtn.change_tabb {
+        margin-bottom: 20px;
+    }
+
+    .caronly {
+        padding: 10px;
+        transition: .2s;
+    }
+
+    .caronly__name {
+        margin-bottom: 0;
+    }
+
+    .box--cars {
+        border-bottom: 1px solid #ECECEC;
+        padding-bottom: 40px;
+        padding: 0 15px 0;
+    }
+
+        .box--cars .col-xs-4 {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+    .dealsWraper h4 {
+        margin-top: 30px;
+    }
+    .pager.wizard {
+        min-height: 155px;
+    }
+    .rootwizard .nav-pills > li > a, .rootwizard .nav.nav-pills > li + li, .rootwizard .nav.nav-pills > li {
+        width: 100%;
+        margin: 0px;
+    }
+    #apply-finance .card .card-body {
+        padding: 15px 5px;
+    }
+
+    .cpatch-padding-left {
+        padding-left: 0rem !important;
+    }
+    .g-recaptcha-margin-left {
+        margin-left: -28px;
+    }
+    .g-recaptcha-margin-right {
+        margin-right: -28px;
+    }
+    .p-0-small {
+        padding: 0 !important;
+    }
+    li.contact--list__item:not(li.bg-gray) {
+        height: 175px;
+    }
+    .tabs_dashboard ul.nav.nav-tabs li {
+        width: 100%;
+    }
+    .new-report #finance-option, .new-report #apply-finance {
+        padding: 0px 15px 0px 15px;
+        border: 0px;
+    }
+    .tabs_descover .tab-pane .tab-inner {
+        padding: 0px !important;
+        border: 0px;
+    }
+    .success-popup-parent {
+        width: 380px;
+    }
+
+    .success-popup {
+        padding-bottom: 578%;
+    }
+         
+}
+/* iPhone XR, Galaxy Plus*/
+@media(max-width:414px){
+    .success-popup-parent {
+        width: 362px;
+    }
+    .success-popup {
+        padding-bottom: 591%;
+    }
+    .tabLogo {
+        padding-top: 9px;
+        padding-bottom: 0px;
+    }
+}
+/* iPhone 7,8,x*/
+@media(max-width:400px) {
+    .success-popup-parent {
+        width: 343px;
+    }
+
+    .success-popup {
+        padding-bottom: 613%;
+    }
+}
+
+/* Andrioed */
+@media(max-width:375px) {
+    .success-popup-parent {
+        width: 328px;
+    }
+
+    .success-popup {
+        padding-bottom: 652%;
+    }
+    .tabLogo {
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+
+}

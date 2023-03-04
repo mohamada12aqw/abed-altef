@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="35" viewBox="0 0 33 35">
+  <g id="icon-email" transform="translate(-183 -74)">
+    <g id="Terms" transform="translate(183 74)">
+      <rect id="Rectangle" width="33" height="35" rx="10" fill="#437f96"/>
+    </g>
+    <g id="Group_48848" data-name="Group 48848" transform="translate(-286.822 -395.329)">
+      <g id="Group_48847" data-name="Group 48847" transform="translate(477.3 480.725)">
+        <rect id="Rectangle_31222" data-name="Rectangle 31222" width="18.043" height="12.207" rx="1" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <path id="Path_95050" data-name="Path 95050" d="M485.727,486.784l8.667,6.6,8.684-6.611" transform="translate(-485.371 -486.516)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <line id="Line_3" data-name="Line 3" x2="5.293" y2="5.455" transform="translate(12.427 6.466)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <line id="Line_4" data-name="Line 4" y1="5.449" x2="5.291" transform="translate(0.322 6.466)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+      </g>
+    </g>
+  </g>
+</svg>

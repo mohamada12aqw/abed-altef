@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="icon-instagram" transform="translate(-1153 -682.05)">
+    <g id="Group_48965" data-name="Group 48965" transform="translate(1153 682.05)">
+      <path id="Path_96368" data-name="Path 96368" d="M485.239,360.476a17.5,17.5,0,1,1,17.5,17.5A17.5,17.5,0,0,1,485.239,360.476Z" transform="translate(-485.239 -342.976)" fill="#fff"/>
+      <g id="Group_49039" data-name="Group 49039" transform="translate(-476.091 -655.479)">
+        <circle id="Ellipse_1826" data-name="Ellipse 1826" cx="2.657" cy="2.657" r="2.657" transform="matrix(0.982, -0.189, 0.189, 0.982, 490.479, 670.911)" fill="#23b3ce"/>
+        <path id="Path_96402" data-name="Path 96402" d="M496.93,665.079h-6.679a4.56,4.56,0,0,0-4.56,4.56v6.679a4.56,4.56,0,0,0,4.56,4.56h6.679a4.56,4.56,0,0,0,4.56-4.56v-6.679A4.56,4.56,0,0,0,496.93,665.079Zm-3.339,12.039a4.1,4.1,0,1,1,4.1-4.1A4.1,4.1,0,0,1,493.591,677.118Zm4.236-7.4a.955.955,0,1,1,.955-.955A.955.955,0,0,1,497.827,669.718Z" transform="translate(0 0)" fill="#23b3ce"/>
+      </g>
+    </g>
+  </g>
+</svg>

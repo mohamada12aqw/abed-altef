@@ -1,0 +1,1790 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="تويوتا, لكزس, الشركة المتحدة للبيع بالتقسيط, تمويل , سيارات ,  تويوتا, تقسيط السيارات, تأجير السيارات, سيارات, تقسيط أجهزة منزلية, تقسيط , تأجير , سيارة , كامري, كورولا, كيا, هيونداي, جيلي, مستعمل, يارس, ليموزين, لكزس, لاندكروزر, برادو, عبد اللطيف جميل , تويوتا, تويوتا السعودية. تأجير السيارات, أفضل , عروض , السعودية , السعوديين , وظائف , وكلاء السيارات, معارض , وكيل , معرض , أسعار, شريعة , إسلام , بالتقسيط , بالتأجير , تمويل المستعمل"><meta property="og:locale" content="ar_SA"><meta property="og:type" content="article"><meta property="og:title" content="شركة عبد اللطيف جميل المتحدة للتمويل"><meta property="og:description" content="تقوم شركة عبد اللطيف جميل المتحدة للتمويل بتمويل جميع أنواع  السيارات الجديدة والمستعملة وكذلك الأجهزة المنزلية و الإلكترونيات وبعض أنواع المعدات الثقيلة من خلال نظامي الإيجار التمويلي  أو المرابحة ضمن الشروط والأحكام الخاصة بها ."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan-ar.svg">
+
+    <!-- Boots`trap CSS-->
+
+    <link href="css/bootstrap.rtl.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/global-style.css" rel="stylesheet" type="text/css"><link href="css/bootstrap3-rtl-custom.css" rel="stylesheet">
+
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/media-queries-ar.css" rel="stylesheet"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="يمكنك الاطلاع على اكثر من 130 موديل لسيارات تويوتا و لكزس و معرفة الأسعار وعمل حسبة التمويل لكل سيارة.">
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.5.1.js"></script>
+     <script src="js/jquery.md5.js"></script>
+    <script type="text/javascript">
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        var newsLink;
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            if (url.toLowerCase().indexOf(".aspx") <= 0) {
+                url = url + "index_ar.aspx";
+            }
+
+            newURL = 'http://' + document.location.host + url.split('_ar')[0] + url.split('_ar')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#English"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "English" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment_ar.aspx';
+            } else {
+                newsLink = 'SADAD_payment_ar.aspx';
+            }
+
+            var links = ['index',
+                'Offers_listing',
+                'fleet_and_business',
+                'vehicle_listing',
+                'vehicles_comparison',
+                'feedbacks',
+                'account_dashboard',
+                'offers_details'];
+
+            links.forEach(function (item) {
+
+                if (url.indexOf(item) !== -1) {
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                //swal({
+                //    html: true,
+                //    title: "<hr>رأيك يهمنا",
+                //    text: "تهـــدف شركة عبداللطيف جميل للتمويــل إلى تطوير موقعها الإلكتروني.<br> نأمل تخصيص دقيقة من وقتكم لمشاركتنا بعض الافكار<br><br>",
+                //    imageUrl: "img/logo-ar.png",
+                //    imageSize: '200x50',
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "تخطي",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'دخول'
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+                document.getElementById("myForm").style.display = "block";
+
+            } else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            };
+
+            //end of VAT popup code
+            //=====================================================================
+
+
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+
+            var index = url.search("index");
+
+            if (index > 0) {
+            //    if (true) {
+            //        mobile_Div.style.display = "none";;
+            //    }
+            //    else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر التطبيقات";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon-a appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر جوجل للأندرويد";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon-a googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<span>لتجربة أفضل</span><br> حمل تطبيقنا من متجر ويندوز";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon-a winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+            }
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        };
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        };
+
+        function openInNewTab() {
+            var win = window.open(newsLink, '_blank');
+            win.focus();
+        };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+    
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script>
+
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+    
+<title>
+	تويوتا و لكزس | عبداللطيف جميل للتمويل
+</title></head>
+<body>
+    <!-- Google Tag Manager -->
+   
+
+    <script async="" src="gtag/js?id=UA-7444353-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-7444353-1');
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./vehicle_listing_ar.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="18056C61">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="mn3hcAPumaKjd35Tdg+ZZ2scG9IFz3mQNZXCw/BeMUjR+U59r37qSbVhJeLyCbfBpPQwGGMLDuocDtR2IwiCrKzsQ+uQCYKC+U2ummetOCQQdwSIoKquhtkt7oTTPrgmWCQJ9m/AlrZOxhMPJu2Vpg==">
+         
+        
+        <!-- Wrapper start -->
+        <div class="wrapper">
+            
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-sm-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">التأجير التمويلي</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            اتصل بنا: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="account_login_ar.aspx.html">تسجيل الدخول</a></li>
+    <li><a href="account_registration_ar.aspx.html">مستخدم جديد</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class=""><a href="#English" class="activelangbutton">English</a></li>
+                                            <li class="active"><a href="#" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                            <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>القائمة</a>
+                                </div>
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo tabLogoAr">
+                                        <a href="index_ar.aspx.html">
+                                            <img src="img/logo-tamakan-ar.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item"><a href="index_ar.aspx.html" class="nav-link">الرئيسية</a></li>
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">أسعار المنتجات التمويلية</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products_ar.aspx.html">
+                                                                            <h6>الإيجار التمويلي للسيارات</h6>
+                                                                            <p>احصل على سعر تمويل السيارة التي تختارها.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic_ar.aspx.html">
+                                                                            <h6>تمويل السيارات بالمرابحة</h6>
+                                                                            <p>قم بالاستعلام عن تمويل المرابحة </p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance_ar.aspx.html">
+                                                                            <h6>تمويل المنتجات الاستهلاكية</h6>
+                                                                            <p>احصل على تمويل للإلكترونيات والأجهزة المنزلية</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">
+                                                                            <h6>تمويل السيارات المستعملة</h6>
+                                                                            <p>أحصل على سياراتك المستعملة بالتمويل</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div> 
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing_ar.aspx.html">
+                                                                            <h6> التمويل النقدي للأفراد</h6>
+                                                                            <p>منتج تمويلي يسمح للأفراد بتلبية احتياجاتهم المالية </p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref_ar.aspx.html">
+                                                                            <h6>التمويل العقاري</h6>
+                                                                            <p> نقدم حلول مالية ميسرة ومتوافقة مع الشريعة الإسلامية</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf_ar.aspx.html">
+                                                                            <h6>باب رزق جميل</h6>
+                                                                            <p>التمويل المتناهي الصغر</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="offers_listing_ar.aspx.html">عروض التمويل</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business_ar.aspx.html">تمويل الشركات</a></li>
+                                            <li class="nav-item"><a href="locations_ar.aspx.html">فروعنا</a></li>
+                                            <li class="nav-item"><a href="news_listing_ar.aspx.html">أخبارنا</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw selected">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">من نحن</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about_ar.aspx.html">
+                                                                            <h6>الرؤية و الرسالة</h6>
+                                                                            <p>نبذه عامة عن الشركة</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan_ar.aspx.html">
+                                                                            <h6>تمكّن</h6>
+                                                                            <p>نبني الثقة بتمكين الأحلام</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs_ar.aspx.html">
+                                                                            <h6>الأسئلة الشائعة</h6>
+                                                                            <p>كل ما ترغب في معرفته والإستفسار عنه</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <div class="logo">
+                                            <a href="index_ar.aspx.html">
+                                                <img src="img/logo-tamakan-ar.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top"></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="أدخل كلمة البحث" class="sb-search-input input__field" maxlength="255">
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+                
+    <h1 class="bo-h1" itemprop="name" style="visibility: hidden;line-height: 0px;margin: 0px;padding: 0px;">تويوتا و لكزس</h1>
+        <section class="pageHeaderWide">
+        <div class="container pageHeader">
+            <div class="row">
+                <div class="col-sm-8">
+                    <ol class="breadcrumb">
+                        <li><a href="index.aspx.html">الرئيسية</a></li>
+                        <li>السيارات</li>
+                    </ol>
+                    <h1>
+                        
+                        تويوتا
+                        
+
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+<div class="container">
+    <div class="row">
+        <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tab_deal d-none d-sm-none d-md-inline-flex nav-fill" role="tablist" id="myTab">
+                <li class="title_tab_deal d-none d-sm-none d-md-block">مشاهدة :
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#allvehicles" class="nav-link active" id="all-tab" role="tab" data-toggle="tab" aria-controls="allvehicles" aria-selected="true">كل السيارات</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#Cars" class="nav-link" id="Cars-tab" role="tab" data-toggle="tab" aria-controls="Cars" aria-selected="false">سيدان
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#suvsand" class="nav-link" id="suvs-tab" role="tab" data-toggle="tab" aria-controls="suvsand" aria-selected="false">الدفع الرباعي و العائلية
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#commercial" class="nav-link" id="commercial-tab" role="tab" data-toggle="tab" aria-controls="commercial" aria-selected="false">التجارية
+                    </a>
+                </li>
+                <li class="col-md-4 float-right d-none d-sm-none d-md-block">
+                    <div role="form" class="formsearch-car">
+                        <input type="text" placeholder="البحث عن سيارات تويوتا">
+                        <button class="formsearch-car_btn">
+                            <img src="img/search.png" alt="بحث" title="بحث"></button>
+                    </div>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="View">
+                    مشاهدة.
+                </div>
+                <div id="allvehicles" role="tabpanel" class="tab-pane fade show active" aria-labelledby="all-tab">
+                    <article class="box--cars">
+                        <div class="col-md-12">
+                            <h3 class="box--cars__title">سيدان</h3>
+                        </div>
+                        <div class="row">
+                            
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-20.html?ProductID=10'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_Image1_0" title="أفالون" src="WebImages/Products/TOYOTA/Avalon/VehicleListing.jpg" alt="أفالون">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    أفالون</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-3.html?ProductID=1'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_Image1_1" title="كامري" src="WebImages/Products/TOYOTA/Camry/VehicleListing.png" alt="كامري">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    كامري</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-1.html?ProductID=22'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_Image1_2" title="كورولا" src="WebImages/Products/TOYOTA/Corolla/VehicleListing.jpg" alt="كورولا">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    كورولا</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-21.html?ProductID=40'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_Image1_3" title="يارس هاتشباك" src="WebImages/Products/TOYOTA/Yaris%20HB/VehicleListing.png" alt="يارس هاتشباك">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    يارس هاتشباك</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx.html?ProductID=61'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_Image1_4" title="يارس سيدان" src="WebImages/Products/Toyota/Yaris%20Sedan/VehicleListing.png" alt="يارس سيدان">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    يارس سيدان</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                            
+                        </div>
+                        <!-- row -->
+                    </article>
+                    <article class="box--cars margintop50">
+                        <div class="col-md-12">
+                            <h3 class="box--cars__title">الدفع الرباعي و العائلية
+                            </h3>
+                        </div>
+                        <div class="row">
+                            
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-22.html?ProductID=96'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_0" title="أفانزا" src="WebImages/Products/TOYOTA/Avanza/VehicleListing.png" alt="أفانزا">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    أفانزا</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-23.html?ProductID=254'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_1" title="سي اتش ار" src="WebImages/Products/TOYOTA/C-HR/VehicleListing.jpg" alt="سي اتش ار">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    سي اتش ار</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-24.html?ProductID=255'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_2" title="كورولا كروس" src="WebImages/Products/TOYOTA/Corolla%20Cross/VehicleListing.png" alt="كورولا كروس">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    كورولا كروس</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-25.html?ProductID=66'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_3" title="إف جي كروزر" src="WebImages/Products/TOYOTA/FJ%20Cruiser/VehicleListing.png" alt="إف جي كروزر">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    إف جي كروزر</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-4.html?ProductID=39'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_4" title="فورتشنر" src="WebImages/Products/TOYOTA/Fortuner/VehicleListing.png" alt="فورتشنر">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    فورتشنر</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-26.html?ProductID=251'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_5" title="جرانفيا" src="WebImages/Products/TOYOTA/GRANVIA/VehicleListing.jpg" alt="جرانفيا">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    جرانفيا</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-27.html?ProductID=78'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_6" title="هايلاندر" src="WebImages/Products/TOYOTA/Highlander/VehicleListing.jpg" alt="هايلاندر">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    هايلاندر</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-28.html?ProductID=37'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_7" title="إنوفا" src="WebImages/Products/TOYOTA/Innova/VehicleListing.png" alt="إنوفا">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    إنوفا</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-29.html?ProductID=20'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_8" title="لاندكروزر" src="WebImages/Products/TOYOTA/Land%20Cruiser/VehicleListing.png" alt="لاندكروزر">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    لاندكروزر</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-30.html?ProductID=256'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_9" title=" لاندكروزر 2022 " src="WebImages/Products/TOYOTA/LAND%20CRUISER%202022/VehicleListing.png" alt=" لاندكروزر 2022 ">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                     لاندكروزر 2022 </h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-31.html?ProductID=18'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_10" title="برادو" src="WebImages/Products/TOYOTA/Prado/VehicleListing.jpg" alt="برادو">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    برادو</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-32.html?ProductID=257'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_11" title="RAIZE " src="WebImages/Products/Toyota/RAIZE/VehicleListing.jpg" alt="RAIZE ">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    RAIZE </h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-33.html?ProductID=21'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_12" title="راف فور" src="WebImages/Products/TOYOTA/Rav4/VehicleListing.png" alt="راف فور">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    راف فور</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-2.html?ProductID=106'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_13" title="راش" src="WebImages/Products/TOYOTA/Rush/VehicleListing.png" alt="راش">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    راش</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-34.html?ProductID=260'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_Image2_14" title="ڤيلوز" src="WebImages/Products/Toyota/VELOZ/VehicleListing.png" alt="ڤيلوز">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    ڤيلوز</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                            
+                        </div>
+                        <!-- row -->
+                    </article>
+                    <article class="box--cars margintop50">
+                        <div class="col-md-12">
+                            <h3 class="box--cars__title">التجارية
+                            </h3>
+                        </div>
+                        <div class="row">
+                            
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-35.html?ProductID=17'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_Image1_0" title="كوستر" src="WebImages/Products/Toyota/Coster/vehicle%20listing.png" alt="كوستر">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    كوستر</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-36.html?ProductID=11'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_Image1_1" title="هاي أس باص" src="WebImages/Products/Toyota/Hiace%20Bus/vehicle%20listing.png" alt="هاي أس باص">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    هاي أس باص</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-37.html?ProductID=12'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_Image1_2" title="هاي أس فان" src="WebImages/Products/Toyota/Hiace%20Van/vehicle%20listing.png" alt="هاي أس فان">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    هاي أس فان</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-38.html?ProductID=42'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_Image1_3" title="هايلوكس غمارتين " src="WebImages/Products/Toyota/Hilux%20Double%20Cab/vehicle%20listing.png" alt="هايلوكس غمارتين ">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    هايلوكس غمارتين </h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-39.html?ProductID=41'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_Image1_4" title="هايلوكس غمارة" src="WebImages/Products/Toyota/Hilux%20Single%20Cab/vehicle%20listing.png" alt="هايلوكس غمارة">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    هايلوكس غمارة</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                                    <div class="col-md-2 col-4">
+                                        <a href='vehicle_ar.aspx-40.html?ProductID=19'>
+                                            <section class="caronly">
+                                                <div class="caronly__img text-center">
+                                                    <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_Image1_5" title="لاندكروزر أر جي" src="WebImages/Products/Toyota/LC70/vehicle%20listing.png" alt="لاندكروزر أر جي">
+                                                </div>
+                                                <h6 class="caronly__name text-center">
+                                                    لاندكروزر أر جي</h6>
+                                                
+                                            </section>
+                                        </a>
+                                    </div>
+                                
+                            
+                        </div>
+                        <!-- row -->
+                    </article>
+                </div>
+                <div id="Cars" role="tabpanel" class="tab-pane fade" aria-labelledby="Cars-tab">
+                    <div class="row">
+                        
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-20.html?ProductID=10'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_2_Image3_0" title="أفالون" src="WebImages/Products/TOYOTA/Avalon/VehicleListing.jpg" alt="أفالون">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                أفالون</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-3.html?ProductID=1'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_2_Image3_1" title="كامري" src="WebImages/Products/TOYOTA/Camry/VehicleListing.png" alt="كامري">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                كامري</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-1.html?ProductID=22'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_2_Image3_2" title="كورولا" src="WebImages/Products/TOYOTA/Corolla/VehicleListing.jpg" alt="كورولا">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                كورولا</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-21.html?ProductID=40'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_2_Image3_3" title="يارس هاتشباك" src="WebImages/Products/TOYOTA/Yaris%20HB/VehicleListing.png" alt="يارس هاتشباك">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                يارس هاتشباك</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx.html?ProductID=61'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Cars_2_Image3_4" title="يارس سيدان" src="WebImages/Products/Toyota/Yaris%20Sedan/VehicleListing.png" alt="يارس سيدان">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                يارس سيدان</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+
+                    </div>
+                </div>
+                <div id="suvsand" role="tabpanel" class="tab-pane fade" aria-labelledby="suvs-tab">
+                    <div class="row">
+                        
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-22.html?ProductID=96'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_0" title="أفانزا" src="WebImages/Products/TOYOTA/Avanza/VehicleListing.png" alt="أفانزا">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                أفانزا</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-23.html?ProductID=254'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_1" title="سي اتش ار" src="WebImages/Products/TOYOTA/C-HR/VehicleListing.jpg" alt="سي اتش ار">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                سي اتش ار</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-24.html?ProductID=255'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_2" title="كورولا كروس" src="WebImages/Products/TOYOTA/Corolla%20Cross/VehicleListing.png" alt="كورولا كروس">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                كورولا كروس</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-25.html?ProductID=66'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_3" title="إف جي كروزر" src="WebImages/Products/TOYOTA/FJ%20Cruiser/VehicleListing.png" alt="إف جي كروزر">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                إف جي كروزر</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-4.html?ProductID=39'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_4" title="فورتشنر" src="WebImages/Products/TOYOTA/Fortuner/VehicleListing.png" alt="فورتشنر">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                فورتشنر</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-26.html?ProductID=251'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_5" title="جرانفيا" src="WebImages/Products/TOYOTA/GRANVIA/VehicleListing.jpg" alt="جرانفيا">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                جرانفيا</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-27.html?ProductID=78'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_6" title="هايلاندر" src="WebImages/Products/TOYOTA/Highlander/VehicleListing.jpg" alt="هايلاندر">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                هايلاندر</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-28.html?ProductID=37'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_7" title="إنوفا" src="WebImages/Products/TOYOTA/Innova/VehicleListing.png" alt="إنوفا">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                إنوفا</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-29.html?ProductID=20'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_8" title="لاندكروزر" src="WebImages/Products/TOYOTA/Land%20Cruiser/VehicleListing.png" alt="لاندكروزر">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                لاندكروزر</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-30.html?ProductID=256'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_9" title=" لاندكروزر 2022 " src="WebImages/Products/TOYOTA/LAND%20CRUISER%202022/VehicleListing.png" alt=" لاندكروزر 2022 ">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                 لاندكروزر 2022 </h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-31.html?ProductID=18'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_10" title="برادو" src="WebImages/Products/TOYOTA/Prado/VehicleListing.jpg" alt="برادو">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                برادو</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-32.html?ProductID=257'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_11" title="RAIZE " src="WebImages/Products/Toyota/RAIZE/VehicleListing.jpg" alt="RAIZE ">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                RAIZE </h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-33.html?ProductID=21'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_12" title="راف فور" src="WebImages/Products/TOYOTA/Rav4/VehicleListing.png" alt="راف فور">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                راف فور</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-2.html?ProductID=106'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_13" title="راش" src="WebImages/Products/TOYOTA/Rush/VehicleListing.png" alt="راش">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                راش</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-34.html?ProductID=260'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_SUVsVans_2_Image4_14" title="ڤيلوز" src="WebImages/Products/Toyota/VELOZ/VehicleListing.png" alt="ڤيلوز">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                ڤيلوز</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+
+                    </div>
+                </div>
+                <div id="commercial" role="tabpanel" class="tab-pane fade" aria-labelledby="commercial-tab">
+                    <div class="row">
+                        
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-35.html?ProductID=17'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_2_Image1_0" title="كوستر" src="WebImages/Products/Toyota/Coster/vehicle%20listing.png" alt="كوستر">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                كوستر</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-36.html?ProductID=11'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_2_Image1_1" title="هاي أس باص" src="WebImages/Products/Toyota/Hiace%20Bus/vehicle%20listing.png" alt="هاي أس باص">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                هاي أس باص</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-37.html?ProductID=12'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_2_Image1_2" title="هاي أس فان" src="WebImages/Products/Toyota/Hiace%20Van/vehicle%20listing.png" alt="هاي أس فان">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                هاي أس فان</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-38.html?ProductID=42'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_2_Image1_3" title="هايلوكس غمارتين " src="WebImages/Products/Toyota/Hilux%20Double%20Cab/vehicle%20listing.png" alt="هايلوكس غمارتين ">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                هايلوكس غمارتين </h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-39.html?ProductID=41'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_2_Image1_4" title="هايلوكس غمارة" src="WebImages/Products/Toyota/Hilux%20Single%20Cab/vehicle%20listing.png" alt="هايلوكس غمارة">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                هايلوكس غمارة</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+                                <div class="col-md-2 col-4">
+                                    <a href='vehicle_ar.aspx-40.html?ProductID=19'>
+                                        <section class="caronly">
+                                            <div class="caronly__img text-center">
+                                                <img id="ContentPlaceHolder1_VehiclesList_Toyota2_Repeater_Commercial_2_Image1_5" title="لاندكروزر أر جي" src="WebImages/Products/Toyota/LC70/vehicle%20listing.png" alt="لاندكروزر أر جي">
+                                            </div>
+                                            <h6 class="caronly__name text-center">
+                                                لاندكروزر أر جي</h6>
+                                            
+                                        </section>
+                                    </a>
+                                </div>
+                            
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aboutmodel row">
+            <div class="col-sm-12">
+                <h2 class="aboutmodel__title">عن سيارات تويوتا
+                </h2>
+            </div>
+            <div class="col-md-9">
+                <p class="aboutmodel__desc">
+                    شركة تويوتا للسيارات (بالإنجليزية: Toyota Motor Corporation أو TMC اختصاراً‎؛ باليابانية: トヨタ自動車株式会社‎، ‏تويوتا جيدوشا كابوشيكي كايشا؟) هي شركة كبرى متعددة الجنسيات لصناعة السيارات يقع مقرها الرئيسي في اليابان. وتعتبر الآن المُصنع الأول للسيارات بالعالم،[6][7][8][9] تتمركز الشركة في كل من ناغويا وتويوتا بمحافظة آيتشي، وطوكيو.
+                </p>
+                <p class="aboutmodel__desc">
+                    تمتلك تويوتا حالياً شركات لكزس، سايون، وهينو ولها النصيب الأكبر من دايهاتسو وجزء صغير من سوبارو (فوجي للصناعات الثقيلة)، وإيسوزو، وياماها. وللشركة 522 فرعاً. تقوم الشركة بإنتاج الشاحنات والحافلات ومركبات صناعية مختلفة، إلى جانب تصنيعها السيارات. وتقدم تويوتا خدمات مالية من خلال فرعها: تويوتا للخدمات المالية (بالإنجليزية: Toyota Financial Services). ومن نشاطاتها أيضاً صناعة الإنسان الآلي (الروبوت).
+                </p>
+                <div class="wikipedia__img">
+                    <img src="img/Wikipedia.png" alt="wikipedia" title="wikipedia">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="aboutmodel__prand">
+                    <img src="img/Toyota_tab.png" alt="تويوتا" title="تويوتا">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+            </main>
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h6><strong>السيارات</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options_ar.aspx.html?BrandID=1">تويوتا</a></li>
+                                <li><a href="finance_options_ar.aspx-1.html?BrandID=2">لكزس</a></li>
+                                <li><a href="finance_options_ar.aspx-2.html?BrandID=2015">هيونداي</a></li>
+                                <li><a href="finance_options_ar.aspx-3.html?BrandID=2019">كيا</a></li>
+                                <li><a href="finance_options_ar.aspx-4.html?BrandID=2053">جيلي</a></li>
+                                <li><a href="vehicles_comparison_ar.aspx.html">مقارنة السيارات</a></li>
+
+                            </ul>
+
+                            <h6><strong>تمويل الشركات</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry_ar.aspx.html">تقديم الطلب</a></li>
+                                <li><a href="fleet_and_business_ar.aspx.html">إستعراض فروع الشركات</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">خدمات الموردين</a></li>
+                            </ul>
+
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>أدوات التمويل</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan_ar.aspx.html">تمكن</a></li>
+                                <li><a href="products_ar.aspx.html">حاسبة التمويل</a></li>
+                                <li><a href="finance_options_generic_ar.aspx.html">حاسبة المرابحه</a></li>
+                                <li><a href="home_appliances_finance_ar.aspx.html">تمويل المنتجات الاستهلاكية</a></li>
+                                <li><a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">تمويل السيارات المستعملة</a></li>
+                                <li><a href="cash_financing_ar.aspx.html"> التمويل النقدي للأفراد</a></li>
+                                <li><a href="aljuref_ar.aspx.html">التمويل العقاري</a></li>
+                                <li><a href="brjmf_ar.aspx.html">باب رزق جميل</a></li>
+                                <li><a href="affordability_calculator_ar.aspx.html">أي السيارات تناسبني؟</a></li>
+                                <li><a href="how_to_auto_finance_ar.aspx.html">كيف أتقدم بطلب تمويل؟</a></li>
+                                <li><a href="offers_listing_ar.aspx.html">عروض التأجير التمويلي</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>إدارة حسابك</strong></h6>
+                            <ul class="footerTopMenu">
+
+                                <li><a href="account_login_ar.aspx.html">تسجل الدخول</a></li>
+                                <li><a href="account_registration_ar.aspx.html">تسجيل مستخدم جديد</a></li>
+                                <li><a href="account_password_reset_ar.aspx.html">هل نسيت كلمة المرور؟</a></li>
+                                <li><a href="SADAD_payment_ar.aspx.html">الدفع عن طريق سداد</a></li>
+                                <li><a href="Documents/ServicesFeesListAr.pdf">رسوم الخدمات</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>اتصل بنا</strong></h6>
+                            <ul class="footerTopMenu">
+
+                                <li><a href="feedbacks_ar.aspx.html">الاستفسارات</a></li>
+                                <li><a href="feedbacks_ar.aspx.html">الشكاوي</a></li>
+                                <li><a href="feedbacks_whistleblowing_ar.aspx.html">المخالفات</a></li>
+                            </ul>
+                            <h6><strong>فروعنا</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations_ar.aspx.html">خريطة المواقع</a></li>
+                                <li><a href="locations_ho_ar.aspx.html">دعنا نتصل بك</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">قائمة تجار الجملة</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>شركة عبداللطيف جميل المتحدة للتمويل</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about_ar.aspx.html">من نحن</a></li>
+                                <li><a href="Documents/doc_ar.pdf">حماية العملاء</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_Ar.pdf">مبادئ التمويل المسئول للأفراد</a></li>
+                                <li><a href="FAQs_ar.aspx.html">أسئلة شائعة</a></li>
+                                <li><a href="http://careers.aljfinance.com/ar/">تقدم بطلب توظيف</a></li>
+                                <li><a href="feedbacks_training_ar.aspx.html">تقدم بطلب تدريب</a></li>
+                                <li><a href="Documents/Complines_How_To_Ar.jpg">آلية تقديم الشكوى</a></li>
+                                <li><a href="Documents/ALJUF_Terms_ar.pdf">شروط التأجير التمويلي</a></li>
+                                <li><a href="finance_reports_ar.aspx.html">التقارير المالية</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingAr.pdf">الشروط و الأحكام العامة</a></li>    
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                                <li><a href="https://www.facebook.com/Aljfinance" title="Facebook">
+                                    <!-- <i class="fa fa-facebook"></i> -->
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks_ar.aspx.html" class="btn-block footerFeedback">الشكاوي</a>
+                            <a href="WS_login_ar.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">تجار السيارات</a>
+                            <span id="siteseal" class=" btn-block footerFeedback">
+                                <script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                         <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                            	<!--<span class="c-icon appleStore-icon"></span>-->
+                              <img src="img/appStore.png" alt="App Store" title="App Store" class="float-left  ">
+                                <p><small>نتزيل تطبقنا</small></p>
+                                <p>متجر التطبيقات</p>
+                            </a></li>
+
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                         <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                          	<!--<span class="c-icon blackberry-icon"></span>-->
+                              <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-left  ">
+                               <p><small>نتزيل تطبقنا</small></p>
+                                <p>جوجل بلاي</p>
+                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreAppAr.png" alt="iOS App" title="iOS App" class="center-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li>
+                                    <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                                        <img src="img/appStore.png" alt="App Store" title="App Store" class="float-left  ">
+                                        <p><small>نتزيل تطبقنا</small></p>
+                                        <p>متجر التطبيقات</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayAppAr.png" alt="Google App" title="Google App" class="center-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-left  ">
+                                    <p><small>نتزيل تطبقنا</small></p>
+                                    <p>جوجل بلاي</p>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+
+                        
+                            
+
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer_ar.aspx.html">حقوق الطبع </a></li>
+                                <li><a href="terms_of_use_ar.aspx.html">شروط  الاستخدام</a></li>
+                                <li><a href="cookie_policy_ar.aspx.html">سياسة الكوكيز</a></li>
+                                <li><a href="accessibility_policy_ar.aspx.html">سياسة الوصول</a></li>
+                                <li><a href="privacy_policy_ar.aspx.html">سياسة الخصوصية</a></li>
+                                <li><a href="Documents/Personal%20Data%20Protection%D9%80_Ar.pdf" target="_blank">سياسة حماية البيانات الشخصية</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 شركة عبد اللطيف جميل المتحدة للتمويل. جميع الحقوق محفوظة. مسموح لك باستخدام هذا الموقع شريطة الالتزام التام بشروط الاستخدام. يُمثل اسم "عبد اللطيف جميل" وشعارها المكتوب والتصميم الخماسي الشكل علاماتٍ تجارية (مُسجلة أو غير مُسجلة) تعود ملكيتها الفكرية إلى شركة عبد اللطيف جميل للملكية الفكرية المحدودة. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index_ar.aspx.html">الرئيسية</a></li>
+                        <li class="dropdownTab"><a href="#" data-toggle="dropdown">أسعار المنتجات التمويلية</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>للخلف</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">أسعار المنتجات التمويليه</a>
+                                            <ul class="navTabSubMenu">
+
+                                                <li><a href="products_ar.aspx.html">الإيجار التمويلي للسيارات</a></li>
+                                                <li><a href="finance_options_generic_ar.aspx.html">تمويل السيارات بالمرابحة</a></li>
+                                                <li><a href="home_appliances_finance_ar.aspx.html">تمويل الاجهزة المنزلية</a></li>
+                                                <li><a href="C%3A%5CDownloaded%20Web%20Sites%5Cwww.aljfinance.com%5Cused_cars_campaign_ar.aspx.html">تمويل السيارات المستعملة</a></li>
+                                                <li><a href="cash_financing_ar.aspx.html"> التمويل النقدي للأفراد</a></li>
+                                                <li><a href="aljuref_ar.aspx.html">التمويل العقاري</a></li>
+                                                <li><a href="brjmf_ar.aspx.html">باب رزق جميل</a></li>
+                                                <li><a href="affordability_calculator_ar.aspx.html">أي السيارات تناسب ميزانيتي؟</a></li>
+                                                <li><a href="how_to_auto_finance_ar.aspx.html">كيفية الحصول على تمويل؟</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="offers_listing_ar.aspx.html">عروض التمويل</a></li>
+                        <li><a href="locations_ar.aspx.html">فروعنا</a></li>
+                        <li><a href="fleet_and_business_ar.aspx.html">تمويل الشركات</a></li>
+                        <li><a href="news_listing_ar.aspx.html">أخبارنا</a></li>
+                        <li class="dropdownTab"><a href="#" data-toggle="dropdown">من نحن</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>للخلف</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">من نحن</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about_ar.aspx.html">الرؤية و الرسالة</a></li>
+                                                <li><a href="tamakan_ar.aspx.html">تمكّن</a></li>
+                                                <li><a href="FAQs_ar.aspx.html">الأسئلة الشائعة</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="account_login_ar.aspx.html">تسجبل الدخول </a></li>
+                        <li><a href="account_registration_ar.aspx.html">تسجيل جديد</a></li>
+                        <li><a href="account_password_reset_ar.aspx.html">إستعادة كلمة المرور</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>اتصل بنا 8002442211</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="أدخل كلمة البحث" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                    <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565">
+                    <img class="float-left  " title="App Store" alt="App Store" src="img/appStore.png">
+                    <p><small>نتزيل تطبقنا</small></p>
+                    <p>متجر التطبيقات</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.aljfs.it">
+                    <img class="float-left  " title="Google play" alt="Google play" src="img/googlePlay.png">
+                    <p><small>نتزيل تطبقنا</small></p>
+                    <p>جوجل بلاي</p>
+                    </a>
+                </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Tablet menu end -->
+        
+
+
+<style type="text/css">
+/*common*/
+.loading-wrap{
+    background: rgba(128,128,128,0.8);
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    z-index:2000;
+    display: none;
+}
+    .loading-wrap .loading{
+        max-width:617px;
+        max-height:210px;
+        margin: auto;
+        position: relative;
+        top: 180px;
+        overflow: hidden;
+        -moz-border-radius: 3px 3px 0 0;
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0; /* border radius */
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box; /* prevents bg color from leaking outside the border */
+        background-color: #fff; /* layer fill content */
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+        background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+        background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+    }
+    .loading-wrap .loading-head{
+        border-bottom: 7px solid #4d8092;
+        background-color: #fff;
+        padding: 17px 30px;
+    }
+.loading-wrap .loading-content{
+    background-color: #fff;
+    padding: 21px 30px 18px;
+}
+.loading-wrap .loading-head figure{
+    position: relative;
+    top:-1px;
+}
+
+.font-18{font-size: 18px;}
+.font-14{font-size: 14px;}
+.mb25{margin-bottom:25px;}
+@media (max-width: 767px)  {
+    .loading-wrap .loading{
+        max-height:inherit;
+    }
+    .loading-wrap .loading-head h1{
+        font-size: 40px;
+    }
+}
+
+.one {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.0s;
+}
+
+.two {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.2s;
+}
+
+.three {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.3s;
+}
+
+@-webkit-keyframes dot {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dot {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ar only*/
+.loading-wrap .loading-head h1{
+    font-size: 40px;
+    margin-bottom: 11px;
+}
+.loading-wrap .loading {
+    top: 177px;
+}
+</style>
+
+<section class="loading-wrap" style="display:block;z-index: 9998;visibility:hidden;" id="PleaseWait" tabindex="-1">
+      
+      <div class="loading">
+          
+            <div class="loading-head">
+              
+                <button type="button" class="close closeRoundWhite-icon" style="margin-left: -10px;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo-ar.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span class="three">.</span><span class="two">.</span><span class="one">.</span><span>جاري التحميل</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">  الرجاء الانتظار ، طلبك قيد التنفيذ .</p>
+                <p class="font-14">هل  استغرقت هذه العملية أكثر مما ينبغي؟  من فضلك  <a href="feedbacks_ar.aspx.html" target="_blank"> أبلغنا  </a></p>
+            </div>
+          
+        </div>
+</section>
+
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">خدمة سداد</button>
+
+        <div class="form-popup" id="myForm">
+            <div class="form-container">
+                <div class="survey-logo">
+                    <img src="img/logo-tamakan-ar.svg">
+                </div>
+                <div class="survey-bg">
+                    <h1 class="survey-title">عميلنا العزيز</h1>
+                    <p class="survey-text">
+                        حفاظًا على صحتك وصحة من تحب<br>
+                        سدد دفعاتك الشهرية من خلال خدمة سداد عبر القنوات البنكية
+                    </p>
+                </div>
+                <div class="survey-footer">
+                    <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">سداد</button>
+                    <button type="button" class="btn cancel" onclick="javascript:closeForm()">إغلاق</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/sideMenu-script-ar.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    </form>
+    <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+</body>
+</html>

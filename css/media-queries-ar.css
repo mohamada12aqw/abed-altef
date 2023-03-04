@@ -1,0 +1,61 @@
+/*Extra large device (Desktops)*/
+@media (min-width: 1200px) and (max-width: 1920px) {
+   
+}
+/*Medium device (Desktops)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+/*Small device (Tablets)*/
+@media (max-width: 991px) {
+    
+}
+/*Extra small device (Phones)*/
+@media (max-width: 767px) {
+   
+    .tabSubMenu .leftCaretWhite-icon {
+        margin-left: 13px;
+        margin-right:auto;
+    }
+}
+/*Extra small device (Phones)*/
+@media (max-width: 665px) {
+    
+    .tabSubMenu .leftCaretWhite-icon {
+        margin-left: 13px;
+        margin-right: auto;
+    }
+}
+/*Extra small device (Phones)*/
+@media (max-width: 480px) {
+   
+    .tabSubMenu .leftCaretWhite-icon {
+        margin-left: 13px;
+        margin-right: auto;
+    }
+}
+
+/*Extra small device (Phones)*/
+@media(max-width:425px) {
+   
+      .tabSubMenu .leftCaretWhite-icon {
+        margin-left: 13px;
+        margin-right: auto;
+    }
+}
+
+@media(max-width:400px) {
+
+    .tabLogo {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+/* Andrioed */
+@media(max-width:375px) {
+
+    .tabLogo {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}

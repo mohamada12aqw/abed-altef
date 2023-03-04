@@ -1,0 +1,1701 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="ALJFinance.com">
+
+    <!-- Google Analytics Tool -->
+    <meta name="verify-v1" content="hN4cF9QlDQe2kJbBKdrJCym6TwWJhWobMQCSjjPDZMc=">
+    <!-- Bing Search Engine Indexing -->
+    <meta name="msvalidate.01" content="48A61DB7465D1CECFABC60E71A8233AA">
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="PvfyLg_l2iHgdOs67LK2Z7iht2BgKmDEJ8QEbIdw7Io"><meta name="google-site-verification" content="Xo2-PIVRcbaO6h8Fy7RH_plVtdxKoAZDzTACsQLyH0M"><meta name="google-site-verification" content="26mRW6vYxJyZwAz33DEF1lLXyetJkDbi62e-zQALgjI"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="Toyota, Lexus, UIS, United Installment, Toyota Financing, Vehicle Installment, Vehicle Financing, Vehicle Leasing, Vehicle installment, Corolla, Camry, Yaris, Limousine, Lexus, Land Cruiser, Prado, Daihatsu, Abdul Latif Financing, Toyota Saudi, Rent a car, Vehicle Dealer, car loan"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Abdul Latif Jameel United Finance Co"><meta property="og:description" content="Abdul Latif Jameel United Finance Co. provides financial leasing and Murabaha services for all car brands, home appliances, electronics and certain types of heavy equipment subject to terms and conditions."><meta property="og:url" content="https://www.ALJFinance.com"><meta property="og:site_name" content="ALJFinance.com"><meta property="og:image" content="https://www.aljfinance.com/img/logo-tamakan.svg">
+
+   
+    <!-- Boots`trap CSS-->
+    <!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="css/bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/bootstrap3-custom.css" rel="stylesheet"><link href="css/global-style.css" rel="stylesheet" type="text/css">
+    <!-- Media queries CSS -->
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css"><link href="css/yamm.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="We are pleased to serve you through our branches">
+ 
+     <script src="js/jquery-3.5.1.js"></script> 
+
+    <script type="text/javascript">
+        var newsLink ;
+        /*================= SCRIPT FOR SELECT LANGUAGE ========================*/
+        $(document).ready(function () {
+            var url = document.location.pathname.toString();
+
+            newURL = 'http://' + document.location.host + url.split('.aspx')[0] + "_ar.aspx" + url.split('.aspx')[1] + location.search + location.hash;
+            $('.siteLanguage a[href="#Arabic"]').attr('href', newURL);
+
+            $("#sidr .sidrContentHolder > .tabMenuRow:eq(1) ul").append("<li class='res_lang'><a href='" + encodeURL(newURL) + "'>" + "العربية" + "</a></li>");
+
+            //====================================================================
+            //Added by Muhammad Ghunaim
+            //To show the VAT popup in some listed pages
+
+            
+            var SweetFlag = false;
+            //var indexOfString;
+            if (url.indexOf('account_dashboard') !== -1) {
+                newsLink = 'SADAD_payment.aspx';
+            }else {
+                newsLink = 'SADAD_payment.aspx';
+            }
+
+            var links = ['index',
+                      'Offers_listing',
+                      'fleet_and_business',
+                      'vehicle_listing',
+                      'vehicles_comparison',
+                      'feedbacks',
+                      'account_dashboard',
+                      'offers_details'];
+
+
+            links.forEach(function (item) {
+                
+                if (url.indexOf(item) !== -1) {
+
+                    SweetFlag = true;
+                }
+            });
+
+            if (SweetFlag && isDateValid()) {
+                
+                //swal({
+                //    html: true,
+                //    title: "<hr>We value your Feedback",
+                //    text: "Abdul Latif Jameel Finance aims to improve your website experience.<br>Please spare a minute to share your thoughts<br><br>",
+                //    imageUrl: "img/logo.png",
+                //    imageSize: '200x50',          
+                //    type: '',
+                //    showCancelButton: true,
+                //    cancelButtonText: "SKIP",
+                //    confirmButtonColor: '#518599',
+                //    confirmButtonText: 'VISIT'
+
+                //},
+                //    function () {
+                //        window.location.href = newsLink;
+                //    });
+
+            document.getElementById("myForm").style.display = "block";
+                
+            }else {
+                document.getElementById("myForm").style.display = "none";
+                document.getElementById("Btn_Survey").style.display = "none";
+            };
+
+            function isDateValid() {
+                var nowDate = new Date(Date.now());
+                var startDate = new Date("2020-03-17T00:00:00");
+                var EndDate = new Date("2020-04-30T23:59:59");
+                //alert(nowDate + " , " + startDate + " , " + EndDate);
+                if (nowDate >= startDate && nowDate <= EndDate) {
+                    return true;
+                }
+                return false;
+            }
+
+
+            //end of VAT popup code
+            //=====================================================================
+
+            var Device = navigator.userAgent.toLowerCase();
+            var Device_Text = document.getElementById("mobile_screen");
+            var Store_Logo = document.getElementById("store_logo");
+            var mobile_Div = document.getElementById("mobile_Div");
+            var index = url.search("index");
+
+            if (index > 0) {
+                //if (true) {
+                //     mobile_Div.style.display = "none";;
+                //}
+                //else
+                if (/ipad|iphone|ipod/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From App Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://apps.apple.com/sa/app/alj-finance/id1594544565'><span class='m-icon appStoreWhite-icon'></span></a>";
+                }
+                else if (/android/i.test(Device)) //.m-icon.googlePlayWhite-icon
+                {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From GOOGLE PLAY</p>";
+                    Store_Logo.innerHTML = "<a href='https://play.google.com/store/apps/details?id=com.aljfs.it'><span class='m-icon googlePlayWhite-icon'></span></a>";
+                }
+                else if (/windows phone/i.test(Device)) {
+                    Device_Text.innerHTML = "<p><span>For Better Browsing Experience</span><br>Download ALJ Finance App From Windose Store</p>";
+                    Store_Logo.innerHTML = "<a href='https://www.microsoft.com/en-us/store/apps/alj-finance/9nblggh1z8r0'><span class='m-icon winStoreWhite-icon'></span></a>";
+                }
+                else {
+                    mobile_Div.style.display = "none";;
+                }
+               
+            }
+
+            else {
+                mobile_Div.style.display = "none";;
+            }
+
+        });
+        function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+            };
+
+            function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+            };
+
+            function openInNewTab() {
+              var win = window.open(newsLink, '_blank');
+              win.focus();
+            };
+    </script>
+
+    <!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+  
+    <!-- Include all compiled plugins, or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap4.js"></script> 
+    
+    
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css"><link href="css/bootstrap-select.css" rel="stylesheet">
+    <script src="js/SweetAlertBox.js"></script>
+    <link rel="SHORTCUT ICON" href="images/alj-favicon.ico"><link rel="stylesheet" type="text/css" href="v3/3.0/mapsjs-ui.css"><meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8" src="v3/3.0/mapsjs-places.js"></script>
+
+   
+<title>
+	Branches | Abdul Latif Jameel United Finance
+</title></head>
+<body>
+    <!-- Google Tag Manager -->
+
+
+    <!-- Google tag (gtag.js) -->
+
+<script async="" src="gtag/js?id=UA-7444353-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7444353-1');
+</script>
+
+
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="./locations.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/AmcXgjTKcAsncY6X6dUF9YIuRbiimAjqGMh47584cR1Y2UfFT+r/ndfDDRCFVPqkMyZ/mux8H6mrmI+msF1R4rUE3BzjteHElbS4UZXumVWBWb7+00zrQNQPZ+BiUJI/KnvThNXBLeO8osQMdk2Wp6lt6cVYLoejDMgeTm0lgarrEmXP3h9/hoFjgipAh5yDn4pt+bJeRbEWp5TlMLztEvcbrYX4DiBQEn3DuwcFZMp2opiylc1ngMwTC0+pJGCxXdZdq5ZJ6f55eo27OgWqoxmLxXI5GyQfOwlf6QVl27WbSxlUWtMLgK6NgDkhP5ksU8vD3hEaKodKnBPkmrbP3HFOTtGB+NA8o50PVL4POMYj/RSJhebgeWI/MQKzKDRdFdrBwy/W+BtJ9Dg6+dtK3v2e9+rqnH+qZ7m6aKakIcQ/3p+1pV2NLGnrYL2pAYA/WwH8XYtm0Tp8gtGOvF7saxPqfrCicYmG0mL6tSgbIo3uNrGoGIScFjPyLMANugPPLi/lMzrxcmEIIuSUJAdwWMBvgJoi7U3lUVR/K5yKs7AZszBOGjzbg1O8Q0dGlqvtB4pWWTx+ewGBjXZMYsdTalu4fGAC/yJmgSqZ7+rLZrUGSa6zhBggAj6H//ps/fHhXVfrCTrcp0JXGBdWVtRXPL764RTxN0FyvfUwzghrXKiyoEjOYJZF7EYrTS6AjDtZiQOBIDuVzq06V8dm3w9gOWyAwckvfIukf6IXkqbu04waJYJi1xWiB9FEWXeE4ygHAqr0j53ORdNYr+3RX2mdM+UlXDqZNaHSDgDrg4BBxjnDrL/kKpPlgLao6GQde8dcR66FuGRUX33OyOHQSSScRBqMV5L84wwcAkzqUFlc28oRqVBy/PUolj/lZhhH2Bvo/wU09VjYfI++pIGUc9gx/5VjNXfrogcCqbnQIE885Gt4BYg9Yq5a/NnGn99IFoG9koX4ZBMswb6oL6AeRa6h9G0a7XAA6yvwUJSBvXfMTtDc5aRHKMxovZEHQaFJa57RIRml+PqlakiKo3EiisY8F70OnR6vNXK1jklPaqcaGoWpHlW8ti3fA4/MUZfVXxogm5w6IA1RdgfbGgcdSc3MXe5ItEFKJNipZNUdISboc1//1ng0nXR7hXCKNT5sRDM3oGMnPLQe7T1wAEqrNxgLbjiWc+mdROZL8gzSg1aSWbbHVQ4kJyww8CBnlYrGKwSwRqhD/nt7gPff+gpyVYVX0YIHJ08iZ2R1NzqDPOyqCirCo6tO6eWpjfHl6HW22ukqYBKNJ7J6NSUfQiKf6CuyMTAS7z0d4mZTFgEh3K9qm89AtBsLVzV+v1nPnborHAwuXX/+Rd4Ev1idDHgGmQ92R5XUKkI2dh80NLM+zyKWG0EwwqNFhKTueG2gD+byY6WsLQiW0ZyvqA5DZ//1PBvw6qF7dmjjIjm9+HfTaZBCj2kw2A4C/oO4mzDX8lapJusU29CUlHXRknXasbmCUSWCakPMJmngMkX7ELi25PGaW+hjsAQzxc8iuDpgjB78CCyQ34oFxj4RzPI8QzS5c88M5HNA+3bAKSR7VhckMQhSDlgGxkt1WQZ5oGi+Lhay0sgdE/0cZH8PsYO/uItmUpdGneq06BzEFKrUFO28bB+zQDG4+t53nTNdxF2IX0hJtRCj8C0INOcoPmSsdCEdbJvAcJBOxyDi9Rr1JLCmh67sd8ZJvZT1KyoTvxFCnqzdW5xMDdoWEZHzgHq8YPxX6u/HBR5ylfjSX1is4ZXhRVuzTPFi9bgccFBs9i9qV308NaHY8cw2L8//8OooWzbHxobkpH44I4WkzqHCKllZAp1PakY3t4LeA2Hv1GLv8GBJTvsmQtdmt+uCZwu8TKmWlcOKFnhSW4Jsu5rhNRvlUXUnd2OqczYU6fMifsnkMN24d5SgLDXy5bz92iXqomL6eNnt63HQimSUxMDTLOLFzDS3zombJZlwLxBixEVNemjGGdyOObZvlRo1aYYwUgJlEst7FaHs0lzqs0qxk12bdElIkrtaHexxQKgB6syIIGHt0JXZfuy4pbCYkrDmPchlIeo+itPu/jlzXJLmAh4AIrcM0Okx9zpH5Tk7McCYWGEwvut8OtAIlGS8xMiaw5EGKLkIZeSzfhQNrZ7qZr3yz7WZggxKEmpv4E4niF+MX3Wp/mzsryzVS0tYXYImwqIVTiBzik4YViAR25xdV0GZrDHnlLjCy9Zr5PI2ZdmqbBTB4lu+ghIhDnVbwYjTO4gvHUvfdYEDq0zaDXofBr+OV+QF+lEpmfDYHTin48TFGLOxYHJOI/7j+ntAGBoOH1/ggh9Svn3IaW+IStnSeXXlN7Ukmwlt5OFXskreMIGFijFDu+0mHOFeVeoLDG8JMB9IC1mqIIqJux5ajWiDhuyXsnGbm+VO5rWi2yKBKsAGyomzWl8Xlb4ADOqMgF9N+EsVQESoddm0mZoFU6i0uIqL3z8uFnAueRTSdW08flmDY/ZxFVe9Ry8zUzyLSs61BvHMg7j/l+OVqmRuJIhyphUA/JcQgrS2P50h2ld/ce5naC7kyOEH7L7Osj0uUmD7Mc/aigEQ4IFIaUGnu4bDdBkFFThSyRGeBMbUqlhx3JuaJIAX+R7G6vXd+15ymuOXZjEYDXtaVAPIqDG6UKZTmCGCaCtSMCBtYV9X64IkQlMS0UN1awikXP67gQ8+KBdID/2Mdz/CrggJ949GbzvlAn7u40SMPUCXSG5dEEzhtlt6lA7IPxh6oJeeppenu5I9GdZyfpTZw4j/b/C9GxSX6w1/SKuHlufNFNdSG/GUkKa0ZwGxJUCXX2hJwS2kWblleF4HPgwn3Lx+HB1djHMpOc51GcUCpUjDqPe/XaTTIQHgHAkaYnJBZAP+F0uDmLS5WJhRRJezZS/H6tN9USJD0aKEXW6PbK2SL1PM0V65R1LMcSgNUnLT5VSRYsodlGCYLEfOykXJJbff6VyX/pmXaPgKPpFSxRNWAC88OLey0/XlBL0BW5nHWMQkxm46T23kPN59deZozy8LUaitA7JmLkXy5svXNZdLr/sZK0ivJPeQt2z3VJcb4ovMnmdwqaHlLOiO11HDEgd6iQrrGeQwzF9TQOj8wGh8q1slRuRSKr2CXZxPEIK1NWiSvIw0NZEjoMLFCtglC3xJYSrNTFR0QcBe4g7Yk0=">
+
+<script type='text/javascript'>
+var Cities = [
+[18.2295,42.5477 , 11, 'Abha'],
+[20.0882,41.4418 , 11, 'Al-Bahah'],
+[26.3995,50.0141 , 11, 'Al-Dammam'],
+[25.4872,49.5508 , 11, 'Al-Hafouf'],
+[29.9684,40.1975 , 11, 'Al-Jouf'],
+[27.088,49.5634 , 11, 'Al-Jubayl'],
+[28.4327,48.4737 , 11, 'Al-Khafgi'],
+[24.196,47.2711 , 11, 'Al-Kharj'],
+[24.5032,39.6514 , 11, 'Al-Khobar'],
+[24.4382,39.6101 , 11, 'Al-Madinah Al-Monaourah'],
+[19.7529,41.4373 , 11, 'Al-Mekhwaah'],
+[26.5423,50.0213 , 11, 'Al-Qateaf'],
+[20.1519,40.2738 , 11, 'Al-Qunfudhah'],
+[21.2638,40.4019 , 11, 'Al-Taif'],
+[30.9688,41.0054 , 11, 'Arar'],
+[23.7778,38.7916 , 11, 'Badr Hunayn'],
+[20.0016,42.6169 , 11, 'Bishah'],
+[26.378,43.9078 , 11, 'Buraidah'],
+[27.4767,41.7323 , 11, 'Domat Al-Gandel'],
+[28.4415,46.0054 , 11, 'Hafer Al-Batin'],
+[27.4766,41.7322 , 11, 'Hail'],
+[21.6022,39.1514 , 11, 'Jeddah'],
+[16.8892,42.5629 , 11, 'Jizan'],
+[18.2905,42.6792 , 11, 'Khamis Mushayt'],
+[18.5349,42.0194 , 11, 'Mahail Aseer'],
+[21.3677,39.7994 , 11, 'Makkah Al-Mukarramah'],
+[17.5136,44.1759 , 11, 'Najran'],
+[22.779,39.0349 , 11, 'Rabegh'],
+[29.6157,43.5316 , 11, 'Rafha'],
+[24.4546,46.2755 , 11, 'Riyadh'],
+[26.6397,49.9639 , 11, 'Safwa'],
+[17.1642,42.6468 , 11, 'Sebia'],
+[28.3961,36.5597 , 11, 'Tabuk'],
+[25.0638,37.2651 , 11, 'Ummlujj'],
+[26.1216,43.9837 , 11, 'Unaizah'],
+];
+var ourBranches = "<a href='javascript:void(0);' class='buttonClass' onClick='map.setCenter(KSA);map.setZoom(5);'>View our branch</a>"; var brancheNearMe = "<a href='javascript:void(0);' class='buttonClass'>View  branch near me</a>";
+var branches = [
+['AL Muzahmiah',24.454554,46.275528 , 0, 'AL Muzahmiah', 'Tel:011-5236555', 'Fax:011-5235577', 'Address:Riyadh', 'Closest Image'],
+['Comm-Lease 2',24.800864,46.646444 , 0, 'Comm-Lease 2', 'Tel:011-4539242', 'Fax:011-2393745', 'Address:Riyadh', 'Closest Image'],
+['New Badeeah',24.57393,46.662887 , 0, 'New Badeeah', 'Tel:011-4273000', 'Fax:011-4267547', 'Address:Riyadh', 'Closest Image'],
+['Al Qadisiah Fleet',24.827192,46.806702 , 0, 'Al Qadisiah Fleet', 'Tel:011-2773814', 'Fax:011-2774699', 'Address:Riyadh', 'Closest Image'],
+['Areas Outside Riyadh',24.1959784,47.271139 , 0, 'Areas Outside Riyadh', 'Tel:', 'Fax:', 'Address:Al Kharj', 'Closest Image'],
+['South Riyadh WS FIN',24.5676438,46.6867275 , 0, 'South Riyadh WS FIN', 'Tel:', 'Fax:', 'Address:Riyadh', 'Closest Image'],
+['South Riyadh Fleet ',24.567427,46.687174 , 0, 'South Riyadh Fleet ', 'Tel:011-4218428', 'Fax:011-4218490', 'Address:Ryadh', 'Closest Image'],
+['Khurais',24.700189,46.740301 , 0, 'Khurais', 'Tel:011-4916921', 'Fax:011-4931416', 'Address:Riyadh', 'Closest Image'],
+['Wadi Dawaser',20.468552,44.784817 , 0, 'Wadi Dawaser', 'Tel:011-7841970', 'Fax:011-7840817', 'Address:Wadi Dawas', 'Closest Image'],
+['C Multi Brand',24.7577627,46.5669128 , 0, 'C Multi Brand', 'Tel:', 'Fax:', 'Address:Riyadh', 'Closest Image'],
+['Aljisr',24.816694,46.645261 , 0, 'Aljisr', 'Tel:011-8102452', 'Fax:', 'Address:Riyadh', 'Closest Image'],
+['Al Manarat Toshiba',24.7465416666667,46.6573833333333 , 0, 'Al Manarat Toshiba', 'Tel:011-47018240', 'Fax:011-4536391', 'Address:Riyadh', 'Closest Image'],
+['Al nakheel',24.748563,46.817706 , 0, 'Al nakheel', 'Tel:011-2300831', 'Fax:011-2352910', 'Address:Riyadh', 'Closest Image'],
+['Al Olaya',24.746653,46.65723 , 0, 'Al Olaya', 'Tel:011-4568717', 'Fax:011-4700413', 'Address:Riyadh', 'Closest Image'],
+['Comm-lease',24.595678,46.737824 , 0, 'Comm-lease', 'Tel:011-4486862', 'Fax:011-4482010', 'Address:Riyadh', 'Closest Image'],
+['Fleet Sales Riyadh',24.68477,46.7772759 , 0, 'Fleet Sales Riyadh', 'Tel:011-0555214254', 'Fax:011-4961594', 'Address:Riyadh', 'Closest Image'],
+['Al-Rawabi',24.700189,46.740301 , 0, 'Al-Rawabi', 'Tel:011-5443054', 'Fax:011-4931416', 'Address:Riyadh', 'Closest Image'],
+['Qurtuba',24.700189,46.740301 , 0, 'Qurtuba', 'Tel:011-6821197', 'Fax:011-4931416', 'Address:Riyadh', 'Closest Image'],
+['Al Sahafa',24.795237,46.629673 , 0, 'Al Sahafa', 'Tel:011-4544865', 'Fax:011-2250516', 'Address:Riyadh', 'Closest Image'],
+['Used Car',28.441546,46.005418 , 0, 'Used Car', 'Tel:013-7251340', 'Fax:013-7239495', 'Address:Hafr Al batin', 'Closest Image'],
+['Khobar MB Financing',24.5031769704227,39.6514342 , 0, 'Khobar MB Financing', 'Tel:', 'Fax:', 'Address:Al Khoubar', 'Closest Image'],
+['Eastern Wholesalers',26.3995435,50.0140626 , 0, 'Eastern Wholesalers', 'Tel:', 'Fax:', 'Address:Al Dammam', 'Closest Image'],
+['Al Estismar ',27.087953,49.56342 , 0, 'Al Estismar ', 'Tel:013-3408641', 'Fax:013-3407750', 'Address:Al Jubail Al Senaiah', 'Closest Image'],
+['Dammam',26.440672,50.070528 , 0, 'Dammam', 'Tel:013-8029724', 'Fax:013-8176135', 'Address:Dammam', 'Closest Image'],
+['Al Khober',26.3075448,50.176686 , 0, 'Al Khober', 'Tel:013-8022129', 'Fax:013-8824769', 'Address:Al Khober', 'Closest Image'],
+['Jubail',27.013739,49.639271 , 0, 'Jubail', 'Tel:013-3620811', 'Fax:013-3624201', 'Address:Jubail', 'Closest Image'],
+['Hafr Al Batn',28.404065,45.967275 , 0, 'Hafr Al Batn', 'Tel:013-7218750', 'Fax:013-7218752', 'Address:Hafr Al Batn', 'Closest Image'],
+['Qatif',26.542331,50.021253 , 0, 'Qatif', 'Tel:013-8543116', 'Fax:013-8543171', 'Address:Qatif', 'Closest Image'],
+['Khafji',28.432697,48.473678 , 0, 'Khafji', 'Tel:013-3901376', 'Fax:013-7671656', 'Address:Khafji', 'Closest Image'],
+['Hajr',25.487156,49.550765 , 0, 'Hajr', 'Tel:013-5321110', 'Fax:013-5321114', 'Address:Hufuf', 'Closest Image'],
+['Toshiba Dammam',26.4360222222222,50.1020777777778 , 0, 'Toshiba Dammam', 'Tel:013-8265617', 'Fax:013-8261971', 'Address:Dammam', 'Closest Image'],
+['Safwa',26.639731,49.9639 , 0, 'Safwa', 'Tel:013-6630952', 'Fax:013-6643716', 'Address:Safwa', 'Closest Image'],
+['Fleet Branch',26.366457,50.206512 , 0, 'Fleet Branch', 'Tel:013-8595873', 'Fax:013-8141295', 'Address:Dammam', 'Closest Image'],
+['AL khalidiah',25.350728,49.605943 , 0, 'AL khalidiah', 'Tel:012-2236404', 'Fax:012-5884328', 'Address:Al hufuf', 'Closest Image'],
+['Soultanah',26.378034,43.907829 , 0, 'Soultanah', 'Tel:016-3834464', 'Fax:016-3854809', 'Address:Buridah', 'Closest Image'],
+['Qeba',24.438153,39.610067 , 0, 'Qeba', 'Tel:014-8486623', 'Fax:014-8481538', 'Address:Al-Madinah Al-Munura', 'Closest Image'],
+['Tabook',28.3961313,36.5596971 , 0, 'Tabook', 'Tel:014-4220826', 'Fax:014-4225252', 'Address:Tabook', 'Closest Image'],
+['Hail',27.476561,41.732239 , 0, 'Hail', 'Tel:016-5321102', 'Fax:016-5430196', 'Address:Hail', 'Closest Image'],
+['Al Jouf',29.968416,40.197462 , 0, 'Al Jouf', 'Tel:014-6246311', 'Fax:014-6240520', 'Address:Al Jouf', 'Closest Image'],
+['Buraidah',26.28693,44.000721 , 0, 'Buraidah', 'Tel:016-3854805', 'Fax:016-3238877', 'Address:Buraidah', 'Closest Image'],
+['Badr',23.777802,38.791616 , 0, 'Badr', 'Tel:014-3322489', 'Fax:014-3322149', 'Address:Badr', 'Closest Image'],
+['Umlog',25.063822,37.265102 , 0, 'Umlog', 'Tel:014-3820678', 'Fax:', 'Address:Umlog', 'Closest Image'],
+['Domat Aljandal',27.4767241,41.7322782 , 0, 'Domat Aljandal', 'Tel:016-5339385', 'Fax:016-6225550', 'Address:Domat Aljandal', 'Closest Image'],
+['Tabuk - 2',28.417764,36.602608 , 0, 'Tabuk - 2', 'Tel:014-4215300', 'Fax:014-4291691', 'Address:Tabuk ', 'Closest Image'],
+['Moushrif',30.968802,41.005352 , 0, 'Moushrif', 'Tel:014-6629901', 'Fax:014-6610749', 'Address:Arar', 'Closest Image'],
+['Al Matar Dist',27.5109459,41.6908347 , 0, 'Al Matar Dist', 'Tel:016-0165710093', 'Fax:016-0165710095', 'Address:Hail', 'Closest Image'],
+['MadinahYanbu WSalers',24.4173472,39.5154056 , 0, 'MadinahYanbu WSalers', 'Tel:', 'Fax:', 'Address:Al Madinah', 'Closest Image'],
+['Madina Monawarra ',24.520929,39.670666 , 0, 'Madina Monawarra ', 'Tel:014-8424463', 'Fax:014-8422947', 'Address:Madina Monawarra', 'Closest Image'],
+['Rafha',29.615702,43.53157 , 0, 'Rafha', 'Tel:014-6764049', 'Fax:014-6767902', 'Address:Rafha', 'Closest Image'],
+['Alfarooq',26.121569,43.983702 , 0, 'Alfarooq', 'Tel:016-3649447', 'Fax:016-3624006', 'Address:Oniza', 'Closest Image'],
+['Al-Nahada',16.889167,42.562933 , 0, 'Al-Nahada', 'Tel:', 'Fax:3174384', 'Address:Gizan', 'Closest Image'],
+['AL - Nahdha',17.164242,42.646838 , 0, 'AL - Nahdha', 'Tel:017-3260313', 'Fax:017-3272796', 'Address:Gizan - Sabia', 'Closest Image'],
+['ALDAYR',17.33276,43.128059 , 0, 'ALDAYR', 'Tel:017-3409775', 'Fax:017-3409144', 'Address:JAZAN', 'Closest Image'],
+['Taif',21.263758,40.401917 , 0, 'Taif', 'Tel:012-7381449', 'Fax:012-7324890', 'Address:Taif', 'Closest Image'],
+['Toshiba Al Taif',21.2637706,40.4018542 , 0, 'Toshiba Al Taif', 'Tel:012-7345678', 'Fax:012-7344100', 'Address:Taif', 'Closest Image'],
+['Baha & Taif WSalers',20.0881793,41.4418168 , 0, 'Baha & Taif WSalers', 'Tel:', 'Fax:', 'Address:Al Baha', 'Closest Image'],
+['Abha',18.229476,42.547681 , 0, 'Abha', 'Tel:017-2313046', 'Fax:017-2241627', 'Address:Abha', 'Closest Image'],
+['Khamis Mushait',18.290483,42.679218 , 0, 'Khamis Mushait', 'Tel:017-2236456', 'Fax:017-2222121', 'Address:Khamis Mushait', 'Closest Image'],
+['Najran',17.5135522,44.1758799 , 0, 'Najran', 'Tel:017-5225336', 'Fax:017-5225332', 'Address:Najran', 'Closest Image'],
+['Beesha',20.001623,42.616922 , 0, 'Beesha', 'Tel:017-6222868', 'Fax:017-6222907', 'Address:Beesha', 'Closest Image'],
+['Al Baha',20.009806,41.472368 , 0, 'Al Baha', 'Tel:017-7398492', 'Fax:017-7274483', 'Address:Al Baha', 'Closest Image'],
+['Gizan',16.889167,42.562933 , 0, 'Gizan', 'Tel:017-3238118', 'Fax:017-3174384', 'Address:Gizan', 'Closest Image'],
+['Al Ahad',16.717061,42.94298 , 0, 'Al Ahad', 'Tel:017-3191211', 'Fax:017-3191034', 'Address:Al Ahad', 'Closest Image'],
+['Mahil Aseer',18.534915,42.019393 , 0, 'Mahil Aseer', 'Tel:017-2857404', 'Fax:017-2857072', 'Address:Mahil Asee', 'Closest Image'],
+['Al Makhwa',19.752868,41.437266 , 0, 'Al Makhwa', 'Tel:017-7284201', 'Fax:017-7284202', 'Address:Al Makhwa', 'Closest Image'],
+['Al-Qounfoudah',20.151862,40.273757 , 0, 'Al-Qounfoudah', 'Tel:017-7424114', 'Fax:017-7421229', 'Address:Al-Qunfudhah', 'Closest Image'],
+['Abu Arish2',16.967045,42.839733 , 0, 'Abu Arish2', 'Tel:017-3251006', 'Fax:017-3254010', 'Address:Gizan', 'Closest Image'],
+['Medina Road K 14',21.6022277777778,39.1514361111111 , 0, 'Medina Road K 14', 'Tel:012-2603772', 'Fax:012-6824026', 'Address:Jeddah', 'Closest Image'],
+['Fleet Sales Jeddah',21.5770284,39.1670309 , 0, 'Fleet Sales Jeddah', 'Tel:012-6924265', 'Fax:012-6924290', 'Address:Jeddah', 'Closest Image'],
+['Mekkah Rd.',21.470777,39.2366135 , 0, 'Mekkah Rd.', 'Tel:012-2236813', 'Fax:012-6873301', 'Address:Jeddah', 'Closest Image'],
+['Medina Rd.',21.56034,39.17261 , 0, 'Medina Rd.', 'Tel:012-6690968', 'Fax:012-6641303', 'Address:Jeddah', 'Closest Image'],
+['Makkah Mukkarama',21.367747,39.799439 , 0, 'Makkah Mukkarama', 'Tel:012-5325000', 'Fax:012-5325040', 'Address:Makkah Mukkarama', 'Closest Image'],
+['Rabegh',22.779036,39.034861 , 0, 'Rabegh', 'Tel:012-4231789', 'Fax:012-4231560', 'Address:Rabegh', 'Closest Image'],
+['Toshiba',21.5566194444444,39.1790333333333 , 0, 'Toshiba', 'Tel:012-6666666', 'Fax:012-2830773', 'Address:Jeddah', 'Closest Image'],
+['Al Sail',21.471906,39.904853 , 0, 'Al Sail', 'Tel:012-5975460', 'Fax:', 'Address:Makkah Mukkarama', 'Closest Image'],
+['TOYOTA Auto Mall',21.648504,39.114403 , 0, 'TOYOTA Auto Mall', 'Tel:012-2854004', 'Fax:012-6909128', 'Address:Jeddah', 'Closest Image'],
+['Al-Safa ALJ',21.5769208,39.1997728 , 0, 'Al-Safa ALJ', 'Tel:012-2387909', 'Fax:', 'Address:Jeddah', 'Closest Image'],
+['Used Car Kakih',21.366247,39.798386 , 0, 'Used Car Kakih', 'Tel:012-5310695', 'Fax:012-5310551', 'Address:Makah', 'Closest Image'],
+['Jeddah Multi-Brand',21.6493172,39.1328694 , 0, 'Jeddah Multi-Brand', 'Tel:012-2566768', 'Fax:', 'Address:Jeddah', 'Closest Image'],
+['Rusafa',21.4400994,39.7828487 , 0, 'Rusafa', 'Tel:012-5674001', 'Fax:012-5674012', 'Address:MAKHA', 'Closest Image'],
+['AL HAMADANIAH ',21.754923,39.18557 , 0, 'AL HAMADANIAH ', 'Tel:012-2066468', 'Fax:', 'Address:Jeddah', 'Closest Image'],
+['Toshiba makkah',21.4016472222222,39.8094027777778 , 0, 'Toshiba makkah', 'Tel:012-5383800', 'Fax:012-5384800', 'Address:Makkah', 'Closest Image'],
+['AL ameer Soultan',21.602222,39.143517 , 0, 'AL ameer Soultan', 'Tel:012-2566768', 'Fax:012-2563528', 'Address:Jeddah', 'Closest Image'],
+['Alrehab',21.5647069,39.2170179 , 0, 'Alrehab', 'Tel:012-6170407', 'Fax:012-6191526', 'Address:Jeddah', 'Closest Image'],
+['Al haj Street',21.476194,39.843111 , 0, 'Al haj Street', 'Tel:012-5708811', 'Fax:012-5707733', 'Address:Makkah Mukkarama', 'Closest Image'],
+['Tibah ALJR',24.520929,39.670666 , 0, 'Tibah ALJR', 'Tel:014-8424463', 'Fax:014-8422947', 'Address:Madina Monawarra', 'Closest Image'],
+['Taif WSales',24.4173472,39.5154056 , 0, 'Taif WSales', 'Tel:', 'Fax:', 'Address:Taif', 'Closest Image'],
+['Taif WSales',24.4173472,39.5154056 , 0, 'Taif WSales', 'Tel:', 'Fax:', 'Address:Yanbu', 'Closest Image'],
+];
+</script>
+
+<script src="ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqfOKjD8sZdk_gWQn2xU28SF5PudfkrzchODxAQEYeOgvk3326MN6WTvd4f_Kk1TJOqUCsFrRZAegTGYFTDtlshb3DOm1jhPr-WXU_Ckh3o9e2xXb28Z1pvJ8GFCseTdwmX2goInVZqWy6A8z4Uoq7M1&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="908A2EFE">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="YzTuwYXrJOMfQ7UVZqQ4GngdrsedPF0lpwcEY5bTfSHchNzI0kULolxK4Mevncyg+xombKhT/r2jElzSnrU3L176kqCnIZmZTuweX3y8q7943rOQMvcof67MA+ao2vkpISm8AqAkjR28Io2TZaXG3tgPyKp/lLqRfo5uuqd3djA4zUVbHjbzIgOtHdvogX8cRFoP9IOdZnIiSXnuLoKxiOc7wlqgcMcpLTpZ4pnpi5SkoJ/uHNV6X5/o/EMoPOQqKIhvy+Xr9xVM94PdoXo7j8UjPcCQdbHnxd7MrO98iZaqLo9rh95Bzodc7eRBI1Wb9NBzs/T/CE10WpV23RsyHpccL7eqa7ZbuppkmxniQoquFeDhgHRMocQUeA/q/bCMTydodTkqNlaLAqtJi+WvDGJuB+rHCl+dO/v+rf6N6hheiEI3pHR++aMCM6A/4HepqSnWACqA/zishCcZfx9W9BYrjvmm8roMnjcXuRnhcyYddghK3OzxaBbPpYTkico59Vlbxbd7oHEG58WAPzS1V+w2gD/xVr9e4mQnSkgS9D9+jPBhJih1DgKvf3IA6x2Qu7zIpfyC8eQXRq0xCB0wjJPa1gFpmoQPxDvY4qhvB2KC1b6CMv/jnSAGZoaH1gkCbCRH57cmpRtsvp7jp8+shdRfD9T5AZDNzAi9yvif1Xbu4X7/EGzhH2G5H7qVR64VragzjjqM4+VnQmihTO0jy+8qx4ojoYK3L0sipilKP7Z063nXEO4KAtYTi01XoZyY4MM4QQGfmLxW1FbQe5OUHl30PDStL5cSp5sy7eZvyJM2dh/ZgLWuGY81NMNQ/DIBchM6FCG/K3WqLHjLbGIG7zAcLyvJOWyQq8SZQ5pelkzje5uZ+FUXV4Q4pc4fMiZBVlB04An9hnYaVWW4MaS8eanC9xcS8k6VF0/qhF3A4UcKQzVAmVz2aijErZDsjuT4O4rANxMnIx4Qu7G1GfiX5RNKKf7F20Kdxm7XQyvsJvTHtIa81HLAT5nCC0VdKwtShj7GUlpmOZBP9vBbhzPrs7ffQwScZgtgq0zTeaqYx+HjaGNN0Y9QLQs9pNxFOV+uUSRFNsEEga7/ex6YC1F28AosoYhdktMhAJGRBZHCCj8nU/N6DYMORwb3Ii6sjMR0FFwzQYkKyHTMx0R8GT2ZC4zVEVCr/yXBJP/rYNxud8S1I84YxP0eP0MHi8gOoan5Ceuy/QPJt5ZIiasVo+MYZQ8xcMguuTKYak2al56mFGZmcMaqqyhPCj98t+T7OcAQx/RhL906fwAnMPoXHQ+zMGSO4XBbWdN2ujZcoxDsN+Lz0px6PXB2GDJICSgA0HUBKRIvTOEXzvRZjGQ6ZzjnZUSCTIXwb099fi3YNykRI/BxVI2TQ9sL52PpWsC6ILy8s8z3ke5mc842gsJX4KV8ctUpSruJb80N6sSgWvqdsuBDBeKCX2C6cuX33yUBifWnCIIBkplZUo/tVhv//SZ3YFf/lymKB8voNu5lr8xm9VI+Hd5vQYRMD/Zdze1hzOWTJ7AX0oP8m9WdEYlud57SLqk/YSTL+lzE5qLZIjtkbiBCJ6x0yWBGYbtahLG2PoeHUTSa/Xt/+MJkzPb844T/aoWaA3EEbiQhNK5FxznPHV4BsrFKwbZKm6qjPiuSXwEo50c8m+BqRRgg+rsXg57s/Q1Sb48TluZ0WRUA4l6ppbzknpVbemFohwAk1p+7wsn+KovVE6zATmYFMq6zGnsM4jygwE9YItoYcDO6/SDkcVsPt8UAdag+vBujEi2skXay">
+        
+       
+        <!-- Wrapper start -->
+        <div class="wrapper">
+
+
+            <!-- header start -->
+            <header id="globalHeader">
+                <!-- Header most top start -->
+
+                <div id="mobile_Div" class="headerMostTopWide d-lg-none d-xl-none">
+                    <div class="container headerMostTop">
+                        <a href="#" class="headerMostTopClose"><span class="c-icon closeRoundWhite-icon"></span></a>
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <div class="row">
+                                    <div class="col-6 d-none d-sm-block">
+                                        <p id="mobile_screen">
+                                        </p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div id="store_logo">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Header most top end -->
+
+                <!-- Header top start -->
+                <div class="headerTopWide">
+                    <div class="container headerTop">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-3 col-lg-3">
+                                <p class="slogan">Financial Leasing</p>
+                            </div>
+                            <div class="col-sm-7 col-md-9 col-lg-7 offset-lg-2 d-none d-sm-block">
+                                <div class="row">
+                                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                                        <p class="headerCall">
+                                            <i class="c-icon call-icon"></i>
+                                            Call us: <span class="teal">8002442211</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+<!-- Not member yet -->
+<ul class="headerLoginRagister">
+    <li><a href="Account_login.aspx.html">Login</a></li>
+    <li><a href="account_registration.aspx.html">Register</a></li>
+</ul>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul class="siteLanguage">
+                                            <li class="active"><a href="#" class="activelangbutton">English</a></li>
+                                            <li><a href="#Arabic" class="gbtn btn-white btn-small arabic">العـربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header top end -->
+
+                <!-- Header Bottom start -->
+                <div class="headerBottomWide">
+                    <nav role="navigation" class="navbar">
+                        <div class="container headerBottom justify-content-center">
+                            <!-- Toggle button for small device -->
+                             <div class="row w-100  p-0 m-0">
+                                <div class="col-5 toggleButton d-xl-none">
+                                    <a id="tabMenuTrigger" href="#sidr"><span class="c-icon tabMenu-icon"></span>Menu</a>
+                                </div>
+
+                                <div class="col d-xl-none">
+                                    <div class="tabLogo">
+                                        <a href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mega menu start -->
+                            <nav class="yamm navbar navbar-expand-lg d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-md-12 pl-0 pr-0">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item"><a href="index.aspx.html" class="nav-link">Home</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Financial products</a>
+                                                <div class="dropdown-menu">
+                                                    <div class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="products.aspx.html">
+                                                                            <h6>Finance Calculator</h6>
+                                                                            <p>Get a finance quotation for the vehicle of your choice</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            <!-- Generic Calculator -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="finance_options_generic.aspx.html">
+                                                                            <h6>Murabaha Calculator</h6>
+                                                                            <p>Get a finance quotation</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Home Appliances Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="home_appliances_finance.aspx.html">
+                                                                            <h6>Consumer Goods Finance</h6>
+                                                                            <p>Get a Electronics & Home Appliances Finance</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Uesd_Car_P2P -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="used_cars_campaign.aspx.html">
+                                                                            <h6>Used Vehicles</h6>
+                                                                            <p>Get your used vehicle with financing.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>  
+                                                            <!-- Cash Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="cash_financing.aspx.html">
+                                                                            <h6>Cash finance for individual</h6>
+                                                                            <p>A financing product that allows individuals to fulfill their financial needs.</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Real Estate Financing -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="aljuref.aspx.html">
+                                                                            <h6>Real Estate Financing</h6>
+                                                                            <p>We provide affordable, Sharia-compliant financial solutions</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Bab Rizq Jameel Microfinance -->
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="brjmf.aspx.html">
+                                                                            <h6>Bab Rizq Jameel Microfinance</h6>
+                                                                            <p>We provide Small and medium-sized enterprises with sharia compliant financing</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="nav-item"><a href="Offers_listing.aspx.html">Offers</a></li>
+                                            <li class="nav-item"><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                                            <li class="nav-item"><a href="locations.aspx.html">Locations</a></li>
+                                            <li class="nav-item"><a href="news_listing.aspx.html">News</a></li>
+
+                                            <li class="nav-item dropdown yamm-fw">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="yamm-content megaMenu">
+                                                        <div class="row megaMenuRow financeListRow">
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="about.aspx.html">
+                                                                            <h6>Mission and Vision </h6>
+                                                                            <p>Abdul Latif Jameel United Finance Co. (ALJUF)</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="tamakan.aspx.html">
+                                                                            <h6>Tamakan</h6>
+                                                                            <p>We build confidence by enabling dreams</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-4">
+                                                                <ul class="financeList">
+                                                                    <li class="singleFinance">
+                                                                        <a href="FAQs.aspx.html">
+                                                                            <h6>FAQ’s</h6>
+                                                                            <p>Everything you need to know</p>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>                                    
+                                       
+                                        <a class="navbar-brand logo-en" href="index.aspx.html">
+                                            <img src="img/logo-tamakan.svg" alt="Abdul Latif Jameel Finance Logo" title="Abdul Latif Jameel Finance Logo" class="img-fluid logo-height logo-padding-top">
+                                        </a>
+                                    </div>
+                                    <div class="headerSearchWraper">
+                                        <div id="sb-search" class="sb-search">
+                                            <div role="search" class="navbar-formx">
+                                                <!--<input name="ctl00$txt_Search" type="text" id="txt_Search" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength="255" />
+                                                <input name="ctl00$btn_Search" type="submit" id="btn_Search" class="sb-search-submit" />-->
+                                                <input id="txt_ID" type="text" style="visibility: hidden;">
+                                                <input id="txt_Search" type="text" placeholder="Search ALJ Finance" class="sb-search-input input__field" maxlength='255'>
+                                                <input id="btn_Search" type="submit" class="sb-search-submit" onclick="return false">
+                                                <span class="sb-icon-search">
+                                                    <i class="c-icon search-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </nav>
+                            <!-- Mega menu end -->
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- Header Bottom end -->
+            </header>
+            <!-- header end -->
+
+            <main role="main">
+    
+    <h1 class="bo-h1" itemprop="name" style="visibility: hidden; line-height: 0px; margin: 0px; padding: 0px;">Abdul Latif Jameel United Finance Branches
+    </h1>
+    <!-- Page header start -->
+    <section class="pageHeaderWide">
+        <div class="container pageHeader">
+            <div class="row">
+                <div class="col-sm-8">
+                    <ol class="breadcrumb">
+                        <li><a href="index.aspx.html">Homepage</a></li>
+                    </ol>
+                    <h1>
+                        Branches</h1>
+                </div>
+                <div class="col-sm-4">
+                    <div class="locateAdvisorHolder">
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <select name="ctl00$ContentPlaceHolder1$locateAdvisor" id="locateAdvisor" class="form-control">
+	<option selected="selected" value="Please Select City">Please Select City</option>
+
+</select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page header start -->
+
+
+
+    <!-- Locate an Advisor start -->
+    <section class="locateAdvisorMapWide">
+
+
+        <div id="map-canvas"></div>
+
+    </section>
+    
+    <!-- Locate an Advisor end -->
+    <!-- Content area start -->
+    <section class="contentAreaWide">
+
+        <div class="container contentArea">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Tabs start -->
+                    <div class="tabPanel mrgn-b-30">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs border-gray" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#aboutBranch" aria-controls="aboutBranch" data-toggle="tab" id="Branch-tab" class="nav-link active" role="tab" aria-selected="true">About Our Branches</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#OpenHours" aria-controls="OpenHours" data-toggle="tab" id="Hours-tab" class="nav-link" role="tab" aria-selected="false">Open Hours</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="aboutBranch" role="tabpanel" aria-labelledby="Branch-tab">
+                                <div class="tab-pane" id="Div1">
+                                    <img src="img/about-location-alj.jpg" alt="about-location" class="location__img" title="about-location">
+                                    <p class="location__text">
+                                        Abdul Latif Jameel United Finance Co. (ALJUF), a closed joint-stock company under license by the Saudi Arabian Monetary Agency (SAMA). The company has a paid-up capital of 1000 million Saudi Riyals and provides vehicle financial leasing, consumer finance and capital equipment finance. We are pleased to serve you through our branches.
+                                    </p>
+                                    <p class="location__text">
+                                        Abdul Latif Jameel United Finance is continually looking for ways to delight its guests and to be closer to them. In order to be accessible to our guests at all times ALJFinance.com was created to be available 24/7.                                   
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="OpenHours" role="tabpanel" aria-labelledby="Hours-tab">
+                                <div class="hours--head d-none d-sm-block">
+                                    <div class="row">
+                                        <div class="col-md-3 col-6">
+                                            <div class="hours--head__day">
+                                                Day
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            First Shift
+                                        </div>
+                                        <div class="col-md-3 no-padding-left col-6">
+                                            Second Shift
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="dealsList hours--body">
+                                    
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Sunday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_0">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_0">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_0">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_0">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Monday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_1">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_1">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_1">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_1">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Tuesday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_2">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_2">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_2">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_2">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Wednesday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_3">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_3">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_3">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_3">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Thursday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_4">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_4">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_4">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_4">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Friday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_5">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_5">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_5">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_5">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                            <li style="opacity: 1;">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3 col-12">
+                                                        <div class="hours--body__day">
+                                                            <span>Saturday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-2 col-12" style="display: none">
+                                                        <div class="hours--body__time">
+                                                            <span class="btn-brown">Closed
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label25_6">08:00 AM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label26_6">12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-md-3 col-12" style="">
+                                                        <div class="hours--body__time">
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label27_6">04:00 PM</span>
+                                                            <span class="to">to</span>
+                                                            <span id="ContentPlaceHolder1_rp_OpenHours_Label28_6">08:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                        
+                                    
+
+                                    
+                                </ul>
+                            </div>
+
+
+
+                            <div class="tab-pane bookAppointment" id="bookAppointment">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p>Descriptive paragraph about booking and the nearest branch and the opportunity to respond to inquiries</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        
+
+
+<div role="form" class="contact--form">
+    <div class="form-group">
+        <label>Name:</label>
+        <input name="ctl00$ContentPlaceHolder1$ContactForm$txt_Name" type="text" id="txt_Name" class="form-control">
+        
+        
+    </div>
+    <div class="form-group">
+        <label class="mb11">ID Number</label>
+        <input name="ctl00$ContentPlaceHolder1$ContactForm$txt_ID_Number" type="text" maxlength="10" id="txt_ID_Number" class="form-control">
+        
+        
+    </div>
+    <div class="form-group">
+        <label>E-mail:</label>
+        <input name="ctl00$ContentPlaceHolder1$ContactForm$txt_Email" id="txt_Email" class="form-control" type="email">
+        
+        
+    </div>
+    <div class="form-group">
+        <label for="mobile">Mobile:</label>
+        <span class="formInlinegroup mobileNumber">
+            <input name="ctl00$ContentPlaceHolder1$ContactForm$txt_Mobile" maxlength="10" id="txt_Mobile" class="form-control" type="tel">
+        </span>
+        
+        
+    </div>
+
+    <div id="ContentPlaceHolder1_ContactForm_update_FB">
+	
+
+            <div class="form-group">
+                <label>Nearest City:</label>
+                <select name="ctl00$ContentPlaceHolder1$ContactForm$lst_City" id="lst_City" class="selectpicker minimal form-control" data-live-search="true">
+		<option selected="selected" value="0"> Select City</option>
+		<option value="151001">Abha</option>
+		<option value="192002">Abu Areesh</option>
+		<option value="102008">Afeef</option>
+		<option value="192272">Ahad Al-Masarha</option>
+		<option value="152002">Ahad Refaidah</option>
+		<option value="211001">AL Bahah</option>
+		<option value="222002">AL Jouf</option>
+		<option value="102009">Anaizah</option>
+		<option value="181001">Arar</option>
+		<option value="172184">Baqaa One</option>
+		<option value="152003">Beesha</option>
+		<option value="142010">Beqaiq</option>
+		<option value="101002">Buraydah</option>
+		<option value="102004">Dalm</option>
+		<option value="141001">Dammam</option>
+		<option value="102005">Dawadmey</option>
+		<option value="142006">Dhahran</option>
+		<option value="171001">Hael</option>
+		<option value="142012">Hafer Baten</option>
+		<option value="142009">Hafouf</option>
+		<option value="112002">Haweyah</option>
+		<option value="112004">Jeddah</option>
+		<option value="191001">Jizan</option>
+		<option value="142003">Jubail</option>
+		<option value="142264">Jubail Industrial City</option>
+		<option value="142005">Khafjey</option>
+		<option value="152004">Khamees Moshait</option>
+		<option value="102003">Kharj</option>
+		<option value="142004">Khobar</option>
+		<option value="121001">Madina</option>
+		<option value="102007">Majmaah</option>
+		<option value="111001">Makkah Al-Mukarramah</option>
+		<option value="142008">Mobaraz</option>
+		<option value="152499">Mohayel Aseer</option>
+		<option value="201001">Najran</option>
+		<option value="142263">Om Alsahek</option>
+		<option value="142007">Qatif</option>
+		<option value="222003">Qerayat</option>
+		<option value="112005">Rabegh</option>
+		<option value="182002">Rafhaa</option>
+		<option value="142014">Raheemah</option>
+		<option value="132001">Ras</option>
+		<option value="142013">Ras Tanourah</option>
+		<option value="101001">Riyadh</option>
+		<option value="192003">Sabia</option>
+		<option value="142016">Safwa</option>
+		<option value="142015">Saihat</option>
+		<option value="221001">Sakaka</option>
+		<option value="154348">Sarat Obaidah</option>
+		<option value="202002">Sharorah</option>
+		<option value="161001">Tabouk</option>
+		<option value="112003">Taif</option>
+		<option value="142011">Tarout</option>
+		<option value="142002">Thoqba</option>
+		<option value="182003">Traif</option>
+		<option value="162002">Umluj</option>
+		<option value="102786">Wady Al Dawaser</option>
+		<option value="122002">Yanbu</option>
+		<option value="102006">Zolfey</option>
+
+	</select>
+
+                
+            </div>
+            
+            <div class="form-group">
+                <label>Category:</label>
+                <select name="ctl00$ContentPlaceHolder1$ContactForm$Lst_Category" id="Lst_Category" class="selectpicker minimal form-control">
+		<option value="0">Choose Category</option>
+		<option value="5">Pensioners Campaign</option>
+		<option value="3">Complaint</option>
+		<option value="1">Inquiry</option>
+		<option value="2">Suggestion</option>
+		<option value="4">B2B Inquiry</option>
+
+	</select>
+                
+                
+            </div>
+
+        
+</div>
+
+    <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input name="ctl00$ContentPlaceHolder1$ContactForm$txt_Subject" type="text" maxlength="500" id="txt_Subject" class="form-control">
+        
+        
+    </div>
+
+    <div class="form-group">
+        <label>Message:</label>
+        <textarea name="ctl00$ContentPlaceHolder1$ContactForm$txt_Message" rows="5" cols="20" maxlength="4000" id="txt_Message" class="form-control">
+</textarea>
+        
+        
+    </div>
+
+
+    <div class="checkbox">
+        <span class="styled"><input id="newsEvent" type="checkbox" name="ctl00$ContentPlaceHolder1$ContactForm$newsEvent"><label for="newsEvent">Keep Me Informed of news and eventes</label></span>
+    </div>
+
+    <div class="form-group">
+        <label for="">Are you a robot?</label>
+        <div class="g-recaptcha" id="recaptcha2" data-sitekey="6LcLFwwTAAAAANyLXxeMItgo8kMZsG4itE9PxTh6"></div>
+        <script src='recaptcha/api-2.js?hl=en' async="" defer=""></script>
+    </div>
+
+    <input type="submit" name="ctl00$ContentPlaceHolder1$ContactForm$btn_Request_Send" value="Send your Request" onclick="WaitMessage_popup();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$ContactForm$btn_Request_Send&quot;, &quot;&quot;, true, &quot;VG_Feedback&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_ContactForm_btn_Request_Send" class="gbtn btn-slate btn-regular">
+
+    <br>
+</div>
+
+<input name="ctl00$ContentPlaceHolder1$ContactForm$Hid_captcha" type="hidden" id="Hid_captcha" value="0">
+
+<script type="text/javascript">
+
+    function WaitMessage_popup() {
+
+        if (IsPersonValid() && captchaValidation()) {
+            showWaitMessage();
+        }
+    }
+
+    function captchaValidation() {
+
+        if (grecaptcha.getResponse() === '') {
+            //reCaptcha not verified
+            document.getElementById('Hid_captcha').value = 0;
+                Alert_Warning('Warning!', 'Please verify if you are not a robot!');
+                event.returnValue = false;
+                return false;
+            } else {
+                //reCaptch verified
+                document.getElementById('Hid_captcha').value = 1;
+                return true;
+            }
+    }
+
+    function IsPersonValid() {
+        var flag = true;
+
+          if ($("#txt_Name").val() == "") return false;
+          if ($("#txt_Email").val() == "") return false;
+          if ($("#txt_Mobile").val() == "") return false;
+
+          if ($("#txt_Subject").val() == "") return false;
+          if ($("#txt_Message").val() == "") return false;
+         
+          if ($("#lst_City").val() == "0") return false;
+          if ($("#Lst_Category").val() == "0") return false;
+
+          return flag;
+      }
+
+</script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs end -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Content area end -->
+
+
+    <script src="js/HereMap-script-Maps.js"></script>
+    <script type="text/javascript" src="v3/3.0/mapsjs-pano.js"></script>
+
+    <script>
+        window.onload = function () {
+            HereMap();
+        };
+    </script>
+    <script src="js/jquery.bootstrap.wizard.min.js"></script>
+
+
+
+</main>
+
+
+        </div>
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="globalFooter">
+            <!-- Footer Top Start -->
+            <div class="footerTopWide">
+                <div class="container footerTop">
+                    <div class="row">
+                        <div class="col-sm-2">
+          
+                            <h6><strong>Vehicles</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="finance_options.aspx-5.html?BrandID=1">Toyota</a></li>
+                                <li><a href="finance_options.aspx-6.html?BrandID=2">Lexus</a></li>
+                                <li><a href="finance_options.aspx-7.html?BrandID=2015">Hyundai</a></li>
+                                <li><a href="finance_options.aspx-8.html?BrandID=2019">Kia</a></li>
+                                <li><a href="finance_options.aspx-9.html?BrandID=2053">Geely</a></li>
+                                <li><a href="vehicles_comparison.aspx.html">Vehicles Comparison</a></li>
+                             
+                            </ul>
+
+                            <h6><strong>SME Financing</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="fleet_and_business_inquiry.aspx.html">Make A Fleet Enquiry</a></li>
+                                <li><a href="fleet_and_business.aspx.html">Our Fleet Branches</a></li>
+                                <li><a href="https://masar.aljfs.com:9443/">Suppliers services</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Tools</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                <li><a href="cash_financing.aspx.html">Cash finance for individual </a></li>
+                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance </a></li>
+                                <li><a href="how_to_auto_finance.aspx.html">How to finance a vehicle?</a></li>
+                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                <li><a href="Offers_listing.aspx.html">Offers</a></li>                               
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Your Account</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="Account_login.aspx.html">Account Login</a></li>
+                                <li><a href="account_registration.aspx.html">New Registration</a></li>
+                                <li><a href="account_password_reset.aspx.html">Recover Password</a></li>
+                                <li><a href="SADAD_payment.aspx.html">SADAD Payment</a></li>
+                                <li><a href="Documents/ServicesFeesListEn.pdf">Services Fees List</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-2">
+
+                            <h6><strong>Locations</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="locations.aspx.html">Branches Map</a></li>
+                                <li><a href="locations_ho.aspx.html">Let Us Call You</a></li>
+                                <li><a href="Documents/dealrs-branch-info.pdf">Wholesalers List</a></li>
+                            </ul>
+                            <h6><strong>Contact us</strong></h6>
+                            <ul class="footerTopMenu">
+                          
+                                <li><a href="feedbacks.aspx.html">Feedbacks</a></li>
+                                <li><a href="feedbacks.aspx.html">Complaints</a></li>
+                                <li><a href="feedbacks_whistleblowing.aspx.html">Whistleblowing</a></li>
+
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6><strong>Abdul Latif Jameel Finance</strong></h6>
+                            <ul class="footerTopMenu">
+                                <li><a href="about.aspx.html">About Us</a></li>
+                                <li><a href="WebImages/Links/27/File_en.pdf">Consumer Protection</a></li>
+                                <li><a href="Documents/PrinciplesOfResponsible_En.pdf">Principles of Responsible Financing for Individuals</a></li>
+                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                <li><a href="Documents/Complines_How_To_En.jpg">Complaints Handling Process</a></li>
+                                <li><a href="http://careers.aljfinance.com/">Careers</a></li>
+                                <li><a href="feedbacks_training.aspx.html">Training Request</a></li>
+                                <li><a href="Documents/ALJUF_Terms_en.pdf">Financial Leasing Conditions</a></li>
+                                <li><a href="finance_reports.aspx.html">Financial Reports</a></li>
+                                <li><a href="Documents/TermsAndConditionsOnlineFinancingEn.pdf">General terms and conditions</a></li>  
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <ul class="footerTopSocialMedia">
+                                <li><a href="https://www.instagram.com/alj_finance" title="instagram" target="_blank">
+                                    <!-- <i class="fa fa-google-plus"></i> -->
+                                    <span class="c-icon instagram-icon"></span>
+                                </a></li>
+                              
+							  <li><a href="https://www.facebook.com/Aljfinance" title="Facebook" target="_blank">
+                                    <!-- <i class="fa fa-facebook"></i> --> 
+                                    <span class="c-icon facebook-icon"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/aljfinance" title="Twitter" target="_blank">
+                                    <!-- <i class="fa fa-twitter"></i> -->
+                                    <span class="c-icon twitter-icon"></span>
+                                </a></li>
+                            </ul>
+                            <a href="feedbacks.aspx.html" class="btn-block footerFeedback">Complaints</a>
+                            <a href="WS_login.aspx.html" class="btn-block footerFeedback " style="background-color: #51859a;">Wholesalers</a>
+                            <span id="siteseal" class=" btn-block footerFeedback"><script async="" type="text/javascript" src="getSeal?sealID=DZOWRfyhSdJGcd9y0EnQAyfJyDKMfmgjyGUTi4A0oZ9qYrov0YaVBY1zmAr3"></script></span>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top end -->
+            <!-- Footer Mid Start -->
+            <div class="footerMidWide">
+                <div class="container footerMid">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block d-xl-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                            <!--<span class="c-icon appleStore-icon"></span>-->
+                                            <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>APP STORE</p>
+                                        </a></li>
+
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="appWidget">
+                                        <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                            <!--<span class="c-icon blackberry-icon"></span>-->
+                                            <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                            <p><small>Download ALJ Finance App</small></p>
+                                            <p>GOOGLE PLAY</p>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Mid end -->
+
+            <!-- Footer App For tab Start -->
+            <div class="footerMidWide d-lg-none d-xl-none">
+                <div class="container footerMidBottom">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" class="visible-xs">
+                                <img src="img/appStoreApp.png" alt="iOS App" title="iOS App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                    <img src="img/appStore.png" alt="App Store" title="App Store" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>APP STORE</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" class="visible-xs">
+                                <img src="img/googlePlayApp.png" alt="Google App" title="Google App" class=" mx-auto d-block appImage"></a>
+                            <ul class="appWidget d-none d-sm-block">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                    <img src="img/googlePlay.png" alt="Google play" title="Google play" class="float-xs-left">
+                                    <p><small>Download ALJ Finance App</small></p>
+                                    <p>GOOGLE PLAY</p>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer App For tab End -->
+
+            <!-- Footer Bottom Start -->
+            <div class="footerBottomWide">
+                <div class="container footerBottom">
+                    <div class="row">
+                        
+                        <div class="col-sm-12 text-center">
+                            <ul class="footerBottomMenu text-center">
+                                <li><a href="copyright_and_disclaimer.aspx.html">Copyright</a></li>
+                                <li><a href="terms_of_use.aspx.html">Terms of Usage</a></li>
+                                <li><a href="cookie_policy.aspx.html">Cookies Policy</a></li>
+                                <li><a href="accessibility_policy.aspx.html">Accessibility Policy</a></li>
+                                <li><a href="privacy_policy.aspx.html">Privacy Policy</a></li>
+                                <li><a href="Documents/Personal_Data_Protection_En.pdf" target="_blank">Personal Data Protection Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 text-center pt-3 small">
+                            <p>&copy; 2008-2022 Abdul Latif Jameel United Finance Company. Permission to use this site is granted strictly subject to the Terms of Use. The Abdul Latif Jameel logotype and pentagon-shaped graphic are trademarks, or registered trademarks of Abdul Latif Jameel IPR Company Limited.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom end -->
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Tablet menu start -->
+        <div id="sidr">
+
+            <div class="sidrContentHolder">
+                <div class="tabMenuRowHeader">
+                    <a href="#tabclose" class="tabMenuClose"><span class="c-icon closeWhite-icon"></span></a>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="nav navTab">
+                        <li><a href="index.aspx.html">Home</a></li>
+                        
+                          <li class="dropdownTab"><a href="#" data-toggle="dropdown">Financial products</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">Financial products</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="products.aspx.html">Finance Calculator</a></li>
+                                                <li><a href="finance_options_generic.aspx.html">Murabaha Calculator</a></li>
+                                                <li><a href="home_appliances_finance.aspx.html">Home Appliances Finance</a></li>
+                                                <li><a href="used_cars_campaign.aspx.html">Used Vehicles</a></li>
+                                                <li><a href="cash_financing.aspx.html">Cash finance for individual</a></li>
+                                                <li><a href="aljuref.aspx.html">Real Estate Financing</a></li>
+                                                <li><a href="brjmf.aspx.html">Bab Rizq Jameel Microfinance</a></li>
+                                                <li><a href="affordability_calculator.aspx.html">Which Vehicles Fit my Budget?</a></li>
+                                                <li><a href="how_to_auto_finance.aspx.html">How to vehicle finance?</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="Offers_listing.aspx.html">Offers</a></li>
+                        <li><a href="fleet_and_business.aspx.html">SME Financing</a></li>
+                        <li><a href="locations.aspx.html">Locations</a></li>
+                        <li><a href="news_listing.aspx.html">News</a></li>
+                        
+                        <li class="dropdownTab"><a href="vehicle.aspx.html" data-toggle="dropdown">About Us</a>
+                            <div class="tabSubMenu dropdown-menu">
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="index.aspx.html"><span class="c-icon leftCaretWhite-icon"></span>Back</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tabMenuRow">
+                                    <ul class="navTab">
+                                        <li><a href="#">About Us</a>
+                                            <ul class="navTabSubMenu">
+                                                <li><a href="about.aspx.html">Mission and Vision</a></li>
+                                                <li><a href="tamakan.aspx.html">Tamakan</a></li>
+                                                <li><a href="FAQs.aspx.html">FAQs</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="Account_login.aspx.html">Account Login</a></li>
+                        <li><a href="account_registration.aspx.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="navTab">
+                        <li><a href="#"><i class="c-icon callWhite-icon"></i>Call us 8002442211</a></li>
+                  
+                    </ul>
+                </div>
+                <div class="tabMenuRow">
+                    <form class="tabFormSearch">
+                        <div class="form-group">
+                            <input name="ctl00$txt_Search2" type="text" id="txt_Search2" class="form-control tabMenuSearch" placeholder="Search ALJ Finance" maxlength="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabMenuRow">
+                    <ul class="appWidget">
+
+                        <li>
+                            <a href="https://apps.apple.com/sa/app/alj-finance/id1594544565" target="_blank">
+                                <img class="float-xs-left" title="App Store" alt="App Store" src="img/appStore.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>APP STORE</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.aljfs.it" target="_blank">
+                                <img class="float-xs-left" title="Google play" alt="Google play" src="img/googlePlay.png">
+                                <p><small>Download ALJ Finance App</small></p>
+                                <p>GOOGLE PLAY</p>
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+  <style type="text/css">
+        /*common*/
+      .loading-wrap
+      {
+          background: rgba(128,128,128,0.8);
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 2000;
+          display: none;
+      }
+
+        .loading-wrap .loading{
+            max-width:617px;
+            max-height:210px;
+            margin: auto;
+            position: relative;
+            top: 180px;
+            overflow: hidden;
+            -moz-border-radius: 3px 3px 0 0;
+            -webkit-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0; /* border radius */
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box; /* prevents bg color from leaking outside the border */
+            background-color: #fff; /* layer fill content */
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            box-shadow: 0 0 10px rgba(0,0,0,.15); /* drop shadow */
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE0Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+            background-image: -moz-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -o-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+            background-image: linear-gradient(left, rgba(0,0,0,.14) 0%, rgba(255,255,255,.14) 100%); /* gradient overlay */
+
+
+        }
+        .loading-wrap .loading-head{
+            border-bottom: 7px solid #4d8092;
+            background-color: #fff;
+            padding: 17px 30px;
+        }
+        .loading-wrap .loading-content{
+            background-color: #fff;
+            padding: 21px 30px 18px;
+        }
+        .loading-wrap .loading-head figure{
+            position: relative;
+            top: -1px;
+        }
+
+        .font-18{font-size: 18px;}
+        .font-14{font-size: 14px;}
+        .mb25{margin-bottom:25px;}
+
+        @media (max-width: 767px)  {
+            .loading-wrap .loading{
+                max-height:inherit;
+            }
+            .loading-wrap .loading-head h1{
+                font-size: 40px;
+            }
+        }
+
+        .one {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.0s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.0s;
+        }
+
+        .two {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.2s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.2s;
+        }
+
+        .three {
+            opacity: 0;
+            -webkit-animation: dot 1.3s infinite;
+            -webkit-animation-delay: 0.3s;
+            animation: dot 1.3s infinite;
+            animation-delay: 0.3s;
+        }
+
+        @-webkit-keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes dot {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+/*en only*/
+    .loading-wrap .loading-head h1{
+        font-size: 52px;
+    }
+    </style>
+
+    <section class="loading-wrap" style="display:block;z-index: 9999;visibility:hidden;" id="PleaseWait" tabindex="-1">
+            
+        <div class="loading">
+            <div class="loading-head">
+                
+                   <button type="button" class="close closeRoundWhite-icon" style="margin:-10px -20px 0 0 ;" data-dismiss="modal" aria-label="Close" onclick="hideWaitMessage();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              
+                <figure class="float-right flip d-none d-sm-block">
+                    <img src="img/logo.png" alt="loading ... ">
+                </figure>
+                <h1>
+                    <span><span>Loading</span><span class="one">.</span><span class="two">.</span><span class="three">.</span></span>
+                </h1>
+            </div>
+            <div class="loading-content">
+                <p class="font-18 mb25">Please wait. We are loading the information you are requesting.</p>
+                <p class="font-14">Does it take more time than expected? Please <a href="feedbacks.aspx.html"> contact us</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Tablet menu end -->
+
+        <button id="Btn_Survey" class="open-button" onclick="javascript:openForm()">SADAD Payment</button>
+
+        <div class="form-popup" id="myForm">
+          <div class="form-container">
+              <div class="survey-logo"><img src="img/logo-tamakan.svg"></div>
+              <div class="survey-bg">
+                <h1 class="survey-title">Dear Guest</h1>
+                <p class="survey-text">As we value your health and your loved ones<br>you can perform your monthly payments by SADAD via your banking payment channels.</p>    
+              </div>
+              <div class="survey-footer">
+                <button type="submit" class="btn" id="survay-link" onclick="javascript:openInNewTab()">SADAD</button>
+                <button type="button" class="btn cancel" onclick="javascript:closeForm()">CLOSE</button>
+              </div>
+    
+          </div>
+        </div>
+        <script src="js/Tocca.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <!-- Script for tablet menu -->
+        <script src="js/sideMenu-script.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+          <script src="js/jquery.md5.js"></script>
+        <script src="js/custom-script.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+    </form>
+    
+    <!-- YAMLI CODE START -->
+    <script type="text/javascript" src="js/yamli_api.js"></script>
+    <script type="text/javascript">
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_First_Name_Update", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Last_Name_Update", { settingsPlacement: "hide" });
+        }
+
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street_Home", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Sponser_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Street", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Driver_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative1_Name", { settingsPlacement: "hide" });
+        }
+        if (typeof (Yamli) == "object" && Yamli.init({ uiLanguage: "en", startMode: "onOrUserDefault" })) {
+            Yamli.yamlify("txt_Relative2_Name", { settingsPlacement: "hide" });
+        }
+        
+        
+    </script>
+    <!-- YAMLI CODE END -->
+     <script>
+        function pageLoad() {
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('render');
+        }
+    </script>
+   
+
+
+</body>
+</html>
